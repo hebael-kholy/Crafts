@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "Hash": "+u3e2kajTBRlP4laX/mszIdhE5DtawVM8KJSe+C5eTM=",
+  "Source": "Crafts.Api",
+  "BasePath": "_content/Crafts.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "Crafts.Api\\wwwroot",
+      "Source": "Crafts.Api",
+      "ContentRoot": "E:\\9-months scholarship iti\\Graduatio Project\\Crafts\\Crafts.Api\\wwwroot\\",
+      "BasePath": "_content/Crafts.Api",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "E:\\9-months scholarship iti\\Graduatio Project\\Crafts\\Crafts.Api\\wwwroot\\Images\\download.png",
+      "SourceId": "Crafts.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\9-months scholarship iti\\Graduatio Project\\Crafts\\Crafts.Api\\wwwroot\\",
+      "BasePath": "_content/Crafts.Api",
+      "RelativePath": "Images/download.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\download.png"
+    }
+  ]
+}
