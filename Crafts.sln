@@ -5,6 +5,10 @@ VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Crafts.Api", "Crafts.Api\Crafts.Api.csproj", "{10B39079-B934-4AA0-B82C-7D40EE60E4FF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Crafts.BL", "Crafts.BL\Crafts.BL.csproj", "{4C5C05C9-9965-4EAD-9B11-AE40F129D4A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Crafts.DAL", "Crafts.DAL\Crafts.DAL.csproj", "{D717AAA8-C3E1-4FAC-AED7-A95630A1BFDE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{10B39079-B934-4AA0-B82C-7D40EE60E4FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{10B39079-B934-4AA0-B82C-7D40EE60E4FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{10B39079-B934-4AA0-B82C-7D40EE60E4FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C5C05C9-9965-4EAD-9B11-AE40F129D4A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C5C05C9-9965-4EAD-9B11-AE40F129D4A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C5C05C9-9965-4EAD-9B11-AE40F129D4A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C5C05C9-9965-4EAD-9B11-AE40F129D4A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D717AAA8-C3E1-4FAC-AED7-A95630A1BFDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D717AAA8-C3E1-4FAC-AED7-A95630A1BFDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D717AAA8-C3E1-4FAC-AED7-A95630A1BFDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D717AAA8-C3E1-4FAC-AED7-A95630A1BFDE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
