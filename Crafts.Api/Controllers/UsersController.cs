@@ -81,6 +81,33 @@ public class UsersController : ControllerBase
         return  new TokenDto(token) ;
         
     }
+    #endregion   
+    #region Login
+    [HttpPost]
+    [Route("LoginAdmin")]
+    [Authorize(Policy = "AllowAdminsOnly")]
+    public async Task<ActionResult<TokenDto>> LoginAdmin(LoginDto cradentials)
+    {
+        User? user = await _userManager.FindByEmailAsync(cradentials.Email);
+        if (user is null)
+        {
+            return BadRequest(new { Message = "User Not Found" });
+        }
+        var isPasswordCorrect = await _userManager.CheckPasswordAsync(user, cradentials.Password);
+        if (!isPasswordCorrect || Role.Admin == 0)
+        {
+            return Unauthorized();
+        }    
+
+        var claims = await _userManager.GetClaimsAsync(user);
+        DateTime exp = DateTime.Now.AddMinutes(20);
+
+        var token = GenerateToken(claims, exp);
+
+
+        return  new TokenDto(token) ;
+        
+    }
     #endregion
 
     #region GenerateToken
