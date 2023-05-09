@@ -65,16 +65,16 @@ builder.Services.AddAuthentication(options =>
 builder.Services.AddAuthorization(Options =>
 {
     Options.AddPolicy("AllowAdminsOnly",
-        builder => builder.RequireClaim(ClaimTypes.Role, Role.Admin.ToString()));
+        policy => policy.RequireClaim(ClaimTypes.Role, ((int)Enum.Parse(typeof(Role), Role.Admin.ToString())).ToString()));
 
-    Options.AddPolicy("AllowUsersOnly",
-        builder => builder.RequireClaim(ClaimTypes.Role, Role.User.ToString()));
+    //Options.AddPolicy("AllowUsersOnly",
+    //    builder => builder.RequireClaim(ClaimTypes.Role, Role.User.ToString()));
 });
 #endregion
 
 //builder.Services.AddAuthorization(options =>
 //{
-//    options.AddPolicy("RequireUserRole", policy => policy.RequireRole(Role.User.ToString()));
+//    options.AddPolicy("AllowAdminsOnly", policy => policy.RequireRole(Role.Admin.ToString()));
 //});
 
 
