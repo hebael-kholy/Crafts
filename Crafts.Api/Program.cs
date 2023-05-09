@@ -1,5 +1,11 @@
 using Crafts.DAL.Context;
+using Crafts.DAL.Models;
+using Crafts.DAL.Models.Enum;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
+using System.Security.Claims;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,6 +22,72 @@ builder.Services.AddDbContext<CraftsContext>(options =>
 options.UseSqlServer(connectionString));
 #endregion
 
+#region Identity Manager
+builder.Services.AddIdentity<User, IdentityRole>(options =>
+{
+    options.Password.RequiredUniqueChars = 3;
+    options.Password.RequireNonAlphanumeric = false;
+    options.Password.RequireLowercase = false;
+    options.Password.RequireUppercase = false;
+    options.Password.RequiredLength = 4;
+    options.User.RequireUniqueEmail = true;
+}
+)
+    .AddEntityFrameworkStores<CraftsContext>();
+#endregion
+
+#region Authentication
+//verify token
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme = "Cool";
+    options.DefaultChallengeScheme = "Cool";
+})
+    .AddJwtBearer(
+    "Cool", options =>
+    {
+        var secertKeyString = builder.Configuration.GetValue<string>("SecretKey") ?? "";
+        var secretKeyInBytes = Encoding.ASCII.GetBytes(secertKeyString);
+        var securityKey = new SymmetricSecurityKey(secretKeyInBytes);
+
+        options.TokenValidationParameters = new TokenValidationParameters()
+        {
+            IssuerSigningKey = securityKey,
+            ValidateIssuer = false,
+            ValidateAudience = false
+        };
+    }
+
+    );
+#endregion
+
+#region Authorization
+builder.Services.AddAuthorization(Options =>
+{
+    Options.AddPolicy("AllowAdminsOnly",
+        builder => builder.RequireClaim(ClaimTypes.Role, Role.Admin.ToString()));
+
+    Options.AddPolicy("AllowUsersOnly",
+        builder => builder.RequireClaim(ClaimTypes.Role, Role.User.ToString()));
+});
+#endregion
+
+//builder.Services.AddAuthorization(options =>
+//{
+//    options.AddPolicy("RequireUserRole", policy => policy.RequireRole(Role.User.ToString()));
+//});
+
+
+#region CorsPolicy
+var AllowCorsPolicy = "AllowCorsPolicy";
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(AllowCorsPolicy, builder =>
+    {
+        builder.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin();
+    });
+});
+#endregion
 
 var app = builder.Build();
 
@@ -28,7 +100,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
+app.UseStaticFiles();
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
