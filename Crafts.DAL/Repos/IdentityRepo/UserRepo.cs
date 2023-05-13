@@ -17,9 +17,19 @@ public class UserRepo: GenericRepo<User>, IUserRepo
     {
         _context = context;
     }
-
+    public User? GetById(string id)
+    {
+        return _context.Set<User>().Find(id);
+    }
     public User GetUserByEmail(string email)
     {
         return _context.Users.FirstOrDefault(u => u.Email == email);
     }
+
+    public User? GetUserById(string id)
+    {
+        return _context.Set<User>().Find(id); ;
+    }
+
+
 }

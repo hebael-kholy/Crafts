@@ -10,5 +10,6 @@ namespace Crafts.DAL.Repos.IdentityRepo;
 
 public interface IUserRepo : IGenericRepo<User>
 {
+    User? GetUserById(string id);
     public User GetUserByEmail(string email);
 }

@@ -5,6 +5,22 @@
       "PackagePath": "staticwebassets\\Images\\download.png"
     },
     {
+      "Id": "E:\\9-months scholarship iti\\Graduatio Project\\Crafts\\Crafts.Api\\wwwroot\\Images\\images.jfif",
+      "PackagePath": "staticwebassets\\Images\\images.jfif"
+    },
+    {
+      "Id": "E:\\9-months scholarship iti\\Graduatio Project\\Crafts\\Crafts.Api\\wwwroot\\Images\\pexels-pixabay-268533.jpg",
+      "PackagePath": "staticwebassets\\Images\\pexels-pixabay-268533.jpg"
+    },
+    {
+      "Id": "E:\\9-months scholarship iti\\Graduatio Project\\Crafts\\Crafts.Api\\wwwroot\\Images\\photo_2023-02-20_13-49-40.jpg",
+      "PackagePath": "staticwebassets\\Images\\photo_2023-02-20_13-49-40.jpg"
+    },
+    {
+      "Id": "E:\\9-months scholarship iti\\Graduatio Project\\Crafts\\Crafts.Api\\wwwroot\\Images\\photo_2023-03-11_07-19-44.jpg",
+      "PackagePath": "staticwebassets\\Images\\photo_2023-03-11_07-19-44.jpg"
+    },
+    {
       "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.Crafts.Api.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },
