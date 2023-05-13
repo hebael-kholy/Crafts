@@ -17,11 +17,24 @@ namespace Crafts.Api.Controllers
         }
 
         [HttpPost]
-        [Route("create")]
         public ActionResult Add(CouponAddDto couponDto)
         {
             _couponsManagers.Add(couponDto);
             return NoContent();
+        }
+
+        [HttpGet]
+        public ActionResult<List<CouponReadDto>> GetAll()
+        {
+            return _couponsManagers.GetAll();
+        }
+
+        [HttpGet]
+        [Route("{id:int}")]
+        public ActionResult<CouponReadDto> GetById(int id)
+        {
+            var coupon = _couponsManagers.GetById(id);
+            return coupon;
         }
     }
 }

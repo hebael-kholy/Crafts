@@ -29,5 +29,31 @@ namespace Crafts.BL.Managers.CouponManager
             await _couponRepo.Add(coupon);
             _couponRepo.SaveChanges();
         }
+
+        public List<CouponReadDto> GetAll()
+        {
+            List<Coupon> couponsFromDb = _couponRepo.GetAll();
+            return couponsFromDb
+                .Select(c => new CouponReadDto 
+                { 
+                    Id = c.Id,
+                    Name = c.Name,
+                    ExpireDate = c.ExpireDate,
+                    Discount = c.Discount
+                }).ToList();
+        }
+
+        public CouponReadDto? GetById(int id)
+        {
+            List<Coupon> couponsFromDb = _couponRepo.GetAll();
+            return couponsFromDb
+                .Select(c => new CouponReadDto
+                {
+                    Id = c.Id,
+                    Name = c.Name,
+                    ExpireDate = c.ExpireDate,
+                    Discount = c.Discount
+                }).FirstOrDefault(c => c.Id == id);
+        }
     }
 }
