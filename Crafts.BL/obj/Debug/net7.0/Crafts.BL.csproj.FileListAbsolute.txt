@@ -15,3 +15,20 @@ E:\9-months scholarship iti\Graduatio Project\Crafts\Crafts.BL\obj\Debug\net7.0\
 E:\9-months scholarship iti\Graduatio Project\Crafts\Crafts.BL\obj\Debug\net7.0\Crafts.BL.pdb
 E:\9-months scholarship iti\Graduatio Project\Crafts\Crafts.BL\obj\Debug\net7.0\Crafts.BL.genruntimeconfig.cache
 E:\9-months scholarship iti\Graduatio Project\Crafts\Crafts.BL\obj\Debug\net7.0\ref\Crafts.BL.dll
+D:\Graduation Project\HandMade\Crafts.BL\bin\Debug\net7.0\Crafts.BL.deps.json
+D:\Graduation Project\HandMade\Crafts.BL\bin\Debug\net7.0\Crafts.BL.runtimeconfig.json
+D:\Graduation Project\HandMade\Crafts.BL\bin\Debug\net7.0\Crafts.BL.dll
+D:\Graduation Project\HandMade\Crafts.BL\bin\Debug\net7.0\Crafts.BL.pdb
+D:\Graduation Project\HandMade\Crafts.BL\bin\Debug\net7.0\Crafts.DAL.dll
+D:\Graduation Project\HandMade\Crafts.BL\bin\Debug\net7.0\Crafts.DAL.pdb
+D:\Graduation Project\HandMade\Crafts.BL\obj\Debug\net7.0\Crafts.BL.csproj.AssemblyReference.cache
+D:\Graduation Project\HandMade\Crafts.BL\obj\Debug\net7.0\Crafts.BL.GeneratedMSBuildEditorConfig.editorconfig
+D:\Graduation Project\HandMade\Crafts.BL\obj\Debug\net7.0\Crafts.BL.AssemblyInfoInputs.cache
+D:\Graduation Project\HandMade\Crafts.BL\obj\Debug\net7.0\Crafts.BL.AssemblyInfo.cs
+D:\Graduation Project\HandMade\Crafts.BL\obj\Debug\net7.0\Crafts.BL.csproj.CoreCompileInputs.cache
+D:\Graduation Project\HandMade\Crafts.BL\obj\Debug\net7.0\Crafts.BL.csproj.CopyComplete
+D:\Graduation Project\HandMade\Crafts.BL\obj\Debug\net7.0\Crafts.BL.dll
+D:\Graduation Project\HandMade\Crafts.BL\obj\Debug\net7.0\refint\Crafts.BL.dll
+D:\Graduation Project\HandMade\Crafts.BL\obj\Debug\net7.0\Crafts.BL.pdb
+D:\Graduation Project\HandMade\Crafts.BL\obj\Debug\net7.0\Crafts.BL.genruntimeconfig.cache
+D:\Graduation Project\HandMade\Crafts.BL\obj\Debug\net7.0\ref\Crafts.BL.dll

@@ -1,6 +1,8 @@
+using Crafts.BL.Managers.CouponManager;
 using Crafts.DAL.Context;
 using Crafts.DAL.Models;
 using Crafts.DAL.Models.Enum;
+using Crafts.DAL.Repos.CouponRepo;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -87,6 +89,16 @@ builder.Services.AddCors(options =>
         builder.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin();
     });
 });
+#endregion
+
+#region Repos
+
+builder.Services.AddScoped<ICouponRepo, CouponRepo>();
+#endregion
+
+#region Managers
+
+builder.Services.AddScoped<ICouponsManager, CouponsManager>();
 #endregion
 
 var app = builder.Build();

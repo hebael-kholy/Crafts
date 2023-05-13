@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ROM0HiMOqhcPISQH18s4ysUBZ4v+lmua9u5PBGjN7to=",
+  "Hash": "S57FfbH0v9BmOH36i5IGu7YWxFvdG0Jv331UY4KaRfs=",
   "Source": "Crafts.Api",
   "BasePath": "_content/Crafts.Api",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "Crafts.Api\\wwwroot",
       "Source": "Crafts.Api",
-      "ContentRoot": "E:\\9-months scholarship iti\\Graduatio Project\\Crafts\\Crafts.Api\\wwwroot\\",
+      "ContentRoot": "D:\\Graduation Project\\HandMade\\Crafts.Api\\wwwroot\\",
       "BasePath": "_content/Crafts.Api",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "E:\\9-months scholarship iti\\Graduatio Project\\Crafts\\Crafts.Api\\wwwroot\\Images\\download.png",
+      "Identity": "D:\\Graduation Project\\HandMade\\Crafts.Api\\wwwroot\\Images\\download.png",
       "SourceId": "Crafts.Api",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\9-months scholarship iti\\Graduatio Project\\Crafts\\Crafts.Api\\wwwroot\\",
+      "ContentRoot": "D:\\Graduation Project\\HandMade\\Crafts.Api\\wwwroot\\",
       "BasePath": "_content/Crafts.Api",
       "RelativePath": "Images/download.png",
       "AssetKind": "All",
@@ -34,10 +34,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\download.png"
     },
     {
-      "Identity": "E:\\9-months scholarship iti\\Graduatio Project\\Crafts\\Crafts.Api\\wwwroot\\Images\\images.jfif",
+      "Identity": "D:\\Graduation Project\\HandMade\\Crafts.Api\\wwwroot\\Images\\images.jfif",
       "SourceId": "Crafts.Api",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\9-months scholarship iti\\Graduatio Project\\Crafts\\Crafts.Api\\wwwroot\\",
+      "ContentRoot": "D:\\Graduation Project\\HandMade\\Crafts.Api\\wwwroot\\",
       "BasePath": "_content/Crafts.Api",
       "RelativePath": "Images/images.jfif",
       "AssetKind": "All",
@@ -51,10 +51,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\images.jfif"
     },
     {
-      "Identity": "E:\\9-months scholarship iti\\Graduatio Project\\Crafts\\Crafts.Api\\wwwroot\\Images\\pexels-pixabay-268533.jpg",
+      "Identity": "D:\\Graduation Project\\HandMade\\Crafts.Api\\wwwroot\\Images\\pexels-pixabay-268533.jpg",
       "SourceId": "Crafts.Api",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\9-months scholarship iti\\Graduatio Project\\Crafts\\Crafts.Api\\wwwroot\\",
+      "ContentRoot": "D:\\Graduation Project\\HandMade\\Crafts.Api\\wwwroot\\",
       "BasePath": "_content/Crafts.Api",
       "RelativePath": "Images/pexels-pixabay-268533.jpg",
       "AssetKind": "All",
@@ -68,10 +68,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\pexels-pixabay-268533.jpg"
     },
     {
-      "Identity": "E:\\9-months scholarship iti\\Graduatio Project\\Crafts\\Crafts.Api\\wwwroot\\Images\\photo_2023-02-20_13-49-40.jpg",
+      "Identity": "D:\\Graduation Project\\HandMade\\Crafts.Api\\wwwroot\\Images\\photo_2023-02-20_13-49-40.jpg",
       "SourceId": "Crafts.Api",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\9-months scholarship iti\\Graduatio Project\\Crafts\\Crafts.Api\\wwwroot\\",
+      "ContentRoot": "D:\\Graduation Project\\HandMade\\Crafts.Api\\wwwroot\\",
       "BasePath": "_content/Crafts.Api",
       "RelativePath": "Images/photo_2023-02-20_13-49-40.jpg",
       "AssetKind": "All",
@@ -85,10 +85,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\photo_2023-02-20_13-49-40.jpg"
     },
     {
-      "Identity": "E:\\9-months scholarship iti\\Graduatio Project\\Crafts\\Crafts.Api\\wwwroot\\Images\\photo_2023-03-11_07-19-44.jpg",
+      "Identity": "D:\\Graduation Project\\HandMade\\Crafts.Api\\wwwroot\\Images\\photo_2023-03-11_07-19-44.jpg",
       "SourceId": "Crafts.Api",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\9-months scholarship iti\\Graduatio Project\\Crafts\\Crafts.Api\\wwwroot\\",
+      "ContentRoot": "D:\\Graduation Project\\HandMade\\Crafts.Api\\wwwroot\\",
       "BasePath": "_content/Crafts.Api",
       "RelativePath": "Images/photo_2023-03-11_07-19-44.jpg",
       "AssetKind": "All",

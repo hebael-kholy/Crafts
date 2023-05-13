@@ -12,3 +12,17 @@ E:\9-months scholarship iti\Graduatio Project\Crafts\Crafts.DAL\obj\Debug\net7.0
 E:\9-months scholarship iti\Graduatio Project\Crafts\Crafts.DAL\obj\Debug\net7.0\Crafts.DAL.pdb
 E:\9-months scholarship iti\Graduatio Project\Crafts\Crafts.DAL\obj\Debug\net7.0\Crafts.DAL.genruntimeconfig.cache
 E:\9-months scholarship iti\Graduatio Project\Crafts\Crafts.DAL\obj\Debug\net7.0\ref\Crafts.DAL.dll
+D:\Graduation Project\HandMade\Crafts.DAL\bin\Debug\net7.0\Crafts.DAL.deps.json
+D:\Graduation Project\HandMade\Crafts.DAL\bin\Debug\net7.0\Crafts.DAL.runtimeconfig.json
+D:\Graduation Project\HandMade\Crafts.DAL\bin\Debug\net7.0\Crafts.DAL.dll
+D:\Graduation Project\HandMade\Crafts.DAL\bin\Debug\net7.0\Crafts.DAL.pdb
+D:\Graduation Project\HandMade\Crafts.DAL\obj\Debug\net7.0\Crafts.DAL.csproj.AssemblyReference.cache
+D:\Graduation Project\HandMade\Crafts.DAL\obj\Debug\net7.0\Crafts.DAL.GeneratedMSBuildEditorConfig.editorconfig
+D:\Graduation Project\HandMade\Crafts.DAL\obj\Debug\net7.0\Crafts.DAL.AssemblyInfoInputs.cache
+D:\Graduation Project\HandMade\Crafts.DAL\obj\Debug\net7.0\Crafts.DAL.AssemblyInfo.cs
+D:\Graduation Project\HandMade\Crafts.DAL\obj\Debug\net7.0\Crafts.DAL.csproj.CoreCompileInputs.cache
+D:\Graduation Project\HandMade\Crafts.DAL\obj\Debug\net7.0\Crafts.DAL.dll
+D:\Graduation Project\HandMade\Crafts.DAL\obj\Debug\net7.0\refint\Crafts.DAL.dll
+D:\Graduation Project\HandMade\Crafts.DAL\obj\Debug\net7.0\Crafts.DAL.pdb
+D:\Graduation Project\HandMade\Crafts.DAL\obj\Debug\net7.0\Crafts.DAL.genruntimeconfig.cache
+D:\Graduation Project\HandMade\Crafts.DAL\obj\Debug\net7.0\ref\Crafts.DAL.dll
