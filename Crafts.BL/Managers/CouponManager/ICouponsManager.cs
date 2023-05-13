@@ -10,5 +10,8 @@ namespace Crafts.BL.Managers.CouponManager
     public interface ICouponsManager
     {
         Task Add(CouponAddDto couponDto);
+        List<CouponReadDto> GetAll();
+        CouponReadDto? GetById(int id);
+
     }
 }
