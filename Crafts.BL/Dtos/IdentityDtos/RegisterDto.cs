@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Crafts.BL.Dtos.IdentityDtos;
 
-public record RegisterDto(string UserName, string Email, string Password, Gender Gender);
+public record RegisterDto(string UserName, string Email, string Password, Gender Gender, Role Role);
 //public class RegisterDto
 //{
 //    public string UserName { get; set; }
