@@ -8610,11 +8610,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\ITI\\Final Project .Net API\\Crafts.Api\\Crafts.Api.csproj",
+      "projectUniqueName": "E:\\ITI\\Final Project .Net API\\Crafts\\Crafts.Api\\Crafts.Api.csproj",
       "projectName": "Crafts.Api",
-      "projectPath": "E:\\ITI\\Final Project .Net API\\Crafts.Api\\Crafts.Api.csproj",
+      "projectPath": "E:\\ITI\\Final Project .Net API\\Crafts\\Crafts.Api\\Crafts.Api.csproj",
       "packagesPath": "C:\\Users\\dina\\.nuget\\packages\\",
-      "outputPath": "E:\\ITI\\Final Project .Net API\\Crafts.Api\\obj\\",
+      "outputPath": "E:\\ITI\\Final Project .Net API\\Crafts\\Crafts.Api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\dina\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -8631,8 +8631,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "E:\\ITI\\Final Project .Net API\\Crafts.BL\\Crafts.BL.csproj": {
-              "projectPath": "E:\\ITI\\Final Project .Net API\\Crafts.BL\\Crafts.BL.csproj"
+            "E:\\ITI\\Final Project .Net API\\Crafts\\Crafts.BL\\Crafts.BL.csproj": {
+              "projectPath": "E:\\ITI\\Final Project .Net API\\Crafts\\Crafts.BL\\Crafts.BL.csproj"
             }
           }
         }

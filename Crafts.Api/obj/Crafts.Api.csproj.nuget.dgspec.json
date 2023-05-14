@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\ITI\\Final Project .Net API\\Crafts.Api\\Crafts.Api.csproj": {}
+    "E:\\ITI\\Final Project .Net API\\Crafts\\Crafts.Api\\Crafts.Api.csproj": {}
   },
   "projects": {
-    "E:\\ITI\\Final Project .Net API\\Crafts.Api\\Crafts.Api.csproj": {
+    "E:\\ITI\\Final Project .Net API\\Crafts\\Crafts.Api\\Crafts.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\ITI\\Final Project .Net API\\Crafts.Api\\Crafts.Api.csproj",
+        "projectUniqueName": "E:\\ITI\\Final Project .Net API\\Crafts\\Crafts.Api\\Crafts.Api.csproj",
         "projectName": "Crafts.Api",
-        "projectPath": "E:\\ITI\\Final Project .Net API\\Crafts.Api\\Crafts.Api.csproj",
+        "projectPath": "E:\\ITI\\Final Project .Net API\\Crafts\\Crafts.Api\\Crafts.Api.csproj",
         "packagesPath": "C:\\Users\\dina\\.nuget\\packages\\",
-        "outputPath": "E:\\ITI\\Final Project .Net API\\Crafts.Api\\obj\\",
+        "outputPath": "E:\\ITI\\Final Project .Net API\\Crafts\\Crafts.Api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\dina\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "E:\\ITI\\Final Project .Net API\\Crafts.BL\\Crafts.BL.csproj": {
-                "projectPath": "E:\\ITI\\Final Project .Net API\\Crafts.BL\\Crafts.BL.csproj"
+              "E:\\ITI\\Final Project .Net API\\Crafts\\Crafts.BL\\Crafts.BL.csproj": {
+                "projectPath": "E:\\ITI\\Final Project .Net API\\Crafts\\Crafts.BL\\Crafts.BL.csproj"
               }
             }
           }
@@ -86,14 +86,14 @@
         }
       }
     },
-    "E:\\ITI\\Final Project .Net API\\Crafts.BL\\Crafts.BL.csproj": {
+    "E:\\ITI\\Final Project .Net API\\Crafts\\Crafts.BL\\Crafts.BL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\ITI\\Final Project .Net API\\Crafts.BL\\Crafts.BL.csproj",
+        "projectUniqueName": "E:\\ITI\\Final Project .Net API\\Crafts\\Crafts.BL\\Crafts.BL.csproj",
         "projectName": "Crafts.BL",
-        "projectPath": "E:\\ITI\\Final Project .Net API\\Crafts.BL\\Crafts.BL.csproj",
+        "projectPath": "E:\\ITI\\Final Project .Net API\\Crafts\\Crafts.BL\\Crafts.BL.csproj",
         "packagesPath": "C:\\Users\\dina\\.nuget\\packages\\",
-        "outputPath": "E:\\ITI\\Final Project .Net API\\Crafts.BL\\obj\\",
+        "outputPath": "E:\\ITI\\Final Project .Net API\\Crafts\\Crafts.BL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\dina\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -110,8 +110,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "E:\\ITI\\Final Project .Net API\\Crafts.DAL\\Crafts.DAL.csproj": {
-                "projectPath": "E:\\ITI\\Final Project .Net API\\Crafts.DAL\\Crafts.DAL.csproj"
+              "E:\\ITI\\Final Project .Net API\\Crafts\\Crafts.DAL\\Crafts.DAL.csproj": {
+                "projectPath": "E:\\ITI\\Final Project .Net API\\Crafts\\Crafts.DAL\\Crafts.DAL.csproj"
               }
             }
           }
@@ -153,14 +153,14 @@
         }
       }
     },
-    "E:\\ITI\\Final Project .Net API\\Crafts.DAL\\Crafts.DAL.csproj": {
+    "E:\\ITI\\Final Project .Net API\\Crafts\\Crafts.DAL\\Crafts.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\ITI\\Final Project .Net API\\Crafts.DAL\\Crafts.DAL.csproj",
+        "projectUniqueName": "E:\\ITI\\Final Project .Net API\\Crafts\\Crafts.DAL\\Crafts.DAL.csproj",
         "projectName": "Crafts.DAL",
-        "projectPath": "E:\\ITI\\Final Project .Net API\\Crafts.DAL\\Crafts.DAL.csproj",
+        "projectPath": "E:\\ITI\\Final Project .Net API\\Crafts\\Crafts.DAL\\Crafts.DAL.csproj",
         "packagesPath": "C:\\Users\\dina\\.nuget\\packages\\",
-        "outputPath": "E:\\ITI\\Final Project .Net API\\Crafts.DAL\\obj\\",
+        "outputPath": "E:\\ITI\\Final Project .Net API\\Crafts\\Crafts.DAL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\dina\\AppData\\Roaming\\NuGet\\NuGet.Config",

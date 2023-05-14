@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "XcRUy1MKdspkejTPsx2yAfq/6Pg4FwmBJZrmqDlQogpoja66YzpabNk9QhRft9XVGXZZ8mK8+Zo8/lIyZRky9A==",
+  "dgSpecHash": "noYpNQTWNb8vsrzRQxnCa9wWD1nlQmqNsfPmPCUmHzN3jEOwHgcFaG5hbknETwy0tGv/kc7rwTVSOIHUqg95QQ==",
   "success": true,
-  "projectFilePath": "E:\\ITI\\Final Project .Net API\\Crafts.Api\\Crafts.Api.csproj",
+  "projectFilePath": "E:\\ITI\\Final Project .Net API\\Crafts\\Crafts.Api\\Crafts.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\dina\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\dina\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

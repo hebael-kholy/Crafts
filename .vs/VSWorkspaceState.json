@@ -1,14 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\Crafts.Api",
-    "\\Crafts.Api\\Controllers",
-    "\\Crafts.BL",
-    "\\Crafts.DAL",
-    "\\Crafts.DAL\\Repos",
-    "\\Crafts.DAL\\Repos\\CategoryRepo",
-    "\\Crafts.DAL\\Repos\\ReviewRepo"
+    ""
   ],
-  "SelectedNode": "\\Crafts.sln",
+  "SelectedNode": "\\Crafts",
   "PreviewInSolutionExplorer": false
 }
