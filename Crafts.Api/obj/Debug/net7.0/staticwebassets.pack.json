@@ -1,7 +1,15 @@
 {
   "Files": [
     {
-      "Id": "E:\\9-months scholarship iti\\Graduatio Project\\Crafts\\Crafts.Api\\wwwroot\\Images\\download.png",
+      "Id": "E:\\ITI\\Final Project .Net API\\Crafts.Api\\wwwroot\\Images\\310551841_490575076425596_19719425793244959_n.jpg",
+      "PackagePath": "staticwebassets\\Images\\310551841_490575076425596_19719425793244959_n.jpg"
+    },
+    {
+      "Id": "E:\\ITI\\Final Project .Net API\\Crafts.Api\\wwwroot\\Images\\310623007_490574979758939_2089894049691935084_n.jpg",
+      "PackagePath": "staticwebassets\\Images\\310623007_490574979758939_2089894049691935084_n.jpg"
+    },
+    {
+      "Id": "E:\\ITI\\Final Project .Net API\\Crafts.Api\\wwwroot\\Images\\download.png",
       "PackagePath": "staticwebassets\\Images\\download.png"
     },
     {
