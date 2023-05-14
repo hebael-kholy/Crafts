@@ -1,8 +1,13 @@
+using Crafts.BL.Managers.CategoryManagers;
 using Crafts.BL.Managers.CouponManager;
+using Crafts.BL.Managers.ReviewManagers;
+using Crafts.BL.Managers.Services;
 using Crafts.DAL.Context;
 using Crafts.DAL.Models;
 using Crafts.DAL.Models.Enum;
+using Crafts.DAL.Repos.CategoryRepo;
 using Crafts.DAL.Repos.CouponRepo;
+using Crafts.DAL.Repos.ReviewRepo;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -94,11 +99,23 @@ builder.Services.AddCors(options =>
 #region Repos
 
 builder.Services.AddScoped<ICouponRepo, CouponRepo>();
+builder.Services.AddScoped<ICategoryRepo, CategoryRepo>();
+builder.Services.AddScoped<IReviewRepo, ReviewRepo>();
+
 #endregion
 
 #region Managers
 
 builder.Services.AddScoped<ICouponsManager, CouponsManager>();
+builder.Services.AddScoped<ICategoryManager, CategoryManager>();
+builder.Services.AddScoped<IReviewManager, ReviewManager>();
+
+#endregion
+
+#region Services
+
+builder.Services.AddScoped<IFileService, FileService>();
+
 #endregion
 
 var app = builder.Build();
