@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,6 +14,7 @@ public class Product
     public double Price { get; set; }
     public float Rating { get; set; }
     public string Image { get; set; } = string.Empty;
+  //  public IFormFile? Image { get; set; } 
     public int Quantity { get; set; }
     public bool IsSale { get; set; }
     public string Description { get; set; } = string.Empty;

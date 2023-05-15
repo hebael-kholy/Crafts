@@ -1,8 +1,10 @@
 using Crafts.BL.Managers.CouponManager;
+using Crafts.BL.Managers.ProductManager;
 using Crafts.DAL.Context;
 using Crafts.DAL.Models;
 using Crafts.DAL.Models.Enum;
 using Crafts.DAL.Repos.CouponRepo;
+using Crafts.DAL.Repos.ProductsRepo;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -94,11 +96,13 @@ builder.Services.AddCors(options =>
 #region Repos
 
 builder.Services.AddScoped<ICouponRepo, CouponRepo>();
+builder.Services.AddScoped<IProductRepo, ProductRepo>();
 #endregion
 
 #region Managers
 
 builder.Services.AddScoped<ICouponsManager, CouponsManager>();
+builder.Services.AddScoped<IProductsManager, ProductsManager>();
 #endregion
 
 var app = builder.Build();

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "S57FfbH0v9BmOH36i5IGu7YWxFvdG0Jv331UY4KaRfs=",
+  "Hash": "PgLK+9g4WHtQLXIswwx/BLH2/8iqhPBuLAm8mpYJIno=",
   "Source": "Crafts.Api",
   "BasePath": "_content/Crafts.Api",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "Crafts.Api\\wwwroot",
       "Source": "Crafts.Api",
-      "ContentRoot": "D:\\Graduation Project\\HandMade\\Crafts.Api\\wwwroot\\",
+      "ContentRoot": "D:\\9 Months\\Final_Project_Crafts\\BackEndRepoV02\\Crafts.Api\\wwwroot\\",
       "BasePath": "_content/Crafts.Api",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "D:\\Graduation Project\\HandMade\\Crafts.Api\\wwwroot\\Images\\download.png",
+      "Identity": "D:\\9 Months\\Final_Project_Crafts\\BackEndRepoV02\\Crafts.Api\\wwwroot\\Images\\download.png",
       "SourceId": "Crafts.Api",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Graduation Project\\HandMade\\Crafts.Api\\wwwroot\\",
+      "ContentRoot": "D:\\9 Months\\Final_Project_Crafts\\BackEndRepoV02\\Crafts.Api\\wwwroot\\",
       "BasePath": "_content/Crafts.Api",
       "RelativePath": "Images/download.png",
       "AssetKind": "All",
@@ -34,10 +34,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\download.png"
     },
     {
-      "Identity": "D:\\Graduation Project\\HandMade\\Crafts.Api\\wwwroot\\Images\\images.jfif",
+      "Identity": "D:\\9 Months\\Final_Project_Crafts\\BackEndRepoV02\\Crafts.Api\\wwwroot\\Images\\images.jfif",
       "SourceId": "Crafts.Api",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Graduation Project\\HandMade\\Crafts.Api\\wwwroot\\",
+      "ContentRoot": "D:\\9 Months\\Final_Project_Crafts\\BackEndRepoV02\\Crafts.Api\\wwwroot\\",
       "BasePath": "_content/Crafts.Api",
       "RelativePath": "Images/images.jfif",
       "AssetKind": "All",
@@ -51,10 +51,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\images.jfif"
     },
     {
-      "Identity": "D:\\Graduation Project\\HandMade\\Crafts.Api\\wwwroot\\Images\\pexels-pixabay-268533.jpg",
+      "Identity": "D:\\9 Months\\Final_Project_Crafts\\BackEndRepoV02\\Crafts.Api\\wwwroot\\Images\\pexels-pixabay-268533.jpg",
       "SourceId": "Crafts.Api",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Graduation Project\\HandMade\\Crafts.Api\\wwwroot\\",
+      "ContentRoot": "D:\\9 Months\\Final_Project_Crafts\\BackEndRepoV02\\Crafts.Api\\wwwroot\\",
       "BasePath": "_content/Crafts.Api",
       "RelativePath": "Images/pexels-pixabay-268533.jpg",
       "AssetKind": "All",
@@ -68,10 +68,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\pexels-pixabay-268533.jpg"
     },
     {
-      "Identity": "D:\\Graduation Project\\HandMade\\Crafts.Api\\wwwroot\\Images\\photo_2023-02-20_13-49-40.jpg",
+      "Identity": "D:\\9 Months\\Final_Project_Crafts\\BackEndRepoV02\\Crafts.Api\\wwwroot\\Images\\photo_2023-02-20_13-49-40.jpg",
       "SourceId": "Crafts.Api",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Graduation Project\\HandMade\\Crafts.Api\\wwwroot\\",
+      "ContentRoot": "D:\\9 Months\\Final_Project_Crafts\\BackEndRepoV02\\Crafts.Api\\wwwroot\\",
       "BasePath": "_content/Crafts.Api",
       "RelativePath": "Images/photo_2023-02-20_13-49-40.jpg",
       "AssetKind": "All",
@@ -85,10 +85,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\photo_2023-02-20_13-49-40.jpg"
     },
     {
-      "Identity": "D:\\Graduation Project\\HandMade\\Crafts.Api\\wwwroot\\Images\\photo_2023-03-11_07-19-44.jpg",
+      "Identity": "D:\\9 Months\\Final_Project_Crafts\\BackEndRepoV02\\Crafts.Api\\wwwroot\\Images\\photo_2023-03-11_07-19-44.jpg",
       "SourceId": "Crafts.Api",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Graduation Project\\HandMade\\Crafts.Api\\wwwroot\\",
+      "ContentRoot": "D:\\9 Months\\Final_Project_Crafts\\BackEndRepoV02\\Crafts.Api\\wwwroot\\",
       "BasePath": "_content/Crafts.Api",
       "RelativePath": "Images/photo_2023-03-11_07-19-44.jpg",
       "AssetKind": "All",
