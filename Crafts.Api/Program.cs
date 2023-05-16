@@ -1,5 +1,6 @@
 using Crafts.BL.Managers.CategoryManagers;
 using Crafts.BL.Managers.CouponManager;
+using Crafts.BL.Managers.ProductManager;
 using Crafts.BL.Managers.ReviewManagers;
 using Crafts.BL.Managers.Services;
 using Crafts.DAL.Context;
@@ -7,6 +8,7 @@ using Crafts.DAL.Models;
 using Crafts.DAL.Models.Enum;
 using Crafts.DAL.Repos.CategoryRepo;
 using Crafts.DAL.Repos.CouponRepo;
+using Crafts.DAL.Repos.ProductsRepo;
 using Crafts.DAL.Repos.ReviewRepo;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -101,6 +103,7 @@ builder.Services.AddCors(options =>
 builder.Services.AddScoped<ICouponRepo, CouponRepo>();
 builder.Services.AddScoped<ICategoryRepo, CategoryRepo>();
 builder.Services.AddScoped<IReviewRepo, ReviewRepo>();
+builder.Services.AddScoped<IProductRepo,ProductRepo>();
 
 #endregion
 
@@ -109,6 +112,7 @@ builder.Services.AddScoped<IReviewRepo, ReviewRepo>();
 builder.Services.AddScoped<ICouponsManager, CouponsManager>();
 builder.Services.AddScoped<ICategoryManager, CategoryManager>();
 builder.Services.AddScoped<IReviewManager, ReviewManager>();
+builder.Services.AddScoped<IProductsManager,ProductsManager>();
 
 #endregion
 
