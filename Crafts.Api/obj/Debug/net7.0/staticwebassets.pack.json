@@ -1,8 +1,16 @@
 {
   "Files": [
     {
+      "Id": "D:\\9 Months\\Final_Project_Crafts\\BackEndRepoV02\\Crafts.Api\\wwwroot\\Images\\CraftsLogo.png",
+      "PackagePath": "staticwebassets\\Images\\CraftsLogo.png"
+    },
+    {
       "Id": "D:\\9 Months\\Final_Project_Crafts\\BackEndRepoV02\\Crafts.Api\\wwwroot\\Images\\download.png",
       "PackagePath": "staticwebassets\\Images\\download.png"
+    },
+    {
+      "Id": "D:\\9 Months\\Final_Project_Crafts\\BackEndRepoV02\\Crafts.Api\\wwwroot\\Images\\im3.jpg",
+      "PackagePath": "staticwebassets\\Images\\im3.jpg"
     },
     {
       "Id": "D:\\9 Months\\Final_Project_Crafts\\BackEndRepoV02\\Crafts.Api\\wwwroot\\Images\\images.jfif",

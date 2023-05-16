@@ -26,4 +26,5 @@ public class Product
 
     public int? WishlistId { get; set; }
     public Wishlist? Wishlist { get; set; }
+
 }

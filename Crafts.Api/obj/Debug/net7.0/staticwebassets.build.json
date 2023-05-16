@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "PgLK+9g4WHtQLXIswwx/BLH2/8iqhPBuLAm8mpYJIno=",
+  "Hash": "kVa8vZwylctc7EgQMMvdVTQZd/61sfFlZ9ZifU+GqpI=",
   "Source": "Crafts.Api",
   "BasePath": "_content/Crafts.Api",
   "Mode": "Default",
@@ -17,6 +17,23 @@
   ],
   "Assets": [
     {
+      "Identity": "D:\\9 Months\\Final_Project_Crafts\\BackEndRepoV02\\Crafts.Api\\wwwroot\\Images\\CraftsLogo.png",
+      "SourceId": "Crafts.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\9 Months\\Final_Project_Crafts\\BackEndRepoV02\\Crafts.Api\\wwwroot\\",
+      "BasePath": "_content/Crafts.Api",
+      "RelativePath": "Images/CraftsLogo.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\CraftsLogo.png"
+    },
+    {
       "Identity": "D:\\9 Months\\Final_Project_Crafts\\BackEndRepoV02\\Crafts.Api\\wwwroot\\Images\\download.png",
       "SourceId": "Crafts.Api",
       "SourceType": "Discovered",
@@ -32,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\download.png"
+    },
+    {
+      "Identity": "D:\\9 Months\\Final_Project_Crafts\\BackEndRepoV02\\Crafts.Api\\wwwroot\\Images\\im3.jpg",
+      "SourceId": "Crafts.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\9 Months\\Final_Project_Crafts\\BackEndRepoV02\\Crafts.Api\\wwwroot\\",
+      "BasePath": "_content/Crafts.Api",
+      "RelativePath": "Images/im3.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\im3.jpg"
     },
     {
       "Identity": "D:\\9 Months\\Final_Project_Crafts\\BackEndRepoV02\\Crafts.Api\\wwwroot\\Images\\images.jfif",

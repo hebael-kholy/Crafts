@@ -13,5 +13,7 @@ namespace Crafts.BL.Managers.ProductManager
         Task Add(ProductAddDto productDto);
         List<ProductReadDto> GetAll();
         ProductReadDto? GetById(int id);
+        void AddImage(ProductImgAddDto product, int id);
+
     }
 }

@@ -9,12 +9,13 @@ namespace Crafts.BL.Dtos.ProductDtos
 {
     public class ProductAddDto
     {
-        public  string Title { get; set; }
+        public string Title { get; set; } = string.Empty;
         public  double Price { get; set; }
         public  float Rating { get; set; }
-        //public IFormFile? Image { get; set; }
-        public  int Quantity { get; set; }
+        public int Quantity { get; set; }
         public  bool IsSale { get; set; }
-        public  string Description { get; set; }
+        public string Description { get; set; } = string.Empty;
+        public int CategoryId { get; set; }
+
     }
 }

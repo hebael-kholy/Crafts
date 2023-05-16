@@ -1,7 +1,9 @@
 ﻿using Crafts.BL.Dtos.CouponDtos;
 using Crafts.BL.Dtos.ProductDtos;
+using Crafts.BL.Managers.Services;
 using Crafts.DAL.Models;
 using Crafts.DAL.Repos.ProductsRepo;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,9 +15,12 @@ namespace Crafts.BL.Managers.ProductManager
     public class ProductsManager : IProductsManager
     {
         private readonly IProductRepo _productRepo;
+        private readonly IFileService _fileService;
 
-        public ProductsManager(IProductRepo productRepo) {
+        public ProductsManager(IProductRepo productRepo,
+            IFileService fileService) {
             _productRepo = productRepo;
+            _fileService = fileService;
         }
         public async Task Add(ProductAddDto productDto)
         {
@@ -24,23 +29,28 @@ namespace Crafts.BL.Managers.ProductManager
                 Title = productDto.Title,
                 Price = productDto.Price,
                 Rating = productDto.Rating,
-                //Image = productDto.Image,
+                Image = "https://epin-sam.s3.ap-south-1.amazonaws.com/media/images/category/default.png",
                 Quantity = productDto.Quantity,
                 IsSale = productDto.IsSale,
-                Description = productDto.Description
+                Description = productDto.Description,
+                CategoryId = productDto.CategoryId
             };
             await _productRepo.Add(product);
             _productRepo.SaveChanges();
         }
+
+
         public List<ProductReadDto> GetAll()
         {
             List<Product> productsFromDB = _productRepo.GetAll();
             return productsFromDB
                 .Select(p => new ProductReadDto 
-                { Title = p.Title,
+                {
+                  Id = p.Id,
+                  Title = p.Title,
                   Price = p.Price,
                   Rating = p.Rating,
-                 // Image = p.Image, 
+                  Image = p.Image, 
                   Quantity = p.Quantity, 
                   IsSale = p.IsSale, 
                   Description = p.Description }).ToList();
@@ -55,11 +65,32 @@ namespace Crafts.BL.Managers.ProductManager
                     Title = p.Title,
                     Price = p.Price,
                     Rating = p.Rating,
-                   // Image = p.Image,
+                    Image = p.Image,
                     Quantity = p.Quantity,
                     IsSale = p.IsSale,
                     Description = p.Description
                 }).FirstOrDefault(p => p.Id == id);
+        }
+
+        public void AddImage([FromForm] ProductImgAddDto productImgAddDto, int id)
+        {
+            if (productImgAddDto.Image != null)
+            {
+                var categoryToEdit = _productRepo.GetAll().FirstOrDefault(c => c.Id == id);
+                if (categoryToEdit != null)
+                {
+                    var fileResult = _fileService.SaveImage(productImgAddDto.Image);
+
+                    //When Item1 in Tuple = 1 --> this means image saved successfully
+                    //When Item1 in Tuple = 0 --> this means image not saved successfully
+                    if (fileResult.Item1 == 1)
+                    {
+                        categoryToEdit.Image = fileResult.Item2;
+                        _productRepo.Update(categoryToEdit);
+                        _productRepo.SaveChanges();
+                    }
+                }
+            }
         }
     }
 }

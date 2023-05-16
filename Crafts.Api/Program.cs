@@ -1,5 +1,6 @@
 using Crafts.BL.Managers.CouponManager;
 using Crafts.BL.Managers.ProductManager;
+using Crafts.BL.Managers.Services;
 using Crafts.DAL.Context;
 using Crafts.DAL.Models;
 using Crafts.DAL.Models.Enum;
@@ -103,6 +104,12 @@ builder.Services.AddScoped<IProductRepo, ProductRepo>();
 
 builder.Services.AddScoped<ICouponsManager, CouponsManager>();
 builder.Services.AddScoped<IProductsManager, ProductsManager>();
+#endregion
+
+#region Services
+
+builder.Services.AddScoped<IFileService, FileService>();
+
 #endregion
 
 var app = builder.Build();

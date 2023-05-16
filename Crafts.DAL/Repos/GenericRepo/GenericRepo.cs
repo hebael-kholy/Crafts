@@ -46,4 +46,8 @@ public class GenericRepo<T>: IGenericRepo<T> where T : class
     {
         _context.Set<T>().Update(entity);
     }
+    //public void Update(int id, T entity)
+    //{
+    //    _context.Set<T>().Find()
+    //}
 }

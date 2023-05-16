@@ -17,9 +17,9 @@ namespace Crafts.Api.Controllers
         }
 
         [HttpPost]
-        public ActionResult Add(CouponAddDto couponDto)
+        public async Task<ActionResult> Add(CouponAddDto couponDto)
         {
-            _couponsManagers.Add(couponDto);
+            await _couponsManagers.Add(couponDto);
             return NoContent();
         }
 
