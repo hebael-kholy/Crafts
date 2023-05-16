@@ -1,23 +1,31 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\dina\\Desktop\\HandMade\\Crafts.Api\\wwwroot\\Images\\download.png",
+      "Id": "D:\\9 Months\\Final_Project_Crafts\\BackEndRepoV04\\HandMade\\Crafts.Api\\wwwroot\\Images\\0166e781-5aa2-496f-894a-481bd53395c6.jpg",
+      "PackagePath": "staticwebassets\\Images\\0166e781-5aa2-496f-894a-481bd53395c6.jpg"
+    },
+    {
+      "Id": "D:\\9 Months\\Final_Project_Crafts\\BackEndRepoV04\\HandMade\\Crafts.Api\\wwwroot\\Images\\c565a3ea-bacc-42e3-8f66-d0f7d54bbb98.jpg",
+      "PackagePath": "staticwebassets\\Images\\c565a3ea-bacc-42e3-8f66-d0f7d54bbb98.jpg"
+    },
+    {
+      "Id": "D:\\9 Months\\Final_Project_Crafts\\BackEndRepoV04\\HandMade\\Crafts.Api\\wwwroot\\Images\\download.png",
       "PackagePath": "staticwebassets\\Images\\download.png"
     },
     {
-      "Id": "C:\\Users\\dina\\Desktop\\HandMade\\Crafts.Api\\wwwroot\\Images\\images.jfif",
+      "Id": "D:\\9 Months\\Final_Project_Crafts\\BackEndRepoV04\\HandMade\\Crafts.Api\\wwwroot\\Images\\images.jfif",
       "PackagePath": "staticwebassets\\Images\\images.jfif"
     },
     {
-      "Id": "C:\\Users\\dina\\Desktop\\HandMade\\Crafts.Api\\wwwroot\\Images\\pexels-pixabay-268533.jpg",
+      "Id": "D:\\9 Months\\Final_Project_Crafts\\BackEndRepoV04\\HandMade\\Crafts.Api\\wwwroot\\Images\\pexels-pixabay-268533.jpg",
       "PackagePath": "staticwebassets\\Images\\pexels-pixabay-268533.jpg"
     },
     {
-      "Id": "C:\\Users\\dina\\Desktop\\HandMade\\Crafts.Api\\wwwroot\\Images\\photo_2023-02-20_13-49-40.jpg",
+      "Id": "D:\\9 Months\\Final_Project_Crafts\\BackEndRepoV04\\HandMade\\Crafts.Api\\wwwroot\\Images\\photo_2023-02-20_13-49-40.jpg",
       "PackagePath": "staticwebassets\\Images\\photo_2023-02-20_13-49-40.jpg"
     },
     {
-      "Id": "C:\\Users\\dina\\Desktop\\HandMade\\Crafts.Api\\wwwroot\\Images\\photo_2023-03-11_07-19-44.jpg",
+      "Id": "D:\\9 Months\\Final_Project_Crafts\\BackEndRepoV04\\HandMade\\Crafts.Api\\wwwroot\\Images\\photo_2023-03-11_07-19-44.jpg",
       "PackagePath": "staticwebassets\\Images\\photo_2023-03-11_07-19-44.jpg"
     },
     {
