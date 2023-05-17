@@ -57,5 +57,31 @@ namespace Crafts.Api.Controllers
                 return BadRequest(ex.Message);
             }
         }
+
+        [HttpPut]
+        [Route("{id}")]
+        public ActionResult Edit(int id, ProductUpdateDto productUpdateDto)
+        {
+            var product = _productsManager.GetById(id);
+
+            if (product == null) return NotFound(new { Message = "No Products Found!!" });
+
+            _productsManager.Update(productUpdateDto,id);
+            return CreatedAtAction(
+                actionName: nameof(GetAll),
+                value: "Updated Successfully");
+        }
+
+        [HttpDelete]
+        [Route("{id}")]
+        public ActionResult Delete(int id, ProductDeleteDto productDeleteDto)
+        {
+            if (productDeleteDto.Id != id) return NotFound(new { Message = "No Products Found!!" });
+
+            _productsManager.Delete(id);
+            return CreatedAtAction(
+                actionName: nameof(GetAll),
+                value: "Deleted Successfully");
+        }
     }
 }

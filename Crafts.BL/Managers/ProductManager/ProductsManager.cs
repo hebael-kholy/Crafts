@@ -38,7 +38,32 @@ namespace Crafts.BL.Managers.ProductManager
             await _productRepo.Add(product);
             _productRepo.SaveChanges();
         }
+        public void Update(ProductUpdateDto productUpdateDto, int id)
+        {
+            Product? ProductToEdit =  _productRepo.GetById(id);  //await
+    
+            if (ProductToEdit == null) { return; }
 
+            ProductToEdit.Title = productUpdateDto.Title != "string" ? productUpdateDto.Title : ProductToEdit.Title;
+            ProductToEdit.Price = productUpdateDto.Price != 0 ? productUpdateDto.Price : ProductToEdit.Price;
+            ProductToEdit.Quantity = productUpdateDto.Quantity != 0 ? productUpdateDto.Quantity : ProductToEdit.Quantity;
+            ProductToEdit.IsSale = productUpdateDto.IsSale;
+            ProductToEdit.Description = productUpdateDto.Description != "string" ? productUpdateDto.Description : ProductToEdit.Description; ;
+            ProductToEdit.CategoryId = productUpdateDto.CategoryId != 0 ? productUpdateDto.CategoryId : ProductToEdit.CategoryId;
+
+             _productRepo.Update(ProductToEdit);     //await
+            _productRepo.SaveChanges();
+        }
+
+        public void Delete(int id)
+        {
+            Product? product = _productRepo.GetById(id);
+
+            if (product is null) { return; }
+
+            _productRepo.Delete(product);
+            _productRepo.SaveChanges();
+        }
 
         public List<ProductReadDto> GetAll()
         {
