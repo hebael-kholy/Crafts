@@ -74,9 +74,10 @@ namespace Crafts.Api.Controllers
 
         [HttpDelete]
         [Route("{id}")]
-        public ActionResult Delete(int id, ProductDeleteDto productDeleteDto)
+        public ActionResult Delete(int id)
         {
-            if (productDeleteDto.Id != id) return NotFound(new { Message = "No Products Found!!" });
+            var product = _productsManager.GetById(id); 
+            if (product?.Id != id) return NotFound(new { Message = "No Products Found!!" });
 
             _productsManager.Delete(id);
             return CreatedAtAction(
