@@ -372,11 +372,11 @@ namespace Crafts.DAL.Migrations
                 columns: table => new
                 {
                     ProductsId = table.Column<int>(type: "int", nullable: false),
-                    WishListId = table.Column<int>(type: "int", nullable: false)
+                    WishListsId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_ProductWishlist", x => new { x.ProductsId, x.WishListId });
+                    table.PrimaryKey("PK_ProductWishlist", x => new { x.ProductsId, x.WishListsId });
                     table.ForeignKey(
                         name: "FK_ProductWishlist_Products_ProductsId",
                         column: x => x.ProductsId,
@@ -384,8 +384,8 @@ namespace Crafts.DAL.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_ProductWishlist_Wishlists_WishListId",
-                        column: x => x.WishListId,
+                        name: "FK_ProductWishlist_Wishlists_WishListsId",
+                        column: x => x.WishListsId,
                         principalTable: "Wishlists",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -454,9 +454,9 @@ namespace Crafts.DAL.Migrations
                 column: "CategoryId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_ProductWishlist_WishListId",
+                name: "IX_ProductWishlist_WishListsId",
                 table: "ProductWishlist",
-                column: "WishListId");
+                column: "WishListsId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Reviews_ProductId",

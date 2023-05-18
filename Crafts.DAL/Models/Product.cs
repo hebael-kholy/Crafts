@@ -21,6 +21,6 @@ public class Product
     public Category? Category { get; set; }
 
     public ICollection<Review> Reviews { get; set; } = new HashSet<Review>();
-    public ICollection<Wishlist> WishList { get; set; } = new HashSet<Wishlist>();
+    public ICollection<Wishlist> WishLists { get; set; } = new HashSet<Wishlist>();
 
 }
