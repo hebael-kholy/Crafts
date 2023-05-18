@@ -18,6 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Managers\WishListManager\" />
     <Folder Include="Managers\User\" />
   </ItemGroup>
 

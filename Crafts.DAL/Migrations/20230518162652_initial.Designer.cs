@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Crafts.DAL.Migrations
 {
     [DbContext(typeof(CraftsContext))]
-    [Migration("20230518124114_initial")]
+    [Migration("20230518162652_initial")]
     partial class initial
     {
         /// <inheritdoc />
@@ -221,14 +221,9 @@ namespace Crafts.DAL.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("WishlistId")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
 
                     b.HasIndex("CategoryId");
-
-                    b.HasIndex("WishlistId");
 
                     b.ToTable("Products");
                 });
@@ -491,6 +486,21 @@ namespace Crafts.DAL.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("ProductWishlist", b =>
+                {
+                    b.Property<int>("ProductsId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("WishListId")
+                        .HasColumnType("int");
+
+                    b.HasKey("ProductsId", "WishListId");
+
+                    b.HasIndex("WishListId");
+
+                    b.ToTable("ProductWishlist");
+                });
+
             modelBuilder.Entity("CartCoupon", b =>
                 {
                     b.HasOne("Crafts.DAL.Models.Cart", null)
@@ -563,13 +573,7 @@ namespace Crafts.DAL.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Crafts.DAL.Models.Wishlist", "Wishlist")
-                        .WithMany("Products")
-                        .HasForeignKey("WishlistId");
-
                     b.Navigation("Category");
-
-                    b.Navigation("Wishlist");
                 });
 
             modelBuilder.Entity("Crafts.DAL.Models.Review", b =>
@@ -653,6 +657,21 @@ namespace Crafts.DAL.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("ProductWishlist", b =>
+                {
+                    b.HasOne("Crafts.DAL.Models.Product", null)
+                        .WithMany()
+                        .HasForeignKey("ProductsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Crafts.DAL.Models.Wishlist", null)
+                        .WithMany()
+                        .HasForeignKey("WishListId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("Crafts.DAL.Models.Cart", b =>
                 {
                     b.Navigation("CartItems");
@@ -673,11 +692,6 @@ namespace Crafts.DAL.Migrations
                     b.Navigation("Orders");
 
                     b.Navigation("Reviews");
-                });
-
-            modelBuilder.Entity("Crafts.DAL.Models.Wishlist", b =>
-                {
-                    b.Navigation("Products");
                 });
 #pragma warning restore 612, 618
         }
