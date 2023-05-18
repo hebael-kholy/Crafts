@@ -45,15 +45,46 @@ namespace Crafts.BL.Managers.CouponManager
 
         public CouponReadDto? GetById(int id)
         {
-            List<Coupon> couponsFromDb = _couponRepo.GetAll();
-            return couponsFromDb
-                .Select(c => new CouponReadDto
-                {
-                    Id = c.Id,
-                    Name = c.Name,
-                    ExpireDate = c.ExpireDate,
-                    Discount = c.Discount
-                }).FirstOrDefault(c => c.Id == id);
+            Coupon? coupon = _couponRepo.GetById(id);
+            if (coupon == null)
+            {
+                throw new ArgumentException($"Coupon with id {id} is not found");
+            }
+            return new CouponReadDto
+            {
+                Id = coupon.Id,
+                Name = coupon.Name,
+                ExpireDate = coupon.ExpireDate,
+                Discount = coupon.Discount
+            };
+        }
+
+        public void Delete(int id)
+        {
+            Coupon? coupon = _couponRepo.GetById(id);
+            if (coupon == null)
+            {
+                throw new ArgumentException($"Coupon with id {id} is not found");
+            }
+            _couponRepo.Delete(coupon);
+            _couponRepo.SaveChanges();
+
+        }
+
+        public void Edit(CouponEditDto couponEditDto, int id)
+        {
+            Coupon? couponToEdit = _couponRepo.GetById(id);
+            if (couponToEdit == null)
+            {
+                throw new ArgumentException($"Coupon with id {id} is not found");
+            }
+
+            couponToEdit.Name = couponEditDto.Name;
+            couponToEdit.Discount = couponEditDto.Discount;
+            couponToEdit.ExpireDate = couponEditDto.ExpireDate;
+            
+            _couponRepo.Update(couponToEdit);
+            _couponRepo.SaveChanges();
         }
     }
 }
