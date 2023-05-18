@@ -10,6 +10,6 @@ namespace Crafts.DAL.Repos.CategoryRepo
 {
     public interface ICategoryRepo : IGenericRepo<Category>
     {
-
+        Category GetCategoryWithProducts(int id);
     }
 }

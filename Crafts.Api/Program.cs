@@ -8,6 +8,7 @@ using Crafts.DAL.Models;
 using Crafts.DAL.Models.Enum;
 using Crafts.DAL.Repos.CategoryRepo;
 using Crafts.DAL.Repos.CouponRepo;
+using Crafts.DAL.Repos.IdentityRepo;
 using Crafts.DAL.Repos.ProductsRepo;
 using Crafts.DAL.Repos.ReviewRepo;
 using Microsoft.AspNetCore.Identity;
@@ -104,6 +105,8 @@ builder.Services.AddScoped<ICouponRepo, CouponRepo>();
 builder.Services.AddScoped<ICategoryRepo, CategoryRepo>();
 builder.Services.AddScoped<IReviewRepo, ReviewRepo>();
 builder.Services.AddScoped<IProductRepo,ProductRepo>();
+builder.Services.AddScoped<IUserRepo, UserRepo>();
+
 
 #endregion
 

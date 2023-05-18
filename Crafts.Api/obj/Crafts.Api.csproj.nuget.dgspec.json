@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\9 Months\\Final_Project_Crafts\\BackEndRepoV04\\HandMade\\Crafts.Api\\Crafts.Api.csproj": {}
+    "E:\\ITI\\Final Project .Net API\\HandMade\\Crafts.Api\\Crafts.Api.csproj": {}
   },
   "projects": {
-    "D:\\9 Months\\Final_Project_Crafts\\BackEndRepoV04\\HandMade\\Crafts.Api\\Crafts.Api.csproj": {
+    "E:\\ITI\\Final Project .Net API\\HandMade\\Crafts.Api\\Crafts.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\9 Months\\Final_Project_Crafts\\BackEndRepoV04\\HandMade\\Crafts.Api\\Crafts.Api.csproj",
+        "projectUniqueName": "E:\\ITI\\Final Project .Net API\\HandMade\\Crafts.Api\\Crafts.Api.csproj",
         "projectName": "Crafts.Api",
-        "projectPath": "D:\\9 Months\\Final_Project_Crafts\\BackEndRepoV04\\HandMade\\Crafts.Api\\Crafts.Api.csproj",
-        "packagesPath": "C:\\Users\\TRUST\\.nuget\\packages\\",
-        "outputPath": "D:\\9 Months\\Final_Project_Crafts\\BackEndRepoV04\\HandMade\\Crafts.Api\\obj\\",
+        "projectPath": "E:\\ITI\\Final Project .Net API\\HandMade\\Crafts.Api\\Crafts.Api.csproj",
+        "packagesPath": "C:\\Users\\dina\\.nuget\\packages\\",
+        "outputPath": "E:\\ITI\\Final Project .Net API\\HandMade\\Crafts.Api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\TRUST\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\dina\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +28,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "D:\\9 Months\\Final_Project_Crafts\\BackEndRepoV04\\HandMade\\Crafts.BL\\Crafts.BL.csproj": {
-                "projectPath": "D:\\9 Months\\Final_Project_Crafts\\BackEndRepoV04\\HandMade\\Crafts.BL\\Crafts.BL.csproj"
+              "E:\\ITI\\Final Project .Net API\\HandMade\\Crafts.BL\\Crafts.BL.csproj": {
+                "projectPath": "E:\\ITI\\Final Project .Net API\\HandMade\\Crafts.BL\\Crafts.BL.csproj"
               }
             }
           }
@@ -82,21 +82,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\9 Months\\Final_Project_Crafts\\BackEndRepoV04\\HandMade\\Crafts.BL\\Crafts.BL.csproj": {
+    "E:\\ITI\\Final Project .Net API\\HandMade\\Crafts.BL\\Crafts.BL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\9 Months\\Final_Project_Crafts\\BackEndRepoV04\\HandMade\\Crafts.BL\\Crafts.BL.csproj",
+        "projectUniqueName": "E:\\ITI\\Final Project .Net API\\HandMade\\Crafts.BL\\Crafts.BL.csproj",
         "projectName": "Crafts.BL",
-        "projectPath": "D:\\9 Months\\Final_Project_Crafts\\BackEndRepoV04\\HandMade\\Crafts.BL\\Crafts.BL.csproj",
-        "packagesPath": "C:\\Users\\TRUST\\.nuget\\packages\\",
-        "outputPath": "D:\\9 Months\\Final_Project_Crafts\\BackEndRepoV04\\HandMade\\Crafts.BL\\obj\\",
+        "projectPath": "E:\\ITI\\Final Project .Net API\\HandMade\\Crafts.BL\\Crafts.BL.csproj",
+        "packagesPath": "C:\\Users\\dina\\.nuget\\packages\\",
+        "outputPath": "E:\\ITI\\Final Project .Net API\\HandMade\\Crafts.BL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\TRUST\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\dina\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -110,8 +110,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "D:\\9 Months\\Final_Project_Crafts\\BackEndRepoV04\\HandMade\\Crafts.DAL\\Crafts.DAL.csproj": {
-                "projectPath": "D:\\9 Months\\Final_Project_Crafts\\BackEndRepoV04\\HandMade\\Crafts.DAL\\Crafts.DAL.csproj"
+              "E:\\ITI\\Final Project .Net API\\HandMade\\Crafts.DAL\\Crafts.DAL.csproj": {
+                "projectPath": "E:\\ITI\\Final Project .Net API\\HandMade\\Crafts.DAL\\Crafts.DAL.csproj"
               }
             }
           }
@@ -149,21 +149,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\9 Months\\Final_Project_Crafts\\BackEndRepoV04\\HandMade\\Crafts.DAL\\Crafts.DAL.csproj": {
+    "E:\\ITI\\Final Project .Net API\\HandMade\\Crafts.DAL\\Crafts.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\9 Months\\Final_Project_Crafts\\BackEndRepoV04\\HandMade\\Crafts.DAL\\Crafts.DAL.csproj",
+        "projectUniqueName": "E:\\ITI\\Final Project .Net API\\HandMade\\Crafts.DAL\\Crafts.DAL.csproj",
         "projectName": "Crafts.DAL",
-        "projectPath": "D:\\9 Months\\Final_Project_Crafts\\BackEndRepoV04\\HandMade\\Crafts.DAL\\Crafts.DAL.csproj",
-        "packagesPath": "C:\\Users\\TRUST\\.nuget\\packages\\",
-        "outputPath": "D:\\9 Months\\Final_Project_Crafts\\BackEndRepoV04\\HandMade\\Crafts.DAL\\obj\\",
+        "projectPath": "E:\\ITI\\Final Project .Net API\\HandMade\\Crafts.DAL\\Crafts.DAL.csproj",
+        "packagesPath": "C:\\Users\\dina\\.nuget\\packages\\",
+        "outputPath": "E:\\ITI\\Final Project .Net API\\HandMade\\Crafts.DAL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\TRUST\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\dina\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -250,7 +250,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }
