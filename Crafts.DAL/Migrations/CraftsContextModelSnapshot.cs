@@ -488,12 +488,12 @@ namespace Crafts.DAL.Migrations
                     b.Property<int>("ProductsId")
                         .HasColumnType("int");
 
-                    b.Property<int>("WishListId")
+                    b.Property<int>("WishListsId")
                         .HasColumnType("int");
 
-                    b.HasKey("ProductsId", "WishListId");
+                    b.HasKey("ProductsId", "WishListsId");
 
-                    b.HasIndex("WishListId");
+                    b.HasIndex("WishListsId");
 
                     b.ToTable("ProductWishlist");
                 });
@@ -664,7 +664,7 @@ namespace Crafts.DAL.Migrations
 
                     b.HasOne("Crafts.DAL.Models.Wishlist", null)
                         .WithMany()
-                        .HasForeignKey("WishListId")
+                        .HasForeignKey("WishListsId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });

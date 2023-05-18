@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Crafts.DAL.Migrations
 {
     [DbContext(typeof(CraftsContext))]
-    [Migration("20230518162652_initial")]
+    [Migration("20230518164859_initial")]
     partial class initial
     {
         /// <inheritdoc />
@@ -491,12 +491,12 @@ namespace Crafts.DAL.Migrations
                     b.Property<int>("ProductsId")
                         .HasColumnType("int");
 
-                    b.Property<int>("WishListId")
+                    b.Property<int>("WishListsId")
                         .HasColumnType("int");
 
-                    b.HasKey("ProductsId", "WishListId");
+                    b.HasKey("ProductsId", "WishListsId");
 
-                    b.HasIndex("WishListId");
+                    b.HasIndex("WishListsId");
 
                     b.ToTable("ProductWishlist");
                 });
@@ -667,7 +667,7 @@ namespace Crafts.DAL.Migrations
 
                     b.HasOne("Crafts.DAL.Models.Wishlist", null)
                         .WithMany()
-                        .HasForeignKey("WishListId")
+                        .HasForeignKey("WishListsId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
