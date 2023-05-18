@@ -39,6 +39,37 @@ namespace Crafts.BL.Managers.CategoryManagers
             }).ToList();
         }
 
+        public CategoryReadDto GetById(int id)
+        {
+            var category = _categoryRepo.GetById(id);
+            if(category != null)
+            {
+                return new CategoryReadDto
+                {
+                    Id = category.Id,
+                    Image = category.Image,
+                    Title = category.Title,
+                };
+            }
+            else
+            {
+                throw new ArgumentException($"Category with id {id} is not found");
+            }
+        }
+
+        public Category GetCategoryWithProducts(int id)
+        {
+            var category = _categoryRepo.GetCategoryWithProducts(id);
+            if(category != null)
+            {
+                return category;
+            }
+            else
+            {
+                throw new ArgumentException($"Category with id {id} is not found");
+            }
+        }
+
         public void AddImage([FromForm]CategoryImgAddDto categoryImgAddDto, int id)
         {
             if(categoryImgAddDto.Image != null)
@@ -69,6 +100,36 @@ namespace Crafts.BL.Managers.CategoryManagers
             };
             await _categoryRepo.Add(categoryToAdd);
             _categoryRepo.SaveChanges();
+        }
+
+        public void Edit(CategoryEditDto categoryEditDto, int id)
+        {
+            var categoryToEdit = _categoryRepo.GetById(id);
+            if (categoryToEdit != null)
+            {
+                categoryToEdit.Title = categoryEditDto.Title;
+                _categoryRepo.Update(categoryToEdit);
+                _categoryRepo.SaveChanges();
+            }
+            else
+            {
+                throw new ArgumentException($"Category with id {id} is not found");
+            }
+        }
+
+        public void Delete(int id)
+        {
+            var categoryToDelete = _categoryRepo.GetById(id);
+
+            if(categoryToDelete != null)
+            {
+                _categoryRepo.Delete(categoryToDelete);
+                _categoryRepo.SaveChanges();
+            }
+            else
+            {
+                throw new ArgumentException($"Category with id {id} is not found");
+            }
         }
     }
 }

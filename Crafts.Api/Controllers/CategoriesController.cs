@@ -1,6 +1,7 @@
 ﻿using Crafts.BL.Dtos;
 using Crafts.BL.Dtos.CategoryDtos;
 using Crafts.BL.Managers.CategoryManagers;
+using Crafts.DAL.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -26,14 +27,41 @@ namespace Crafts.Api.Controllers
             return _categoryManager.GetAll();
         }
 
-        [HttpPost]
-        public async Task<ActionResult> Add(CategoryAddDto categoryAddDto)
+        [HttpGet]
+        [Route("{id:int}")]
+        public ActionResult<CategoryReadDto> GetById(int id) 
+        {
+            var category = _categoryManager.GetById(id);
+            if (category == null)
+            {
+                return NotFound(new GeneralResponse("Category is not found"));
+            }
+            return category;
+        }
+
+        [HttpGet]
+        [Route("Products")]
+        public ActionResult<Category> GetProductsWithEachCategory(int id)
         {
             try
             {
-                await _categoryManager.Add(categoryAddDto);
+                var category = _categoryManager.GetCategoryWithProducts(id);
+                return Ok(category);
+            }
+            catch(Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpPost]
+        public async Task<ActionResult> Add(CategoryAddDto category)
+        {
+            try
+            {
+                await _categoryManager.Add(category);
                 var msg = new GeneralResponse("Category Added Successfully");
-                var res = new { msg, categoryAddDto };
+                var res = new { msg, category };
                 return Ok(res);
             }
             catch(Exception ex)
@@ -44,19 +72,45 @@ namespace Crafts.Api.Controllers
 
         [HttpPut]
         [Route("image/{id:int}")] //"api/categories/uploadimage" (Edit Image)
-        public ActionResult AddImage([FromForm] CategoryImgAddDto categoryImgAddDto, int id)
+        public ActionResult AddImage([FromForm] CategoryImgAddDto categoryImage, int id)
         {
             try
             {
-                _categoryManager.AddImage(categoryImgAddDto, id);
-                var msg = new GeneralResponse($"Image Updated Successfully with Id: {id}");
-                var res = new { msg, id, categoryImgAddDto };
+                _categoryManager.AddImage(categoryImage, id);
+                var msg = new GeneralResponse($"Image with id {id} Updated Successfully");
+                var res = new { msg, id, categoryImage };
                 return Ok(res);
             }
             catch (Exception ex)
             {
                 return BadRequest(ex.Message);
             }
+        }
+
+        [HttpPut]
+        [Route("{id:int}")]
+        public ActionResult Edit(CategoryEditDto category, int id)
+        {
+            try
+            {
+                _categoryManager.Edit(category, id);
+                var msg = new GeneralResponse($"Category with id {id} Updated Successfully");
+                var res = new { msg, id, category };
+                return Ok(res);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpDelete]
+        public ActionResult Delete(int id)
+        {
+            _categoryManager.Delete(id);
+            var msg = new GeneralResponse($"Category with id {id} Deleted Successfully");
+            var res = new { msg, id };
+            return Ok(res);
         }
     }
 }
