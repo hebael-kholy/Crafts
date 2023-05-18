@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,6 +17,7 @@ public class Cart
     public ICollection<CartItem> CartItems { get; set;} = new HashSet<CartItem>();
     public ICollection<Coupon> Coupons { get; set;} = new HashSet<Coupon>();
 
-    public int UserId { get; set; }
+    
+    public string UserId { get; set; } = string.Empty;
     public User? User { get; set; }
 }

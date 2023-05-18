@@ -20,7 +20,9 @@ public class CraftsContext : IdentityDbContext<User>
     protected override void OnModelCreating(ModelBuilder builder)
     {
         base.OnModelCreating(builder);
-        builder.Entity<User>().ToTable("Users");   
+        builder.Entity<User>().ToTable("Users");
+        builder.Entity<Order>().HasOne(o => o.User)
+            .WithMany(u => u.Orders).HasForeignKey(o=>o.UserId).OnDelete(DeleteBehavior.NoAction);
     }
 
     public DbSet<Cart> Carts => Set<Cart>();
