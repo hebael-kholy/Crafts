@@ -1,6 +1,7 @@
 ﻿using Crafts.DAL.Models.Enum;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,7 +20,7 @@ public class Order
     public DateTime CratedAt { get; set; } = DateTime.Now;
     public bool IsPaid { get; set; }
 
-    public int UserId { get; set; }
+    public string UserId { get; set; } = string.Empty;
     public User? User { get; set; }
 
 
