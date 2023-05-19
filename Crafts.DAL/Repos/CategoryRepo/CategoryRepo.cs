@@ -1,27 +1,24 @@
 ﻿using Crafts.DAL.Context;
 using Crafts.DAL.Models;
 using Crafts.DAL.Repos.GenericRepo;
-using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace Crafts.DAL.Repos.CategoryRepo
 {
     public class CategoryRepo : GenericRepo<Category>, ICategoryRepo
     {
         private readonly CraftsContext _context;
-        public CategoryRepo(CraftsContext context):base(context) 
+        public CategoryRepo(CraftsContext context) : base(context)
         {
             _context = context;
         }
-        public Category GetCategoryWithProducts(int id)
+        public Category? GetByIdWithProducts(int id)
         {
-            return _context.Set<Category>()
+            //Explicit Loading
+            var x = _context.Categories
                 .Include(c => c.Products)
-                .FirstOrDefault(c => c.Id == id)!;
+                .FirstOrDefault(c => c.Id == id);
+            return x;
         }
     }
 }

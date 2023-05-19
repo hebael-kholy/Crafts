@@ -1,4 +1,5 @@
 ﻿using Crafts.BL.Dtos.CategoryDtos;
+using Crafts.BL.Dtos.ProductDtos;
 using Crafts.BL.Managers.Services;
 using Crafts.DAL.Models;
 using Crafts.DAL.Repos.CategoryRepo;
@@ -57,12 +58,30 @@ namespace Crafts.BL.Managers.CategoryManagers
             }
         }
 
-        public Category GetCategoryWithProducts(int id)
+        public CategoryWithProductsDto GetByIdWithProducts(int id)
         {
-            var category = _categoryRepo.GetCategoryWithProducts(id);
+            var category = _categoryRepo.GetByIdWithProducts(id);
             if(category != null)
             {
-                return category;
+                return new CategoryWithProductsDto
+                {
+                    Id = category.Id,
+                    Image = category.Image,
+                    Title = category.Title,
+                    //We used Select To convert from list of products to list of ProductsReadDto
+                    Products = category.Products.Select(p => new ProductReadDto
+                    {
+                        Id = p.Id,
+                        Title = p.Title,
+                        Price = p.Price,
+                        Rating = p.Rating,
+                        Image = p.Image,
+                        Quantity = p.Quantity,
+                        IsSale = p.IsSale,
+                        Description = p.Description,
+                        CategoryId = p.CategoryId,
+                    }).ToList()
+                };
             }
             else
             {
