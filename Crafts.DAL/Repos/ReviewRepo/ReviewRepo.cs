@@ -1,16 +1,11 @@
 ﻿using Crafts.DAL.Context;
 using Crafts.DAL.Models;
 using Crafts.DAL.Repos.GenericRepo;
-using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace Crafts.DAL.Repos.ReviewRepo
 {
-    public class ReviewRepo: GenericRepo<Review>, IReviewRepo
+    public class ReviewRepo : GenericRepo<Review>, IReviewRepo
     {
         private readonly CraftsContext _context;
         public ReviewRepo(CraftsContext context) : base(context)

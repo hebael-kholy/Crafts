@@ -77,7 +77,8 @@ namespace Crafts.BL.Managers.ProductManager
                   Rating = p.Rating,
                   Image = p.Image, 
                   Quantity = p.Quantity, 
-                  IsSale = p.IsSale, 
+                  IsSale = p.IsSale,
+                  CategoryId = p.CategoryId,
                   Description = p.Description }).ToList();
         }
         public ProductReadDto? GetById(int id)
@@ -93,7 +94,8 @@ namespace Crafts.BL.Managers.ProductManager
                     Image = p.Image,
                     Quantity = p.Quantity,
                     IsSale = p.IsSale,
-                    Description = p.Description
+                    Description = p.Description,
+                    CategoryId = p.CategoryId,
                 }).FirstOrDefault(p => p.Id == id);
         }
 

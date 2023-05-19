@@ -40,15 +40,15 @@ namespace Crafts.Api.Controllers
         }
 
         [HttpGet]
-        [Route("Products")]
-        public ActionResult<Category> GetProductsWithEachCategory(int id)
+        [Route("{id:int}/Products")]
+        public ActionResult<CategoryWithProductsDto> GetByIdWithProducts(int id)
         {
             try
             {
-                var category = _categoryManager.GetCategoryWithProducts(id);
-                return Ok(category);
+                var categoryWithProducts = _categoryManager.GetByIdWithProducts(id);
+                return Ok(categoryWithProducts);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 return BadRequest(ex.Message);
             }

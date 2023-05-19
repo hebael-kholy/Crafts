@@ -194,11 +194,7 @@ C:\Users\dina\Desktop\HandMade\Crafts.Api\bin\Debug\net7.0\Crafts.Api.dll
 C:\Users\dina\Desktop\HandMade\Crafts.Api\bin\Debug\net7.0\Crafts.Api.pdb
 C:\Users\dina\Desktop\HandMade\Crafts.Api\bin\Debug\net7.0\Azure.Core.dll
 C:\Users\dina\Desktop\HandMade\Crafts.Api\bin\Debug\net7.0\Azure.Identity.dll
-C:\Users\dina\Desktop\HandMade\Crafts.Api\bin\Debug\net7.0\EntityFramework.SqlServer.dll
-C:\Users\dina\Desktop\HandMade\Crafts.Api\bin\Debug\net7.0\EntityFramework.dll
 C:\Users\dina\Desktop\HandMade\Crafts.Api\bin\Debug\net7.0\Humanizer.dll
-C:\Users\dina\Desktop\HandMade\Crafts.Api\bin\Debug\net7.0\Microsoft.AspNet.Identity.Core.dll
-C:\Users\dina\Desktop\HandMade\Crafts.Api\bin\Debug\net7.0\Microsoft.AspNet.Identity.EntityFramework.dll
 C:\Users\dina\Desktop\HandMade\Crafts.Api\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\dina\Desktop\HandMade\Crafts.Api\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.Internal.dll
 C:\Users\dina\Desktop\HandMade\Crafts.Api\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll

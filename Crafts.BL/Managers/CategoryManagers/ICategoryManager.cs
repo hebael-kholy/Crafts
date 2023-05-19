@@ -11,7 +11,7 @@ namespace Crafts.BL.Managers.CategoryManagers
     public interface ICategoryManager
     {
         List<CategoryReadDto> GetAll();
-        Category GetCategoryWithProducts(int id);
+        CategoryWithProductsDto GetByIdWithProducts(int id);
         void AddImage(CategoryImgAddDto category, int id);
         Task Add(CategoryAddDto category);
         CategoryReadDto GetById(int id);
