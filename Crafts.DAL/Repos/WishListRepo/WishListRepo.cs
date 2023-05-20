@@ -1,6 +1,7 @@
 ﻿using Crafts.DAL.Context;
 using Crafts.DAL.Models;
 using Crafts.DAL.Repos.GenericRepo;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,6 +17,13 @@ namespace Crafts.DAL.Repos.WishListRepo
         public WishListRepo(CraftsContext context):base(context) 
         {
             _context = context;
+        }
+
+        public Wishlist? GetUserWishList(string userId)
+        {
+            return _context.Set<Wishlist>()
+                .Include(w=>w.Products)
+                .FirstOrDefault(c => c.UserId == userId);
         }
     }
 }
