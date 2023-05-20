@@ -9,8 +9,11 @@ namespace Crafts.BL.Dtos.WishListDto
 {
     public class WishlistWithProductsDto
     {
-        public int productId { get; set; }
-        public int wishlistId { get; set; }
+        public int Id { get; set; }
+        public string userId { get; set; } = string.Empty;
+        public DateTime CreatedAt { get; set; }
+        public List<ProductReadDto> Products { get; set; } = new();
+
 
     }
 }

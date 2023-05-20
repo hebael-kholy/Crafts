@@ -12,8 +12,9 @@ namespace Crafts.BL.Managers.WishListManager
         WishListReadDto GetUserWishList(string userId);
         List<WishListReadDto> GetAll();
         Task Add(WishListAddDto wishList);
-
-       // void AddProductToWishList(string userId, int productId);
+        void AddProductToWishlistAsync(int productId, int wishlist);
+        void DeleteProductFromWishListAsync(int productId , int wishlistId);
+        WishlistWithProductsDto GetByIdWithProducts(int id);
         WishListReadDto GetById(int id);
         void Delete(int id);
     }

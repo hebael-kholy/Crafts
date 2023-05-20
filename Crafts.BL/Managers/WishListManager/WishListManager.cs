@@ -29,6 +29,45 @@ public class WishListManager : IWishListManager
         _productRepo = productRepo;
         _userRepo = userRepo;
     }
+
+    //add product to wishlist
+    public void AddProductToWishlistAsync(int productId, int wishlistId)
+    {
+
+        var wishlist = _wishListRepo.GetById(wishlistId);
+        var product = _productRepo.GetById(productId);
+
+        if (wishlist is not null)
+        {
+            if (wishlist.Products.Any(p => p.Id == productId))
+            {
+                throw new ArgumentException("Product already exists in wishlist");
+            }
+        }
+
+        wishlist.Products.Add(product);
+        _wishListRepo.Update(wishlist);
+        _wishListRepo.SaveChanges();
+
+    }
+    //Remove Product From WishList      //=> Don't Delete from DB =>
+    public void DeleteProductFromWishListAsync(int productId, int wishlistId)
+    {
+        var wishlist = _wishListRepo.GetById(wishlistId);
+       // var product = _productRepo.GetById(productId);
+
+        if (wishlist is not null)
+        {
+            var product = wishlist.Products.FirstOrDefault(p => p.Id == productId);
+            if (product != null)
+            {
+                wishlist.Products.Remove(product);
+                _wishListRepo.Update(wishlist);
+                _wishListRepo.SaveChanges();
+            }
+        }
+    }
+    //add wishlist to user
     public async Task Add(WishListAddDto wishListAddDto)
     {
         var userId = wishListAddDto.UserId;
@@ -54,6 +93,8 @@ public class WishListManager : IWishListManager
         }
         _wishListRepo.SaveChanges();
     }
+
+    //delete wishlist by id
     public void Delete(int id)
     {
         var wishListToDelete = _wishListRepo.GetById(id);
@@ -69,6 +110,7 @@ public class WishListManager : IWishListManager
         }
     }
 
+    //get Wishlist by id
     public WishListReadDto GetById(int id)
     {
         var wishList = _wishListRepo.GetById(id);
@@ -88,17 +130,52 @@ public class WishListManager : IWishListManager
 
 
     }
-    
+
+    //Get WishList with it's Products
+    public WishlistWithProductsDto GetByIdWithProducts(int id)
+    {
+        Wishlist? wishList = _wishListRepo.GetByIdWithProducts(id);
+        if (wishList != null)
+        {
+            return new WishlistWithProductsDto
+            {
+                Id = wishList.Id,
+                userId = wishList.UserId,
+                Products = wishList.Products.Select(w=> new ProductReadDto
+                {
+                    Id = w.Id,
+                    Title = w.Title,
+                    Price = w.Price,
+                    Rating = w.Rating,
+                    Image = w.Image,
+                    Quantity = w.Quantity,
+                    IsSale = w.IsSale,
+                    Description = w.Description,
+                    CategoryId = w.CategoryId
+                }).ToList()
+            };
+        }
+        else
+        {
+            throw new ArgumentException($"WishList with id {id} is not found");
+        }
+
+
+    }
+    //get all wishLists             //=> Don't get all products =>
     public List<WishListReadDto> GetAll()
     {
+   
         List<Wishlist> WishListsFromDb = _wishListRepo.GetAll();
         return WishListsFromDb.Select(w => new WishListReadDto
         {
             Id = w.Id,
-            CreatedAt= w.CreatedAt,
             UserId = w.UserId,
+            CreatedAt = w.CreatedAt
+           // Products= w.Products.Select(p => new ProductReadDto { Id = p.Id, CategoryId = p.CategoryId }).ToList(),
         }).ToList();
     }
+    //get user wishList
     public WishListReadDto GetUserWishList(string userId)
     {
         var wishlist = _wishListRepo.GetUserWishList(userId);
