@@ -1,4 +1,4 @@
-﻿using Crafts.DAL.Models;
+﻿using Crafts.BL.Dtos.ProductDtos;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace Crafts.BL.Dtos.WishListDto
 {
-    public class WishListReadDto
+    public class WishlistWithProductsDto
     {
         public int Id { get; set; }
+        public string userId { get; set; } = string.Empty;
         public DateTime CreatedAt { get; set; }
-        public string UserId { get; set; } = string.Empty;
-        public ICollection<Product> Products { get; set; } = new HashSet<Product>();
+        public List<ProductReadDto> Products { get; set; } = new();
 
 
     }

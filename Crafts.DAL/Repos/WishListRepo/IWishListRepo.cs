@@ -10,5 +10,7 @@ namespace Crafts.DAL.Repos.WishListRepo
 {
     public interface IWishListRepo:IGenericRepo<Wishlist>
     {
+        Wishlist? GetUserWishList(string userId);
+        Wishlist? GetByIdWithProducts(int id);
     }
 }

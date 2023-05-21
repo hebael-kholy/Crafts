@@ -7,6 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Managers\User\**" />
+    <EmbeddedResource Remove="Managers\User\**" />
+    <None Remove="Managers\User\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.5">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -15,11 +21,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Crafts.DAL\Crafts.DAL.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Managers\WishListManager\" />
-    <Folder Include="Managers\User\" />
   </ItemGroup>
 
 </Project>

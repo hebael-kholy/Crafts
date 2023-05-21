@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Crafts.BL.Dtos.WishListDto
 {
-    public class WishListAddDto
+    public class WishListAddToUserDto
     {
-        public DateTime CreatedAt { get; set; }
-        public string UserId { get; set; } = string.Empty;
+        public int wishlistId { get; set; }
+        public int UserId { get; set; }
     }
 }

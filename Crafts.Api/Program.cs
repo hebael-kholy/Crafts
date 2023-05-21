@@ -3,6 +3,7 @@ using Crafts.BL.Managers.CouponManager;
 using Crafts.BL.Managers.ProductManager;
 using Crafts.BL.Managers.ReviewManagers;
 using Crafts.BL.Managers.Services;
+using Crafts.BL.Managers.WishListManager;
 using Crafts.DAL.Context;
 using Crafts.DAL.Models;
 using Crafts.DAL.Models.Enum;
@@ -11,6 +12,7 @@ using Crafts.DAL.Repos.CouponRepo;
 using Crafts.DAL.Repos.IdentityRepo;
 using Crafts.DAL.Repos.ProductsRepo;
 using Crafts.DAL.Repos.ReviewRepo;
+using Crafts.DAL.Repos.WishListRepo;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -106,6 +108,7 @@ builder.Services.AddScoped<ICategoryRepo, CategoryRepo>();
 builder.Services.AddScoped<IReviewRepo, ReviewRepo>();
 builder.Services.AddScoped<IProductRepo,ProductRepo>();
 builder.Services.AddScoped<IUserRepo, UserRepo>();
+builder.Services.AddScoped<IWishListRepo, WishListRepo>();
 
 
 #endregion
@@ -116,6 +119,8 @@ builder.Services.AddScoped<ICouponsManager, CouponsManager>();
 builder.Services.AddScoped<ICategoryManager, CategoryManager>();
 builder.Services.AddScoped<IReviewManager, ReviewManager>();
 builder.Services.AddScoped<IProductsManager,ProductsManager>();
+builder.Services.AddScoped<IWishListManager, WishListManager>();
+
 
 #endregion
 
