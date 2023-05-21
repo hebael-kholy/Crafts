@@ -109,6 +109,10 @@ builder.Services.AddScoped<IReviewRepo, ReviewRepo>();
 builder.Services.AddScoped<IProductRepo,ProductRepo>();
 builder.Services.AddScoped<IUserRepo, UserRepo>();
 builder.Services.AddScoped<IWishListRepo, WishListRepo>();
+builder.Services.AddScoped<ICartRepo, CartRepo>();
+builder.Services.AddScoped<ICartItemRepo, CartItemRepo>();
+
+
 
 
 #endregion
@@ -120,6 +124,9 @@ builder.Services.AddScoped<ICategoryManager, CategoryManager>();
 builder.Services.AddScoped<IReviewManager, ReviewManager>();
 builder.Services.AddScoped<IProductsManager,ProductsManager>();
 builder.Services.AddScoped<IWishListManager, WishListManager>();
+builder.Services.AddScoped<ICartManager, CartManager>();
+builder.Services.AddScoped<ICartItemsManager, CartItemsManager>();
+
 
 
 #endregion
