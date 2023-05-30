@@ -7825,19 +7825,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\TRUST\\.nuget\\packages\\": {}
+    "C:\\Users\\User\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\9 Months\\Final_Project_Crafts\\BackEndRepoV05\\HandMade\\Crafts.Api\\Crafts.Api.csproj",
+      "projectUniqueName": "D:\\Graduation Project\\Crafts\\Crafts.Api\\Crafts.Api.csproj",
       "projectName": "Crafts.Api",
-      "projectPath": "D:\\9 Months\\Final_Project_Crafts\\BackEndRepoV05\\HandMade\\Crafts.Api\\Crafts.Api.csproj",
-      "packagesPath": "C:\\Users\\TRUST\\.nuget\\packages\\",
-      "outputPath": "D:\\9 Months\\Final_Project_Crafts\\BackEndRepoV05\\HandMade\\Crafts.Api\\obj\\",
+      "projectPath": "D:\\Graduation Project\\Crafts\\Crafts.Api\\Crafts.Api.csproj",
+      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+      "outputPath": "D:\\Graduation Project\\Crafts\\Crafts.Api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\TRUST\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -7851,8 +7851,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "D:\\9 Months\\Final_Project_Crafts\\BackEndRepoV05\\HandMade\\Crafts.BL\\Crafts.BL.csproj": {
-              "projectPath": "D:\\9 Months\\Final_Project_Crafts\\BackEndRepoV05\\HandMade\\Crafts.BL\\Crafts.BL.csproj"
+            "D:\\Graduation Project\\Crafts\\Crafts.BL\\Crafts.BL.csproj": {
+              "projectPath": "D:\\Graduation Project\\Crafts\\Crafts.BL\\Crafts.BL.csproj"
             }
           }
         }
@@ -7905,7 +7905,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -641,3 +641,13 @@ D:\9 Months\Final_Project_Crafts\BackEndRepoV05\HandMade\Crafts.Api\obj\Debug\ne
 D:\9 Months\Final_Project_Crafts\BackEndRepoV05\HandMade\Crafts.Api\obj\Debug\net7.0\Crafts.Api.pdb
 D:\9 Months\Final_Project_Crafts\BackEndRepoV05\HandMade\Crafts.Api\obj\Debug\net7.0\Crafts.Api.genruntimeconfig.cache
 D:\9 Months\Final_Project_Crafts\BackEndRepoV05\HandMade\Crafts.Api\obj\Debug\net7.0\ref\Crafts.Api.dll
+D:\Graduation Project\Crafts\Crafts.Api\obj\Debug\net7.0\Crafts.Api.csproj.AssemblyReference.cache
+D:\Graduation Project\Crafts\Crafts.Api\obj\Debug\net7.0\Crafts.Api.GeneratedMSBuildEditorConfig.editorconfig
+D:\Graduation Project\Crafts\Crafts.Api\obj\Debug\net7.0\Crafts.Api.AssemblyInfoInputs.cache
+D:\Graduation Project\Crafts\Crafts.Api\obj\Debug\net7.0\Crafts.Api.AssemblyInfo.cs
+D:\Graduation Project\Crafts\Crafts.Api\obj\Debug\net7.0\Crafts.Api.csproj.CoreCompileInputs.cache
+D:\Graduation Project\Crafts\Crafts.Api\obj\Debug\net7.0\Crafts.Api.MvcApplicationPartsAssemblyInfo.cs
+D:\Graduation Project\Crafts\Crafts.Api\obj\Debug\net7.0\Crafts.Api.MvcApplicationPartsAssemblyInfo.cache
+D:\Graduation Project\Crafts\Crafts.Api\obj\Debug\net7.0\Crafts.Api.dll
+D:\Graduation Project\Crafts\Crafts.Api\obj\Debug\net7.0\refint\Crafts.Api.dll
+D:\Graduation Project\Crafts\Crafts.Api\obj\Debug\net7.0\Crafts.Api.pdb
