@@ -125,3 +125,20 @@ D:\Graduation Project\Crafts\Crafts.BL\obj\Debug\net7.0\Crafts.BL.csproj.CoreCom
 D:\Graduation Project\Crafts\Crafts.BL\obj\Debug\net7.0\Crafts.BL.dll
 D:\Graduation Project\Crafts\Crafts.BL\obj\Debug\net7.0\refint\Crafts.BL.dll
 D:\Graduation Project\Crafts\Crafts.BL\obj\Debug\net7.0\Crafts.BL.pdb
+C:\Users\User\Desktop\Crafts\Crafts.BL\obj\Debug\net7.0\Crafts.BL.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\Crafts\Crafts.BL\obj\Debug\net7.0\Crafts.BL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Desktop\Crafts\Crafts.BL\obj\Debug\net7.0\Crafts.BL.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\Crafts\Crafts.BL\obj\Debug\net7.0\Crafts.BL.AssemblyInfo.cs
+C:\Users\User\Desktop\Crafts\Crafts.BL\obj\Debug\net7.0\Crafts.BL.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Crafts\Crafts.BL\obj\Debug\net7.0\Crafts.BL.dll
+C:\Users\User\Desktop\Crafts\Crafts.BL\obj\Debug\net7.0\refint\Crafts.BL.dll
+C:\Users\User\Desktop\Crafts\Crafts.BL\obj\Debug\net7.0\Crafts.BL.pdb
+C:\Users\User\Desktop\Crafts\Crafts.BL\bin\Debug\net7.0\Crafts.BL.deps.json
+C:\Users\User\Desktop\Crafts\Crafts.BL\bin\Debug\net7.0\Crafts.BL.runtimeconfig.json
+C:\Users\User\Desktop\Crafts\Crafts.BL\bin\Debug\net7.0\Crafts.BL.dll
+C:\Users\User\Desktop\Crafts\Crafts.BL\bin\Debug\net7.0\Crafts.BL.pdb
+C:\Users\User\Desktop\Crafts\Crafts.BL\bin\Debug\net7.0\Crafts.DAL.dll
+C:\Users\User\Desktop\Crafts\Crafts.BL\bin\Debug\net7.0\Crafts.DAL.pdb
+C:\Users\User\Desktop\Crafts\Crafts.BL\obj\Debug\net7.0\Crafts.BL.csproj.CopyComplete
+C:\Users\User\Desktop\Crafts\Crafts.BL\obj\Debug\net7.0\Crafts.BL.genruntimeconfig.cache
+C:\Users\User\Desktop\Crafts\Crafts.BL\obj\Debug\net7.0\ref\Crafts.BL.dll

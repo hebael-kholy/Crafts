@@ -20,4 +20,21 @@ public class Cart
     
     public string UserId { get; set; } = string.Empty;
     public User? User { get; set; }
+
+    #region CalculateTotalPrice
+    public double CalculateTotalPrice()
+    {
+        double totalPrice = 0;
+        foreach (var cartItem in CartItems)
+        {
+            Product product = cartItem.Product;
+            double itemPrice = product.Price * cartItem.Quantity;
+            totalPrice += itemPrice;
+
+        }
+        return totalPrice;
+    }
+    #endregion
+
+
 }

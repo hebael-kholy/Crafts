@@ -7830,11 +7830,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Graduation Project\\Crafts\\Crafts.Api\\Crafts.Api.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Desktop\\Crafts\\Crafts.Api\\Crafts.Api.csproj",
       "projectName": "Crafts.Api",
-      "projectPath": "D:\\Graduation Project\\Crafts\\Crafts.Api\\Crafts.Api.csproj",
+      "projectPath": "C:\\Users\\User\\Desktop\\Crafts\\Crafts.Api\\Crafts.Api.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "D:\\Graduation Project\\Crafts\\Crafts.Api\\obj\\",
+      "outputPath": "C:\\Users\\User\\Desktop\\Crafts\\Crafts.Api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -7851,8 +7851,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "D:\\Graduation Project\\Crafts\\Crafts.BL\\Crafts.BL.csproj": {
-              "projectPath": "D:\\Graduation Project\\Crafts\\Crafts.BL\\Crafts.BL.csproj"
+            "C:\\Users\\User\\Desktop\\Crafts\\Crafts.BL\\Crafts.BL.csproj": {
+              "projectPath": "C:\\Users\\User\\Desktop\\Crafts\\Crafts.BL\\Crafts.BL.csproj"
             }
           }
         }

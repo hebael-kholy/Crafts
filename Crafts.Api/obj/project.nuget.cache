@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "WXV/A8mge/bxElnlnAjm9Lawb8ynZCo6h96FEdkHDLtC3ndWLY56e+Z1sRLHnYBYS2YrPBQ8YypU07FD9jW88A==",
+  "dgSpecHash": "ywhsznR/2QZeWAs/WV8+a7s95B3UhZjlneSiZc2634trx3hLBt18gxNILysPKliWCeel57RqbIlIMKNNGECCOA==",
   "success": true,
-  "projectFilePath": "D:\\Graduation Project\\Crafts\\Crafts.Api\\Crafts.Api.csproj",
+  "projectFilePath": "C:\\Users\\User\\Desktop\\Crafts\\Crafts.Api\\Crafts.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\User\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
