@@ -36,7 +36,16 @@ namespace Crafts.DAL.Repos.WishListRepo
            
         }
 
-        
+
+        public void DeleteProductByWishlistId(int wishlistId, int productId)
+        {
+            var wishlist = _context.Wishlists.FirstOrDefault(w => w.Id == wishlistId);
+            var product = _context.Products.FirstOrDefault(p => p.Id == productId);
+            var productToDelete = wishlist.Products.Remove(product);
+            _context.SaveChanges();
+        }
+
+
     }
 
 }

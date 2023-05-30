@@ -1,3 +1,5 @@
+using Crafts.BL.Managers.CartItemsManager;
+using Crafts.BL.Managers.CartManager;
 using Crafts.BL.Managers.CategoryManagers;
 using Crafts.BL.Managers.CouponManager;
 using Crafts.BL.Managers.ProductManager;
@@ -7,6 +9,8 @@ using Crafts.BL.Managers.WishListManager;
 using Crafts.DAL.Context;
 using Crafts.DAL.Models;
 using Crafts.DAL.Models.Enum;
+using Crafts.DAL.Repos.CartItemsRepo;
+using Crafts.DAL.Repos.CartRepo;
 using Crafts.DAL.Repos.CategoryRepo;
 using Crafts.DAL.Repos.CouponRepo;
 using Crafts.DAL.Repos.IdentityRepo;

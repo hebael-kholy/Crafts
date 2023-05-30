@@ -12,5 +12,7 @@ namespace Crafts.DAL.Repos.WishListRepo
     {
         Wishlist? GetUserWishList(string userId);
         Wishlist? GetByIdWithProducts(int id);
+
+        void DeleteProductByWishlistId(int wishlistId, int productId);
     }
 }

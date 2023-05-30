@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\9 Months\\Final_Project_Crafts\\BackEndRepoV05\\HandMade\\Crafts.Api\\Crafts.Api.csproj": {}
+    "E:\\final project\\HandMade\\Crafts.Api\\Crafts.Api.csproj": {}
   },
   "projects": {
-    "D:\\9 Months\\Final_Project_Crafts\\BackEndRepoV05\\HandMade\\Crafts.Api\\Crafts.Api.csproj": {
+    "E:\\final project\\HandMade\\Crafts.Api\\Crafts.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\9 Months\\Final_Project_Crafts\\BackEndRepoV05\\HandMade\\Crafts.Api\\Crafts.Api.csproj",
+        "projectUniqueName": "E:\\final project\\HandMade\\Crafts.Api\\Crafts.Api.csproj",
         "projectName": "Crafts.Api",
-        "projectPath": "D:\\9 Months\\Final_Project_Crafts\\BackEndRepoV05\\HandMade\\Crafts.Api\\Crafts.Api.csproj",
-        "packagesPath": "C:\\Users\\TRUST\\.nuget\\packages\\",
-        "outputPath": "D:\\9 Months\\Final_Project_Crafts\\BackEndRepoV05\\HandMade\\Crafts.Api\\obj\\",
+        "projectPath": "E:\\final project\\HandMade\\Crafts.Api\\Crafts.Api.csproj",
+        "packagesPath": "C:\\Users\\Copy Center\\.nuget\\packages\\",
+        "outputPath": "E:\\final project\\HandMade\\Crafts.Api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\TRUST\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Copy Center\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +28,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "D:\\9 Months\\Final_Project_Crafts\\BackEndRepoV05\\HandMade\\Crafts.BL\\Crafts.BL.csproj": {
-                "projectPath": "D:\\9 Months\\Final_Project_Crafts\\BackEndRepoV05\\HandMade\\Crafts.BL\\Crafts.BL.csproj"
+              "E:\\final project\\HandMade\\Crafts.BL\\Crafts.BL.csproj": {
+                "projectPath": "E:\\final project\\HandMade\\Crafts.BL\\Crafts.BL.csproj"
               }
             }
           }
@@ -82,21 +82,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\9 Months\\Final_Project_Crafts\\BackEndRepoV05\\HandMade\\Crafts.BL\\Crafts.BL.csproj": {
+    "E:\\final project\\HandMade\\Crafts.BL\\Crafts.BL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\9 Months\\Final_Project_Crafts\\BackEndRepoV05\\HandMade\\Crafts.BL\\Crafts.BL.csproj",
+        "projectUniqueName": "E:\\final project\\HandMade\\Crafts.BL\\Crafts.BL.csproj",
         "projectName": "Crafts.BL",
-        "projectPath": "D:\\9 Months\\Final_Project_Crafts\\BackEndRepoV05\\HandMade\\Crafts.BL\\Crafts.BL.csproj",
-        "packagesPath": "C:\\Users\\TRUST\\.nuget\\packages\\",
-        "outputPath": "D:\\9 Months\\Final_Project_Crafts\\BackEndRepoV05\\HandMade\\Crafts.BL\\obj\\",
+        "projectPath": "E:\\final project\\HandMade\\Crafts.BL\\Crafts.BL.csproj",
+        "packagesPath": "C:\\Users\\Copy Center\\.nuget\\packages\\",
+        "outputPath": "E:\\final project\\HandMade\\Crafts.BL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\TRUST\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Copy Center\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -110,8 +110,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "D:\\9 Months\\Final_Project_Crafts\\BackEndRepoV05\\HandMade\\Crafts.DAL\\Crafts.DAL.csproj": {
-                "projectPath": "D:\\9 Months\\Final_Project_Crafts\\BackEndRepoV05\\HandMade\\Crafts.DAL\\Crafts.DAL.csproj"
+              "E:\\final project\\HandMade\\Crafts.DAL\\Crafts.DAL.csproj": {
+                "projectPath": "E:\\final project\\HandMade\\Crafts.DAL\\Crafts.DAL.csproj"
               }
             }
           }
@@ -149,21 +149,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\9 Months\\Final_Project_Crafts\\BackEndRepoV05\\HandMade\\Crafts.DAL\\Crafts.DAL.csproj": {
+    "E:\\final project\\HandMade\\Crafts.DAL\\Crafts.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\9 Months\\Final_Project_Crafts\\BackEndRepoV05\\HandMade\\Crafts.DAL\\Crafts.DAL.csproj",
+        "projectUniqueName": "E:\\final project\\HandMade\\Crafts.DAL\\Crafts.DAL.csproj",
         "projectName": "Crafts.DAL",
-        "projectPath": "D:\\9 Months\\Final_Project_Crafts\\BackEndRepoV05\\HandMade\\Crafts.DAL\\Crafts.DAL.csproj",
-        "packagesPath": "C:\\Users\\TRUST\\.nuget\\packages\\",
-        "outputPath": "D:\\9 Months\\Final_Project_Crafts\\BackEndRepoV05\\HandMade\\Crafts.DAL\\obj\\",
+        "projectPath": "E:\\final project\\HandMade\\Crafts.DAL\\Crafts.DAL.csproj",
+        "packagesPath": "C:\\Users\\Copy Center\\.nuget\\packages\\",
+        "outputPath": "E:\\final project\\HandMade\\Crafts.DAL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\TRUST\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Copy Center\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -242,7 +242,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }

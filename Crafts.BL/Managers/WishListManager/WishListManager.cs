@@ -53,19 +53,34 @@ public class WishListManager : IWishListManager
     //Remove Product From WishList      //=> Don't Delete from DB =>
     public void DeleteProductFromWishListAsync(int productId, int wishlistId)
     {
-        var wishlist = _wishListRepo.GetById(wishlistId);
-       // var product = _productRepo.GetById(productId);
 
-        if (wishlist is not null)
+        var wishlist = _wishListRepo.GetByIdWithProducts(wishlistId);
+        var product = _productRepo.GetById(productId);
+
+        if (wishlist is not null && product is not null)
         {
-            var product = wishlist.Products.FirstOrDefault(p => p.Id == productId);
+
+            wishlist.Products.Remove(product);
+            _wishListRepo.Update(wishlist);
+
+            _wishListRepo.SaveChanges();
+
+        }
+
+        //var wishlist = _wishListRepo.GetById(wishlistId);
+        // var product = _productRepo.GetById(productId);
+
+        /*if (wishlist is not null)
+        {
+            var product = wishlist.Products.Where(p=>p.Id == productId);
             if (product != null)
             {
-                wishlist.Products.Remove(product);
+                _wishListRepo.Delete()
                 _wishListRepo.Update(wishlist);
                 _wishListRepo.SaveChanges();
             }
-        }
+        }*/
+        // _wishListRepo.DeleteProductByWishlistId(wishlistId, productId);
     }
     //add wishlist to user
     public async Task Add(WishListAddDto wishListAddDto)
