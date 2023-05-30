@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\9 Months\\Final_Project_Crafts\\BackEndRepoV05\\HandMade\\Crafts.DAL\\Crafts.DAL.csproj": {}
+    "D:\\Graduation Project\\Crafts\\Crafts.DAL\\Crafts.DAL.csproj": {}
   },
   "projects": {
-    "D:\\9 Months\\Final_Project_Crafts\\BackEndRepoV05\\HandMade\\Crafts.DAL\\Crafts.DAL.csproj": {
+    "D:\\Graduation Project\\Crafts\\Crafts.DAL\\Crafts.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\9 Months\\Final_Project_Crafts\\BackEndRepoV05\\HandMade\\Crafts.DAL\\Crafts.DAL.csproj",
+        "projectUniqueName": "D:\\Graduation Project\\Crafts\\Crafts.DAL\\Crafts.DAL.csproj",
         "projectName": "Crafts.DAL",
-        "projectPath": "D:\\9 Months\\Final_Project_Crafts\\BackEndRepoV05\\HandMade\\Crafts.DAL\\Crafts.DAL.csproj",
-        "packagesPath": "C:\\Users\\TRUST\\.nuget\\packages\\",
-        "outputPath": "D:\\9 Months\\Final_Project_Crafts\\BackEndRepoV05\\HandMade\\Crafts.DAL\\obj\\",
+        "projectPath": "D:\\Graduation Project\\Crafts\\Crafts.DAL\\Crafts.DAL.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "D:\\Graduation Project\\Crafts\\Crafts.DAL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\TRUST\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -93,7 +93,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }
