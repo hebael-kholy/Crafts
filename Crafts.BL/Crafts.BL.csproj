@@ -23,4 +23,9 @@
     <ProjectReference Include="..\Crafts.DAL\Crafts.DAL.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Dtos\OrderDtos\" />
+    <Folder Include="Managers\OrderManger\" />
+  </ItemGroup>
+
 </Project>
