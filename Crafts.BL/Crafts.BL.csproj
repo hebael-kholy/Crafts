@@ -7,8 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Managers\OrderManger\**" />
     <Compile Remove="Managers\User\**" />
+    <EmbeddedResource Remove="Managers\OrderManger\**" />
     <EmbeddedResource Remove="Managers\User\**" />
+    <None Remove="Managers\OrderManger\**" />
     <None Remove="Managers\User\**" />
   </ItemGroup>
 
@@ -21,11 +24,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Crafts.DAL\Crafts.DAL.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Dtos\OrderDtos\" />
-    <Folder Include="Managers\OrderManger\" />
   </ItemGroup>
 
 </Project>

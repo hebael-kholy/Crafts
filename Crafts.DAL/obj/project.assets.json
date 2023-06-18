@@ -3687,19 +3687,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\User\\.nuget\\packages\\": {}
+    "C:\\Users\\TRUST\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\Desktop\\Crafts\\Crafts.DAL\\Crafts.DAL.csproj",
+      "projectUniqueName": "D:\\9 Months\\Final_Project_Crafts\\BackEndCraftV06\\Crafts\\Crafts.DAL\\Crafts.DAL.csproj",
       "projectName": "Crafts.DAL",
-      "projectPath": "C:\\Users\\User\\Desktop\\Crafts\\Crafts.DAL\\Crafts.DAL.csproj",
-      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\Desktop\\Crafts\\Crafts.DAL\\obj\\",
+      "projectPath": "D:\\9 Months\\Final_Project_Crafts\\BackEndCraftV06\\Crafts\\Crafts.DAL\\Crafts.DAL.csproj",
+      "packagesPath": "C:\\Users\\TRUST\\.nuget\\packages\\",
+      "outputPath": "D:\\9 Months\\Final_Project_Crafts\\BackEndCraftV06\\Crafts\\Crafts.DAL\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\TRUST\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3778,7 +3778,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   }

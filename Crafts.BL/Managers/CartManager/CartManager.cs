@@ -103,6 +103,14 @@ namespace Crafts.BL.Managers.CartManager
             }
             cart.Quantity = cart.CartItems.Count;
             cart.TotalPrice = cart.CalculateTotalPrice();
+            if (cart.TotalPriceAfterDiscount > 0)
+            {
+                cart.TotalPriceAfterDiscount = cart.TotalPriceAfterDiscount;
+            }
+            else
+            {
+                cart.TotalPriceAfterDiscount = cart.CalculateTotalPrice();
+            }
             return new CartWithCartItemsReadDto
             {
                 Id = id,

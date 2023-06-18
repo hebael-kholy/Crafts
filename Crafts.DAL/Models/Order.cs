@@ -17,12 +17,11 @@ public class Order
     public double TaxPrice { get; set; }
     public double ShippingPrice { get; set; }
     public DateTime PaidAt { get; set; }
-    public DateTime CratedAt { get; set; } = DateTime.Now;
+    public DateTime CreatedAt { get; set; } = DateTime.Now;
     public bool IsPaid { get; set; }
 
     public string UserId { get; set; } = string.Empty;
     public User? User { get; set; }
-
 
     public int CartId { get; set; }
     public Cart? Cart { get; set; }
