@@ -163,6 +163,7 @@ namespace Crafts.BL.Managers.CartItemsManager
             if (cart != null)
             {
                 _cartItemRepo.DeleteAllCartItemsByCartId(cartId);
+                cart.TotalPriceAfterDiscount = 0;
                 _cartItemRepo.SaveChanges();
 
             }

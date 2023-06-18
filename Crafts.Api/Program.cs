@@ -2,6 +2,7 @@ using Crafts.BL.Managers.CartItemsManager;
 using Crafts.BL.Managers.CartManager;
 using Crafts.BL.Managers.CategoryManagers;
 using Crafts.BL.Managers.CouponManager;
+using Crafts.BL.Managers.OrderManagers;
 using Crafts.BL.Managers.ProductManager;
 using Crafts.BL.Managers.ReviewManagers;
 using Crafts.BL.Managers.Services;
@@ -13,6 +14,7 @@ using Crafts.DAL.Repos.CartRepo;
 using Crafts.DAL.Repos.CategoryRepo;
 using Crafts.DAL.Repos.CouponRepo;
 using Crafts.DAL.Repos.IdentityRepo;
+using Crafts.DAL.Repos.OrderRepo;
 using Crafts.DAL.Repos.ProductsRepo;
 using Crafts.DAL.Repos.ReviewRepo;
 using Crafts.DAL.Repos.WishListRepo;
@@ -114,7 +116,7 @@ builder.Services.AddScoped<IUserRepo, UserRepo>();
 builder.Services.AddScoped<IWishListRepo, WishListRepo>();
 builder.Services.AddScoped<ICartRepo, CartRepo>();
 builder.Services.AddScoped<ICartItemRepo, CartItemRepo>();
-
+builder.Services.AddScoped<IOrderRepo, OrderRepo>();
 
 
 
@@ -129,8 +131,7 @@ builder.Services.AddScoped<IProductsManager, ProductsManager>();
 builder.Services.AddScoped<IWishListManager, WishListManager>();
 builder.Services.AddScoped<ICartManager, CartManager>();
 builder.Services.AddScoped<ICartItemsManager, CartItemsManager>();
-
-
+builder.Services.AddScoped<IOrderManager, OrderManager>();
 
 #endregion
 
