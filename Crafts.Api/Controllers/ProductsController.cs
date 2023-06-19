@@ -69,7 +69,7 @@ namespace Crafts.Api.Controllers
             _productsManager.Update(productUpdateDto,id);
             return CreatedAtAction(
                 actionName: nameof(GetAll),
-                value: "Updated Successfully");
+                value: $"Product with Id:{id} is Updated Successfully");
         }
 
         [HttpDelete]
@@ -82,7 +82,7 @@ namespace Crafts.Api.Controllers
             _productsManager.Delete(id);
             return CreatedAtAction(
                 actionName: nameof(GetAll),
-                value: "Deleted Successfully");
+                value: $"Product with id:{id} is Deleted Successfully");
         }
     }
 }
