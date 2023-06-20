@@ -12,7 +12,13 @@ using Microsoft.AspNetCore.Authorization;
 using Crafts.DAL.Models.Enum;
 using System.Runtime.Intrinsics.X86;
 using System.IO;
-
+using System.Net.Mail;
+using System.Net;
+using SendGrid.Helpers.Mail;
+using SendGrid;
+using Crafts.BL.Managers.SendEmail;
+using Microsoft.Identity.Client.Platforms.Features.DesktopOs.Kerberos;
+using System.Security.Cryptography;
 
 namespace Crafts.Api.Controllers;
 
@@ -23,16 +29,19 @@ public class UsersController : ControllerBase
     private readonly IConfiguration _configuration;
     private readonly UserManager<User> _userManager;
     private readonly IWebHostEnvironment _env;
+    private readonly EmailSender _emailSender;
 
     //private readonly RoleManager<User> _roleManager;
 
-    public UsersController(IConfiguration configuration, 
+    public UsersController(IConfiguration configuration,
         UserManager<User> userManager,
-        IWebHostEnvironment env)
+        IWebHostEnvironment env,
+        EmailSender emailSender)
     {
         _configuration = configuration;
         _userManager = userManager;
         _env = env;
+        _emailSender = emailSender;
         //_roleManager = roleManager;
     }
 
@@ -62,16 +71,9 @@ public class UsersController : ControllerBase
             };
 
         await _userManager.AddClaimsAsync(user, claims);
-        //var res = await _userManager.CreateAsync(user, registerDto.Password);
-
-        //if (!res.Succeeded)
-        //{
-        //    return BadRequest(res.Errors);
-        //}
-        //if (!await _roleManager.RoleExistsAsync(UserRoles.ad))
-            return Ok(user);
+        return Ok(user);
     }
-#endregion
+    #endregion
 
 
     #region Login
@@ -114,7 +116,7 @@ public class UsersController : ControllerBase
             return BadRequest(new { Message = "User Not Found" });
         }
         var isPasswordCorrect = await _userManager.CheckPasswordAsync(user, cradentials.Password);
-        if (!(isPasswordCorrect && user.Role==0))
+        if (!(isPasswordCorrect && user.Role == 0))
         {
             return Unauthorized();
         }
@@ -153,10 +155,10 @@ public class UsersController : ControllerBase
     #region GetAllUsers
     [HttpGet]
     //[Authorize(Policy = "AllowAdminsOnly")]
-    public  ActionResult<UserReadDto> GetAll()
+    public ActionResult<UserReadDto> GetAll()
     {
-        var userData =  _userManager.Users.Where(R => R.Role==0);
-       
+        var userData = _userManager.Users.Where(R => R.Role == 0);
+
         return Ok(userData);
     }
     #endregion
@@ -169,16 +171,16 @@ public class UsersController : ControllerBase
     {
         var User = await _userManager.FindByIdAsync(id);
 
-            var UserData = new
-            {
-                Email = User.Email,
-                UserName = User.UserName,
-                PasswordHash = User.PasswordHash,
-                Image = User.Image,
-                Gender = User.Gender.GetDisplayName(),
-            };
-            return Ok(UserData);
-        
+        var UserData = new
+        {
+            Email = User.Email,
+            UserName = User.UserName,
+            PasswordHash = User.PasswordHash,
+            Image = User.Image,
+            Gender = User.Gender.GetDisplayName(),
+        };
+        return Ok(UserData);
+
 
     }
     #endregion
@@ -198,9 +200,9 @@ public class UsersController : ControllerBase
             return NotFound($"User with ID {user} not found.");
         }
 
-            var result = await _userManager.DeleteAsync(user);
-            return result.Succeeded;
-        
+        var result = await _userManager.DeleteAsync(user);
+        return result.Succeeded;
+
     }
     #endregion
 
@@ -246,9 +248,9 @@ public class UsersController : ControllerBase
         // Step 5: Update the other fields of the user object
         user.UserName = updateDto.UserName ?? user.UserName;
         user.Email = updateDto.Email ?? user.Email;
-        
+
         var newPasswordHash = _userManager.PasswordHasher.HashPassword(user, updateDto.Password ?? user.PasswordHash);
-        user.PasswordHash = newPasswordHash ;
+        user.PasswordHash = newPasswordHash;
 
         // Step 6: Save the updated user object
         var res = await _userManager.UpdateAsync(user);
@@ -264,4 +266,61 @@ public class UsersController : ControllerBase
         return file.ContentType == "image/jpeg" || file.ContentType == "image/png";
     }
     #endregion
+
+    #region ForgetPassword
+
+    [HttpPost]
+    [Route("Reset-Password")]
+    public async Task<IActionResult> SendEmail(ForgetPasswordDto passwordDto)
+    {
+
+        User? user = await _userManager.FindByEmailAsync(passwordDto.Email);
+
+        if (user is null)
+        {
+            return BadRequest(new { Message = "User Not Found" });
+        }
+
+        
+        _emailSender.SendEmail(user).Wait();
+        await _userManager.UpdateAsync(user);
+        return Ok();
+    }
+
+    #endregion
+
+
+    #region ResetPassword
+
+    [HttpPut]
+    [Route("ResetPassword")]
+    public async Task<ActionResult> ResetPassword(ResetPasswordDto resetDto)
+    {
+
+        User? user = await _userManager.FindByEmailAsync(resetDto.Email);
+
+        if (user is null)
+        {
+            return BadRequest(new { Message = "User Not Found" });
+        }
+        if (user.Flag == false)
+        {
+            return BadRequest(new { Message = "Reset Code Is not Verified" });
+
+        }
+        var newPasswordHash = _userManager.PasswordHasher.HashPassword(user, resetDto.Password);
+        user.PasswordHash = newPasswordHash;
+        user.Flag = false;
+        user.ExpirationDate = null;
+        user.HashCode = null;
+        // Step 6: Save the updated user object
+        var res = await _userManager.UpdateAsync(user);
+        if (!res.Succeeded)
+        {
+            return BadRequest(res.Errors);
+        }
+        return Ok("Reset Successfully");
+    }
+#endregion
+
 }

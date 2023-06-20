@@ -26,6 +26,11 @@ public class UserRepo: GenericRepo<User>, IUserRepo
         return _context.Users.FirstOrDefault(u => u.Email == email);
     }
 
+    public User GetUserByHashCode(string code)
+    {
+        return _context.Users.FirstOrDefault(u => u.HashCode == code );
+    }
+
     public User? GetUserById(string id)
     {
         return _context.Set<User>().Find(id); ;

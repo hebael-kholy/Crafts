@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\9 Months\\Final_Project_Crafts\\BackEndCraftV06\\Crafts\\Crafts.Api\\Crafts.Api.csproj": {}
+    "E:\\9-months scholarship iti\\Graduatio Project\\Master\\Crafts\\Crafts.Api\\Crafts.Api.csproj": {}
   },
   "projects": {
-    "D:\\9 Months\\Final_Project_Crafts\\BackEndCraftV06\\Crafts\\Crafts.Api\\Crafts.Api.csproj": {
+    "E:\\9-months scholarship iti\\Graduatio Project\\Master\\Crafts\\Crafts.Api\\Crafts.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\9 Months\\Final_Project_Crafts\\BackEndCraftV06\\Crafts\\Crafts.Api\\Crafts.Api.csproj",
+        "projectUniqueName": "E:\\9-months scholarship iti\\Graduatio Project\\Master\\Crafts\\Crafts.Api\\Crafts.Api.csproj",
         "projectName": "Crafts.Api",
-        "projectPath": "D:\\9 Months\\Final_Project_Crafts\\BackEndCraftV06\\Crafts\\Crafts.Api\\Crafts.Api.csproj",
-        "packagesPath": "C:\\Users\\TRUST\\.nuget\\packages\\",
-        "outputPath": "D:\\9 Months\\Final_Project_Crafts\\BackEndCraftV06\\Crafts\\Crafts.Api\\obj\\",
+        "projectPath": "E:\\9-months scholarship iti\\Graduatio Project\\Master\\Crafts\\Crafts.Api\\Crafts.Api.csproj",
+        "packagesPath": "C:\\Users\\Hi-Tech\\.nuget\\packages\\",
+        "outputPath": "E:\\9-months scholarship iti\\Graduatio Project\\Master\\Crafts\\Crafts.Api\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\TRUST\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Hi-Tech\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +32,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "D:\\9 Months\\Final_Project_Crafts\\BackEndCraftV06\\Crafts\\Crafts.BL\\Crafts.BL.csproj": {
-                "projectPath": "D:\\9 Months\\Final_Project_Crafts\\BackEndCraftV06\\Crafts\\Crafts.BL\\Crafts.BL.csproj"
+              "E:\\9-months scholarship iti\\Graduatio Project\\Master\\Crafts\\Crafts.BL\\Crafts.BL.csproj": {
+                "projectPath": "E:\\9-months scholarship iti\\Graduatio Project\\Master\\Crafts\\Crafts.BL\\Crafts.BL.csproj"
               }
             }
           }
@@ -90,21 +94,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\9 Months\\Final_Project_Crafts\\BackEndCraftV06\\Crafts\\Crafts.BL\\Crafts.BL.csproj": {
+    "E:\\9-months scholarship iti\\Graduatio Project\\Master\\Crafts\\Crafts.BL\\Crafts.BL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\9 Months\\Final_Project_Crafts\\BackEndCraftV06\\Crafts\\Crafts.BL\\Crafts.BL.csproj",
+        "projectUniqueName": "E:\\9-months scholarship iti\\Graduatio Project\\Master\\Crafts\\Crafts.BL\\Crafts.BL.csproj",
         "projectName": "Crafts.BL",
-        "projectPath": "D:\\9 Months\\Final_Project_Crafts\\BackEndCraftV06\\Crafts\\Crafts.BL\\Crafts.BL.csproj",
-        "packagesPath": "C:\\Users\\TRUST\\.nuget\\packages\\",
-        "outputPath": "D:\\9 Months\\Final_Project_Crafts\\BackEndCraftV06\\Crafts\\Crafts.BL\\obj\\",
+        "projectPath": "E:\\9-months scholarship iti\\Graduatio Project\\Master\\Crafts\\Crafts.BL\\Crafts.BL.csproj",
+        "packagesPath": "C:\\Users\\Hi-Tech\\.nuget\\packages\\",
+        "outputPath": "E:\\9-months scholarship iti\\Graduatio Project\\Master\\Crafts\\Crafts.BL\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\TRUST\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Hi-Tech\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -118,8 +126,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "D:\\9 Months\\Final_Project_Crafts\\BackEndCraftV06\\Crafts\\Crafts.DAL\\Crafts.DAL.csproj": {
-                "projectPath": "D:\\9 Months\\Final_Project_Crafts\\BackEndCraftV06\\Crafts\\Crafts.DAL\\Crafts.DAL.csproj"
+              "E:\\9-months scholarship iti\\Graduatio Project\\Master\\Crafts\\Crafts.DAL\\Crafts.DAL.csproj": {
+                "projectPath": "E:\\9-months scholarship iti\\Graduatio Project\\Master\\Crafts\\Crafts.DAL\\Crafts.DAL.csproj"
               }
             }
           }
@@ -139,6 +147,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[7.0.5, )"
+            },
+            "SendGrid": {
+              "target": "Package",
+              "version": "[9.28.1, )"
             }
           },
           "imports": [
@@ -157,21 +169,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\9 Months\\Final_Project_Crafts\\BackEndCraftV06\\Crafts\\Crafts.DAL\\Crafts.DAL.csproj": {
+    "E:\\9-months scholarship iti\\Graduatio Project\\Master\\Crafts\\Crafts.DAL\\Crafts.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\9 Months\\Final_Project_Crafts\\BackEndCraftV06\\Crafts\\Crafts.DAL\\Crafts.DAL.csproj",
+        "projectUniqueName": "E:\\9-months scholarship iti\\Graduatio Project\\Master\\Crafts\\Crafts.DAL\\Crafts.DAL.csproj",
         "projectName": "Crafts.DAL",
-        "projectPath": "D:\\9 Months\\Final_Project_Crafts\\BackEndCraftV06\\Crafts\\Crafts.DAL\\Crafts.DAL.csproj",
-        "packagesPath": "C:\\Users\\TRUST\\.nuget\\packages\\",
-        "outputPath": "D:\\9 Months\\Final_Project_Crafts\\BackEndCraftV06\\Crafts\\Crafts.DAL\\obj\\",
+        "projectPath": "E:\\9-months scholarship iti\\Graduatio Project\\Master\\Crafts\\Crafts.DAL\\Crafts.DAL.csproj",
+        "packagesPath": "C:\\Users\\Hi-Tech\\.nuget\\packages\\",
+        "outputPath": "E:\\9-months scholarship iti\\Graduatio Project\\Master\\Crafts\\Crafts.DAL\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\TRUST\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Hi-Tech\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -254,7 +270,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }

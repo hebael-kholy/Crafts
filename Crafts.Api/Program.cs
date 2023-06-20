@@ -2,9 +2,11 @@ using Crafts.BL.Managers.CartItemsManager;
 using Crafts.BL.Managers.CartManager;
 using Crafts.BL.Managers.CategoryManagers;
 using Crafts.BL.Managers.CouponManager;
+using Crafts.BL.Managers.ForgetPasswordManager;
 using Crafts.BL.Managers.OrderManagers;
 using Crafts.BL.Managers.ProductManager;
 using Crafts.BL.Managers.ReviewManagers;
+using Crafts.BL.Managers.SendEmail;
 using Crafts.BL.Managers.Services;
 using Crafts.BL.Managers.WishListManager;
 using Crafts.DAL.Context;
@@ -34,16 +36,16 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 #region Database
-//var connectionString = builder.Configuration.GetConnectionString("CraftDB");
-//builder.Services.AddDbContext<CraftsContext>(options =>
-//options.UseSqlServer(connectionString));
+var connectionString = builder.Configuration.GetConnectionString("CraftsDB");
+builder.Services.AddDbContext<CraftsContext>(options =>
+options.UseSqlServer(connectionString));
 #endregion
 
 
 #region DatabaseLite
-var connectionString = builder.Configuration.GetConnectionString("CraftDBLite");
-builder.Services.AddDbContext<CraftsContext>(options =>
-options.UseSqlite(connectionString));
+//var connectionString = builder.Configuration.GetConnectionString("CraftDBLite");
+//builder.Services.AddDbContext<CraftsContext>(options =>
+//options.UseSqlite(connectionString));
 #endregion
 
 
@@ -103,16 +105,7 @@ builder.Services.AddAuthorization(Options =>
 //});
 
 
-#region CorsPolicy
-var AllowCorsPolicy = "AllowCorsPolicy";
-builder.Services.AddCors(options =>
-{
-    options.AddPolicy(AllowCorsPolicy, builder =>
-    {
-        builder.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin();
-    });
-});
-#endregion
+
 
 #region Repos
 
@@ -140,12 +133,14 @@ builder.Services.AddScoped<IWishListManager, WishListManager>();
 builder.Services.AddScoped<ICartManager, CartManager>();
 builder.Services.AddScoped<ICartItemsManager, CartItemsManager>();
 builder.Services.AddScoped<IOrderManager, OrderManager>();
+builder.Services.AddScoped<IForgetPasswordManager, ForgetPasswordManager>();
 
 #endregion
 
 #region Services
 
 builder.Services.AddScoped<IFileService, FileService>();
+builder.Services.AddScoped<EmailSender>();
 
 #endregion
 
@@ -161,6 +156,10 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
+app.UseCors(x => x
+                .AllowAnyOrigin()
+                .AllowAnyMethod()
+                .AllowAnyHeader());
 app.UseAuthentication();
 app.UseAuthorization();
 
