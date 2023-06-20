@@ -12,4 +12,6 @@ public interface IUserRepo : IGenericRepo<User>
 {
     User? GetUserById(string id);
     public User GetUserByEmail(string email);
+    public User GetUserByHashCode(string code);
+
 }
