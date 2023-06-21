@@ -7,8 +7,6 @@ using System.Threading.Tasks;
 
 namespace Crafts.BL.Dtos.ProductDtos
 {
-    public class ProductImgAddDto
-    {
-        public IFormFile? Image { get; set; } = null;
-    }
+    public record ProductImgAddDto (IFormFile Image);
+   
 }

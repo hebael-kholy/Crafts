@@ -9,6 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="CloudinaryDotNet" Version="1.21.0" />
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.2" />
     <PackageReference Include="Microsoft.Data.Sqlite.Core" Version="7.0.7" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.5">

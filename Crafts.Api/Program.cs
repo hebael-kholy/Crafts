@@ -36,15 +36,15 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 #region Database
-//var connectionString = builder.Configuration.GetConnectionString("CraftsDB");
-//builder.Services.AddDbContext<CraftsContext>(options =>
-//options.UseSqlServer(connectionString));
+var connectionString = builder.Configuration.GetConnectionString("CraftsDB");
+builder.Services.AddDbContext<CraftsContext>(options =>
+options.UseSqlServer(connectionString));
 #endregion
 
 #region DatabaseLite
-var connectionString = builder.Configuration.GetConnectionString("CraftDBLite");
-builder.Services.AddDbContext<CraftsContext>(options =>
-options.UseSqlite(connectionString));
+//var connectionString = builder.Configuration.GetConnectionString("CraftDBLite");
+//builder.Services.AddDbContext<CraftsContext>(options =>
+//options.UseSqlite(connectionString));
 #endregion
 
 #region Identity Manager
@@ -173,15 +173,15 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-using (var scope = app.Services.CreateScope())
-{
-    var services = scope.ServiceProvider;
+//using (var scope = app.Services.CreateScope())
+//{
+//    var services = scope.ServiceProvider;
 
-    var context = services.GetRequiredService<CraftsContext>();
-    if (context.Database.GetPendingMigrations().Any())
-    {
-        context.Database.Migrate();
-    }
-}
+//    var context = services.GetRequiredService<CraftsContext>();
+//    if (context.Database.GetPendingMigrations().Any())
+//    {
+//        context.Database.Migrate();
+//    }
+//}
 
 app.Run();

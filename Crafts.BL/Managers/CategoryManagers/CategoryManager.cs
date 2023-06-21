@@ -1,10 +1,11 @@
-﻿using Crafts.BL.Dtos.CategoryDtos;
+﻿using Crafts.Api.Controllers;
+using Crafts.BL.Dtos.CategoryDtos;
 using Crafts.BL.Dtos.ProductDtos;
 using Crafts.BL.Managers.Services;
 using Crafts.DAL.Models;
 using Crafts.DAL.Repos.CategoryRepo;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-
 
 namespace Crafts.BL.Managers.CategoryManagers
 {
@@ -100,23 +101,32 @@ namespace Crafts.BL.Managers.CategoryManagers
                 }
             }
         }
+        private bool IsSupportedImageFormat(IFormFile file)
+        {
+            return file.ContentType == "image/jpeg" || file.ContentType == "image/png" || file.ContentType == "image/jpg"|| file.ContentType == "image/webp";
+        }
 
         public async Task Add([FromForm] CategoryAddDto categoryAddDto)
         {
-            var fileResult = _fileService.SaveImage(categoryAddDto.Image);
-            if (fileResult.Item1 == 1)
+            if (categoryAddDto.Image != null && !IsSupportedImageFormat(categoryAddDto.Image))
             {
-
-
-                Category categoryToAdd = new Category
-                {
-                    Title = categoryAddDto.Title,
-                    Image = fileResult.Item2
-                };
-
-                await _categoryRepo.Add(categoryToAdd);
-                _categoryRepo.SaveChanges();
+                throw new ArgumentException("Image file must be in JPEG or PNG or JPG or WEBP format.");
             }
+
+            var x = upload.UploadImageOnCloudinary(categoryAddDto.Image);
+            // fileResult = _fileService.SaveImage(categoryAddDto.Image);
+
+
+
+            Category categoryToAdd = new Category
+            {
+                Title = categoryAddDto.Title,
+                Image = x
+            };
+
+            await _categoryRepo.Add(categoryToAdd);
+            _categoryRepo.SaveChanges();
+
         }
 
         public void Edit(CategoryEditDto categoryEditDto, int id)
