@@ -10,6 +10,7 @@ namespace Crafts.DAL.Repos.ProductsRepo
 {
     public interface IProductRepo:IGenericRepo<Product>
     {
+        List<Product> GetProductsWithSale();
 
     }
 }

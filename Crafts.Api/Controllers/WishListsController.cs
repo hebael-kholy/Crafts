@@ -94,7 +94,7 @@ namespace Crafts.Api.Controllers
             try
             {
                 _wishListManager.DeleteProductFromWishListAsync(productId, wishlistId);
-                var msg = new GeneralResponse($"WishList with id {wishlistId} Updated Successfully");
+                var msg = new GeneralResponse($"Product with id {productId} is deleted successfully from wishlist with id {wishlistId}");
                 var res = new { msg, wishlistId };
                 return Ok(res);
             }
