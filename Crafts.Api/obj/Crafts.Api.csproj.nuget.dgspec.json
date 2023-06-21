@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\ITI\\Final Project .Net API\\Crafts\\Crafts.Api\\Crafts.Api.csproj": {}
+    "C:\\Users\\dina\\Desktop\\heba\\Crafts\\Crafts.Api\\Crafts.Api.csproj": {}
   },
   "projects": {
-    "E:\\ITI\\Final Project .Net API\\Crafts\\Crafts.Api\\Crafts.Api.csproj": {
+    "C:\\Users\\dina\\Desktop\\heba\\Crafts\\Crafts.Api\\Crafts.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\ITI\\Final Project .Net API\\Crafts\\Crafts.Api\\Crafts.Api.csproj",
+        "projectUniqueName": "C:\\Users\\dina\\Desktop\\heba\\Crafts\\Crafts.Api\\Crafts.Api.csproj",
         "projectName": "Crafts.Api",
-        "projectPath": "E:\\ITI\\Final Project .Net API\\Crafts\\Crafts.Api\\Crafts.Api.csproj",
+        "projectPath": "C:\\Users\\dina\\Desktop\\heba\\Crafts\\Crafts.Api\\Crafts.Api.csproj",
         "packagesPath": "C:\\Users\\dina\\.nuget\\packages\\",
-        "outputPath": "E:\\ITI\\Final Project .Net API\\Crafts\\Crafts.Api\\obj\\",
+        "outputPath": "C:\\Users\\dina\\Desktop\\heba\\Crafts\\Crafts.Api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\dina\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -29,8 +29,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "E:\\ITI\\Final Project .Net API\\Crafts\\Crafts.BL\\Crafts.BL.csproj": {
-                "projectPath": "E:\\ITI\\Final Project .Net API\\Crafts\\Crafts.BL\\Crafts.BL.csproj"
+              "C:\\Users\\dina\\Desktop\\heba\\Crafts\\Crafts.BL\\Crafts.BL.csproj": {
+                "projectPath": "C:\\Users\\dina\\Desktop\\heba\\Crafts\\Crafts.BL\\Crafts.BL.csproj"
               }
             }
           }
@@ -45,6 +45,10 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "CloudinaryDotNet": {
+              "target": "Package",
+              "version": "[1.21.0, )"
+            },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[7.0.2, )"
@@ -95,14 +99,14 @@
         }
       }
     },
-    "E:\\ITI\\Final Project .Net API\\Crafts\\Crafts.BL\\Crafts.BL.csproj": {
+    "C:\\Users\\dina\\Desktop\\heba\\Crafts\\Crafts.BL\\Crafts.BL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\ITI\\Final Project .Net API\\Crafts\\Crafts.BL\\Crafts.BL.csproj",
+        "projectUniqueName": "C:\\Users\\dina\\Desktop\\heba\\Crafts\\Crafts.BL\\Crafts.BL.csproj",
         "projectName": "Crafts.BL",
-        "projectPath": "E:\\ITI\\Final Project .Net API\\Crafts\\Crafts.BL\\Crafts.BL.csproj",
+        "projectPath": "C:\\Users\\dina\\Desktop\\heba\\Crafts\\Crafts.BL\\Crafts.BL.csproj",
         "packagesPath": "C:\\Users\\dina\\.nuget\\packages\\",
-        "outputPath": "E:\\ITI\\Final Project .Net API\\Crafts\\Crafts.BL\\obj\\",
+        "outputPath": "C:\\Users\\dina\\Desktop\\heba\\Crafts\\Crafts.BL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\dina\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -119,8 +123,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "E:\\ITI\\Final Project .Net API\\Crafts\\Crafts.DAL\\Crafts.DAL.csproj": {
-                "projectPath": "E:\\ITI\\Final Project .Net API\\Crafts\\Crafts.DAL\\Crafts.DAL.csproj"
+              "C:\\Users\\dina\\Desktop\\heba\\Crafts\\Crafts.DAL\\Crafts.DAL.csproj": {
+                "projectPath": "C:\\Users\\dina\\Desktop\\heba\\Crafts\\Crafts.DAL\\Crafts.DAL.csproj"
               }
             }
           }
@@ -135,6 +139,10 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "CloudinaryDotNet": {
+              "target": "Package",
+              "version": "[1.21.0, )"
+            },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
@@ -166,14 +174,14 @@
         }
       }
     },
-    "E:\\ITI\\Final Project .Net API\\Crafts\\Crafts.DAL\\Crafts.DAL.csproj": {
+    "C:\\Users\\dina\\Desktop\\heba\\Crafts\\Crafts.DAL\\Crafts.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\ITI\\Final Project .Net API\\Crafts\\Crafts.DAL\\Crafts.DAL.csproj",
+        "projectUniqueName": "C:\\Users\\dina\\Desktop\\heba\\Crafts\\Crafts.DAL\\Crafts.DAL.csproj",
         "projectName": "Crafts.DAL",
-        "projectPath": "E:\\ITI\\Final Project .Net API\\Crafts\\Crafts.DAL\\Crafts.DAL.csproj",
+        "projectPath": "C:\\Users\\dina\\Desktop\\heba\\Crafts\\Crafts.DAL\\Crafts.DAL.csproj",
         "packagesPath": "C:\\Users\\dina\\.nuget\\packages\\",
-        "outputPath": "E:\\ITI\\Final Project .Net API\\Crafts\\Crafts.DAL\\obj\\",
+        "outputPath": "C:\\Users\\dina\\Desktop\\heba\\Crafts\\Crafts.DAL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\dina\\AppData\\Roaming\\NuGet\\NuGet.Config",

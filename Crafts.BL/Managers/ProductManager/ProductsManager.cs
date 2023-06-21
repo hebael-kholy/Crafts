@@ -1,8 +1,12 @@
-﻿using Crafts.BL.Dtos.CouponDtos;
+﻿using Crafts.Api.Controllers;
+using Crafts.BL.Dtos.CategoryDtos;
+using Crafts.BL.Dtos.CouponDtos;
+using Crafts.BL.Dtos.IdentityDtos;
 using Crafts.BL.Dtos.ProductDtos;
 using Crafts.BL.Managers.Services;
 using Crafts.DAL.Models;
 using Crafts.DAL.Repos.ProductsRepo;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -116,24 +120,29 @@ namespace Crafts.BL.Managers.ProductManager
                     CategoryId = p.CategoryId,
                 }).FirstOrDefault(p => p.Id == id);
         }
+        private bool IsSupportedImageFormat(IFormFile file)
+        {
+            return file.ContentType == "image/jpeg" || file.ContentType == "image/png" || file.ContentType == "image/jpg" || file.ContentType == "image/webp";
+        }
 
         public void AddImage([FromForm] ProductImgAddDto productImgAddDto, int id)
         {
             if (productImgAddDto.Image != null)
             {
-                var categoryToEdit = _productRepo.GetAll().FirstOrDefault(c => c.Id == id);
-                if (categoryToEdit != null)
+                var productToEdit = _productRepo.GetAll().FirstOrDefault(c => c.Id == id);
+                if (productToEdit != null)
                 {
-                    var fileResult = _fileService.SaveImage(productImgAddDto.Image);
-
-                    //When Item1 in Tuple = 1 --> this means image saved successfully
-                    //When Item1 in Tuple = 0 --> this means image not saved successfully
-                    if (fileResult.Item1 == 1)
+                    if (productImgAddDto.Image != null && !IsSupportedImageFormat(productImgAddDto.Image))
                     {
-                        categoryToEdit.Image = fileResult.Item2;
-                        _productRepo.Update(categoryToEdit);
-                        _productRepo.SaveChanges();
+                        throw new ArgumentException("Image file must be in JPEG or PNG or JPG or WEBP format.");
                     }
+
+                    var imgURL = upload.UploadImageOnCloudinary(productImgAddDto.Image);
+
+                    productToEdit.Image = imgURL;
+                    _productRepo.Update(productToEdit);
+                    _productRepo.SaveChanges();
+                    
                 }
             }
         }
