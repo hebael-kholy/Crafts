@@ -1,13 +1,24 @@
-﻿using Crafts.BL.Dtos.IdentityDtos;
-using Crafts.BL.Managers.SendEmail;
-using Crafts.DAL.Models;
-using Microsoft.AspNetCore.Identity;
+﻿using Crafts.DAL.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.IdentityModel.Tokens;
-using Microsoft.OpenApi.Extensions;
-using System.IdentityModel.Tokens.Jwt;
+using Microsoft.AspNetCore.Identity;
+using Crafts.BL.Dtos.IdentityDtos;
 using System.Security.Claims;
+using Microsoft.IdentityModel.Tokens;
+using System.IdentityModel.Tokens.Jwt;
 using System.Text;
+using Microsoft.OpenApi.Extensions;
+using Microsoft.AspNetCore.Authorization;
+using Crafts.DAL.Models.Enum;
+using System.Runtime.Intrinsics.X86;
+using System.IO;
+using System.Net.Mail;
+using System.Net;
+using SendGrid.Helpers.Mail;
+using SendGrid;
+using Crafts.BL.Managers.SendEmail;
+using Microsoft.Identity.Client.Platforms.Features.DesktopOs.Kerberos;
+using System.Security.Cryptography;
 
 namespace Crafts.Api.Controllers;
 
@@ -89,8 +100,8 @@ public class UsersController : ControllerBase
 
         var token = GenerateToken(claims, exp);
 
-
-        return new TokenDto(token);
+        var res = new { user,token };
+        return Ok(res);
 
     }
     #endregion   
@@ -231,7 +242,7 @@ public class UsersController : ControllerBase
         {
             return BadRequest(res.Errors);
         }
-        var result = new { res.Succeeded, user };
+        var result = new { res.Succeeded, user};
         return Ok(result);
     }
 
@@ -251,7 +262,7 @@ public class UsersController : ControllerBase
             return BadRequest(new { Message = "User Not Found" });
         }
 
-
+        
         _emailSender.SendEmail(user).Wait();
         await _userManager.UpdateAsync(user);
         return Ok();
@@ -262,7 +273,7 @@ public class UsersController : ControllerBase
     #region ResetPassword
 
     [HttpPut]
-    [Route("ResetPassword")]
+    [Route("NewPassword")]
     public async Task<ActionResult> ResetPassword(ResetPasswordDto resetDto)
     {
 
@@ -295,7 +306,7 @@ public class UsersController : ControllerBase
     #region UpdateImage
     private bool IsSupportedImageFormat(IFormFile file)
     {
-        return file.ContentType == "image/jpeg" || file.ContentType == "image/png" || file.ContentType == "image/jpg" || file.ContentType == "image/webp";
+        return file.ContentType == "image/jpeg" || file.ContentType == "image/png";
     }
 
     [HttpPut("image/{userId}")]
@@ -309,7 +320,7 @@ public class UsersController : ControllerBase
         }
         if (userImageDto.image != null && !IsSupportedImageFormat(userImageDto.image))
         {
-            return BadRequest("Image file must be in JPEG or PNG or JPG or WEBP format.");
+            return BadRequest("Image file must be in JPEG or PNG format.");
         }
 
         // Step 3: Retrieve the user object
@@ -320,10 +331,20 @@ public class UsersController : ControllerBase
         }
 
         // Step 4: Save the new image file
-        var imgURL = upload.UploadImageOnCloudinary(userImageDto.image);
+        string imageFileName = null;
+        if (userImageDto.image != null)
+        {
+            imageFileName = $"{userId}_{DateTime.UtcNow:yyyyMMddHHmmss}.jpg"; // Use a unique file name
+            var imagePath = Path.Combine(_env.WebRootPath, "Images", userImageDto.image.FileName);
+            using (var fileStream = new FileStream(imagePath, FileMode.Create))
+            {
+                await userImageDto.image.CopyToAsync(fileStream);
+            }
+            user.Image = $"/Images/{imageFileName}";
+        }
 
-        user.Image = imgURL;
-    
+        //user.Image = user.Image;
+
         // Step 6: Save the updated user object
         var res = await _userManager.UpdateAsync(user);
         if (!res.Succeeded)

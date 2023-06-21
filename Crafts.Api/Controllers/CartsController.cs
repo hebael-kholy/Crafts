@@ -53,6 +53,18 @@ namespace Crafts.Api.Controllers
             return cartDto;
         }
 
+        [HttpGet]
+        [Route("/WithCartItems")]
+        public ActionResult<CartWithCartItemsReadDto> GetByUserIdWithCartItems(string id)
+        {
+            var cartDto = _cartManager.GetByUserIdWithCartItems(id);
+            if (cartDto == null)
+            {
+                return NotFound();
+            }
+            return cartDto;
+        }
+
         [HttpPost]
         public async Task<ActionResult> Add(CartAddDto cart)
         {
@@ -60,7 +72,7 @@ namespace Crafts.Api.Controllers
             {
                 await _cartManager.Add(cart);
                 var msg = new GeneralResponse("New Cart is Added Successfully OR existing Cart updated quantity");
-                var res = new { msg, cart };
+                var res = new { msg, cart};
                 return Ok(res);
             }
             catch (Exception ex)
