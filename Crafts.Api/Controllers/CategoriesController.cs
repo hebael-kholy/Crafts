@@ -55,7 +55,7 @@ namespace Crafts.Api.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult> Add(CategoryAddDto category)
+        public async Task<ActionResult> Add([FromForm] CategoryAddDto category)
         {
             try
             {
@@ -105,6 +105,7 @@ namespace Crafts.Api.Controllers
         }
 
         [HttpDelete]
+        [Route("{id:int}")]
         public ActionResult Delete(int id)
         {
             _categoryManager.Delete(id);
