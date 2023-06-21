@@ -19,5 +19,9 @@ namespace Crafts.DAL.Repos.ProductsRepo
             _context = context;
         }
 
+        public List<Product> GetProductsWithSale()
+        {
+            return _context.Set<Product>().Where(p => p.IsSale == true).ToList();
+        }
     }
 }

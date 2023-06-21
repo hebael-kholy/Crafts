@@ -29,14 +29,11 @@ namespace Crafts.DAL.Repos.WishListRepo
         //Get WishList With Products
         public Wishlist? GetByIdWithProducts(int id)
         {
-            //Explicit Loading
             return _context.Set<Wishlist>()
                 .Include(c => c.Products)
                 .FirstOrDefault(c => c.Id == id);
-           
         }
 
-        
     }
 
 }

@@ -26,7 +26,14 @@ namespace Crafts.Api.Controllers
         {
             return _productsManager.GetAll();
         }
-  
+
+        [HttpGet]
+        [Route("/api/Products/Sale")]
+        public ActionResult<List<ProductReadDto>> GetProductwithSale()
+        {
+            return _productsManager.GetProductwithSale();
+        }
+
         [HttpGet]
         [Route("{id:int}")]
         public ActionResult<ProductReadDto> GetById(int id) 

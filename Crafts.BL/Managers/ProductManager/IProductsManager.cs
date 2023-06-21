@@ -12,6 +12,7 @@ namespace Crafts.BL.Managers.ProductManager
     {
         Task Add(ProductAddDto productDto);
         List<ProductReadDto> GetAll();
+        List<ProductReadDto> GetProductwithSale();
         ProductReadDto? GetById(int id);
         void AddImage(ProductImgAddDto product, int id);
         void Update(ProductUpdateDto productUpdateDto , int id);

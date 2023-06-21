@@ -44,11 +44,12 @@ namespace Crafts.BL.Managers.ProductManager
     
             if (ProductToEdit == null) { return; }
 
-            ProductToEdit.Title = productUpdateDto.Title != "string" ? productUpdateDto.Title : ProductToEdit.Title;
+            ProductToEdit.Title = productUpdateDto.Title == "" ? ProductToEdit.Title : productUpdateDto.Title; 
             ProductToEdit.Price = productUpdateDto.Price != 0 ? productUpdateDto.Price : ProductToEdit.Price;
             ProductToEdit.Quantity = productUpdateDto.Quantity != 0 ? productUpdateDto.Quantity : ProductToEdit.Quantity;
-            ProductToEdit.IsSale = productUpdateDto.IsSale;
-            ProductToEdit.Description = productUpdateDto.Description != "string" ? productUpdateDto.Description : ProductToEdit.Description; ;
+            if (productUpdateDto.IsSale == true) { ProductToEdit.IsSale = productUpdateDto.IsSale; }
+            else { ProductToEdit.IsSale = ProductToEdit.IsSale; }
+            ProductToEdit.Description = productUpdateDto.Description != "" ? productUpdateDto.Description : ProductToEdit.Description; ;
             ProductToEdit.CategoryId = productUpdateDto.CategoryId != 0 ? productUpdateDto.CategoryId : ProductToEdit.CategoryId;
 
              _productRepo.Update(ProductToEdit);     //await
@@ -80,6 +81,23 @@ namespace Crafts.BL.Managers.ProductManager
                   IsSale = p.IsSale,
                   CategoryId = p.CategoryId,
                   Description = p.Description }).ToList();
+        }
+        public List<ProductReadDto> GetProductwithSale()
+        {
+            List<Product> productsFromDB = _productRepo.GetProductsWithSale();
+            return productsFromDB
+               .Select(p => new ProductReadDto
+               {
+                   Id = p.Id,
+                   Title = p.Title,
+                   Price = p.Price,
+                   Rating = p.Rating,
+                   Image = p.Image,
+                   Quantity = p.Quantity,
+                   IsSale = p.IsSale,
+                   CategoryId = p.CategoryId,
+                   Description = p.Description
+               }).ToList();
         }
         public ProductReadDto? GetById(int id)
         {
