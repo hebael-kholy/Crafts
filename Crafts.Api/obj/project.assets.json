@@ -8257,24 +8257,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Hi-Tech\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\dina\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\9-months scholarship iti\\Graduatio Project\\Master\\Crafts\\Crafts.Api\\Crafts.Api.csproj",
+      "projectUniqueName": "E:\\ITI\\Final Project .Net API\\Crafts\\Crafts.Api\\Crafts.Api.csproj",
       "projectName": "Crafts.Api",
-      "projectPath": "E:\\9-months scholarship iti\\Graduatio Project\\Master\\Crafts\\Crafts.Api\\Crafts.Api.csproj",
-      "packagesPath": "C:\\Users\\Hi-Tech\\.nuget\\packages\\",
-      "outputPath": "E:\\9-months scholarship iti\\Graduatio Project\\Master\\Crafts\\Crafts.Api\\obj\\",
+      "projectPath": "E:\\ITI\\Final Project .Net API\\Crafts\\Crafts.Api\\Crafts.Api.csproj",
+      "packagesPath": "C:\\Users\\dina\\.nuget\\packages\\",
+      "outputPath": "E:\\ITI\\Final Project .Net API\\Crafts\\Crafts.Api\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Hi-Tech\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\dina\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8282,14 +8277,15 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\sdk\\7.0.302\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "E:\\9-months scholarship iti\\Graduatio Project\\Master\\Crafts\\Crafts.BL\\Crafts.BL.csproj": {
-              "projectPath": "E:\\9-months scholarship iti\\Graduatio Project\\Master\\Crafts\\Crafts.BL\\Crafts.BL.csproj"
+            "E:\\ITI\\Final Project .Net API\\Crafts\\Crafts.BL\\Crafts.BL.csproj": {
+              "projectPath": "E:\\ITI\\Final Project .Net API\\Crafts\\Crafts.BL\\Crafts.BL.csproj"
             }
           }
         }
@@ -8350,7 +8346,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }
