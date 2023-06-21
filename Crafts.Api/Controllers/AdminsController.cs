@@ -42,7 +42,7 @@ public async Task<ActionResult<TokenDto>> LoginAdmin(LoginDto cradentials)
         return BadRequest(new { Message = "User Not Found" });
     }
     var isPasswordCorrect = await _userManager.CheckPasswordAsync(user, cradentials.Password);
-    if (!(isPasswordCorrect && user.Role==0))
+    if (!isPasswordCorrect && user.Role==0)
     {
         return Unauthorized();
     }
@@ -52,8 +52,8 @@ public async Task<ActionResult<TokenDto>> LoginAdmin(LoginDto cradentials)
 
     var token = GenerateToken(claims, exp);
 
-
-    return new TokenDto(token);
+    var res = new { user, token };
+    return Ok(res);
 
 }
     #endregion

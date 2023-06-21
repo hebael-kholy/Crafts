@@ -56,9 +56,19 @@ builder.Services.AddIdentity<User, IdentityRole>(options =>
     options.Password.RequireUppercase = false;
     options.Password.RequiredLength = 4;
     options.User.RequireUniqueEmail = true;
+    options.User.AllowedUserNameCharacters = string.Empty;
 }
 )
     .AddEntityFrameworkStores<CraftsContext>();
+#endregion
+
+#region SpacesInUsername
+
+builder.Services.Configure<IdentityOptions>(options =>
+{
+    options.User.AllowedUserNameCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 -._@+";
+});
+
 #endregion
 
 #region Authentication

@@ -3830,24 +3830,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Hi-Tech\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\dina\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\9-months scholarship iti\\Graduatio Project\\Master\\Crafts\\Crafts.BL\\Crafts.BL.csproj",
+      "projectUniqueName": "E:\\ITI\\Final Project .Net API\\Crafts\\Crafts.BL\\Crafts.BL.csproj",
       "projectName": "Crafts.BL",
-      "projectPath": "E:\\9-months scholarship iti\\Graduatio Project\\Master\\Crafts\\Crafts.BL\\Crafts.BL.csproj",
-      "packagesPath": "C:\\Users\\Hi-Tech\\.nuget\\packages\\",
-      "outputPath": "E:\\9-months scholarship iti\\Graduatio Project\\Master\\Crafts\\Crafts.BL\\obj\\",
+      "projectPath": "E:\\ITI\\Final Project .Net API\\Crafts\\Crafts.BL\\Crafts.BL.csproj",
+      "packagesPath": "C:\\Users\\dina\\.nuget\\packages\\",
+      "outputPath": "E:\\ITI\\Final Project .Net API\\Crafts\\Crafts.BL\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Hi-Tech\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\dina\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3861,8 +3856,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "E:\\9-months scholarship iti\\Graduatio Project\\Master\\Crafts\\Crafts.DAL\\Crafts.DAL.csproj": {
-              "projectPath": "E:\\9-months scholarship iti\\Graduatio Project\\Master\\Crafts\\Crafts.DAL\\Crafts.DAL.csproj"
+            "E:\\ITI\\Final Project .Net API\\Crafts\\Crafts.DAL\\Crafts.DAL.csproj": {
+              "projectPath": "E:\\ITI\\Final Project .Net API\\Crafts\\Crafts.DAL\\Crafts.DAL.csproj"
             }
           }
         }
@@ -3904,7 +3899,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }

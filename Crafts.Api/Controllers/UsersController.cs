@@ -69,9 +69,12 @@ public class UsersController : ControllerBase
                 new Claim(ClaimTypes.Role, user.Role.ToString()),
 
             };
+        DateTime exp = DateTime.Now.AddMinutes(20);
 
+        var token = GenerateToken(claims, exp);
         await _userManager.AddClaimsAsync(user, claims);
-        return Ok(user);
+        var res = new { user, token };
+        return Ok(res);
     }
     #endregion
 
@@ -88,7 +91,7 @@ public class UsersController : ControllerBase
         }
         var isPasswordCorrect = await _userManager.CheckPasswordAsync(user, cradentials.Password);
         var UserRole = await _userManager.GetRolesAsync(user);
-        if (!isPasswordCorrect || UserRole.Contains("User"))
+        if (!isPasswordCorrect)
         {
             return Unauthorized();
         }
@@ -209,18 +212,14 @@ public class UsersController : ControllerBase
 
     #region UpdateUser
 
-    [HttpPut("users/{userId}")]
-    public async Task<ActionResult<UpdateUserDto>> UpdateUser(string userId, [FromForm] UpdateUserDto updateDto)
+    [HttpPut("{userId}")]
+    public async Task<ActionResult<UpdateUserDto>> UpdateUser(string userId, [FromBody] UpdateUserDto updateDto)
     {
 
         // Step 2: Validate the input data
         if (!ModelState.IsValid)
         {
             return BadRequest(ModelState);
-        }
-        if (updateDto.ImageFile != null && !IsSupportedImageFormat(updateDto.ImageFile))
-        {
-            return BadRequest("Image file must be in JPEG or PNG format.");
         }
 
         // Step 3: Retrieve the user object
@@ -229,21 +228,6 @@ public class UsersController : ControllerBase
         {
             return NotFound($"User with ID {userId} not found.");
         }
-
-        // Step 4: Save the new image file
-        string imageFileName = null;
-        if (updateDto.ImageFile != null)
-        {
-            imageFileName = $"{userId}_{DateTime.UtcNow:yyyyMMddHHmmss}.jpg"; // Use a unique file name
-            var imagePath = Path.Combine(_env.WebRootPath, "Images", updateDto.ImageFile.FileName);
-            using (var fileStream = new FileStream(imagePath, FileMode.Create))
-            {
-                await updateDto.ImageFile.CopyToAsync(fileStream);
-            }
-            user.Image = $"/Images/{imageFileName}";
-        }
-
-        //user.Image = user.Image;
 
         // Step 5: Update the other fields of the user object
         user.UserName = updateDto.UserName ?? user.UserName;
@@ -258,13 +242,10 @@ public class UsersController : ControllerBase
         {
             return BadRequest(res.Errors);
         }
-        return Ok(res.Succeeded);
+        var result = new { res.Succeeded, user};
+        return Ok(result);
     }
 
-    private bool IsSupportedImageFormat(IFormFile file)
-    {
-        return file.ContentType == "image/jpeg" || file.ContentType == "image/png";
-    }
     #endregion
 
     #region ForgetPassword
@@ -288,7 +269,6 @@ public class UsersController : ControllerBase
     }
 
     #endregion
-
 
     #region ResetPassword
 
@@ -321,6 +301,57 @@ public class UsersController : ControllerBase
         }
         return Ok("Reset Successfully");
     }
-#endregion
+    #endregion
 
+    #region UpdateImage
+    private bool IsSupportedImageFormat(IFormFile file)
+    {
+        return file.ContentType == "image/jpeg" || file.ContentType == "image/png";
+    }
+
+    [HttpPut("image/{userId}")]
+    public async Task<ActionResult<UserImageDto>> UpdateUserImage(string userId, [FromForm] UserImageDto userImageDto)
+    {
+
+        // Step 2: Validate the input data
+        if (!ModelState.IsValid)
+        {
+            return BadRequest(ModelState);
+        }
+        if (userImageDto.image != null && !IsSupportedImageFormat(userImageDto.image))
+        {
+            return BadRequest("Image file must be in JPEG or PNG format.");
+        }
+
+        // Step 3: Retrieve the user object
+        var user = await _userManager.FindByIdAsync(userId);
+        if (user == null)
+        {
+            return NotFound($"User with ID {userId} not found.");
+        }
+
+        // Step 4: Save the new image file
+        string imageFileName = null;
+        if (userImageDto.image != null)
+        {
+            imageFileName = $"{userId}_{DateTime.UtcNow:yyyyMMddHHmmss}.jpg"; // Use a unique file name
+            var imagePath = Path.Combine(_env.WebRootPath, "Images", userImageDto.image.FileName);
+            using (var fileStream = new FileStream(imagePath, FileMode.Create))
+            {
+                await userImageDto.image.CopyToAsync(fileStream);
+            }
+            user.Image = $"/Images/{imageFileName}";
+        }
+
+        //user.Image = user.Image;
+
+        // Step 6: Save the updated user object
+        var res = await _userManager.UpdateAsync(user);
+        if (!res.Succeeded)
+        {
+            return BadRequest(res.Errors);
+        }
+        return Ok(res.Succeeded);
+    }
+    #endregion
 }
