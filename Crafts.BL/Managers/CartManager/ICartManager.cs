@@ -14,6 +14,8 @@ namespace Crafts.BL.Managers.CartManager
         List<CartReadDto> GetAll();
         CartReadDto GetById(int id);
         CartWithCartItemsReadDto GetByIdWithCartItems(int id);
+        CartWithCartItemsReadDto GetByUserIdWithCartItems(string id);
+
         Task Add(CartAddDto cart);
         void ApplyCouponForDiscount(int cartId, int couponId);
         void Delete(int id);

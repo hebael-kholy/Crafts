@@ -128,6 +128,37 @@ namespace Crafts.BL.Managers.CartManager
         }
         #endregion
 
+        #region GetByIdWithCartItems
+        public CartWithCartItemsReadDto GetByUserIdWithCartItems(string id)
+        {
+
+            Cart? cart = _cartRepo.GetByUserIdWithCartItems(id);
+            cart.Quantity = cart.CartItems.Count;
+            cart.TotalPrice = cart.CalculateTotalPrice();
+            if (cart.TotalPriceAfterDiscount > 0)
+            {
+                cart.TotalPriceAfterDiscount = cart.TotalPriceAfterDiscount;
+            }
+            else
+            {
+                cart.TotalPriceAfterDiscount = cart.CalculateTotalPrice();
+            }
+            return new CartWithCartItemsReadDto
+            {
+                Id = cart.Id,
+                Quantity = cart.Quantity,
+                TotalPrice = cart.TotalPrice,
+                TotalPriceAfterDiscount = cart.TotalPriceAfterDiscount,
+                CartItems = cart.CartItems.Select(c => new CartItemsChildReadDto
+                {
+                    Id = c.Id,
+                    Quantity = c.Quantity,
+
+                }).ToList()
+            };
+
+        }
+        #endregion
         #region ApplyCouponForDiscount
         public void ApplyCouponForDiscount(int cartId, int couponId)
         {
