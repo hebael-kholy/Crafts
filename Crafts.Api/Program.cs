@@ -41,11 +41,11 @@ builder.Services.AddSwaggerGen();
 //options.UseSqlServer(connectionString));
 #endregion
 
-
 #region DatabaseLite
 var connectionString = builder.Configuration.GetConnectionString("CraftDBLite");
 builder.Services.AddDbContext<CraftsContext>(options =>
-options.UseSql
+options.UseSqlite(connectionString));
+#endregion
 
 #region Identity Manager
 builder.Services.AddIdentity<User, IdentityRole>(options =>
