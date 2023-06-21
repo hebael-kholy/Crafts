@@ -23,6 +23,16 @@ namespace Crafts.DAL.Repos.CartRepo
         }
         #endregion
 
+        #region GetByUserIdWithCartItems
+        public Cart? GetByUserIdWithCartItems(string id)
+        {
+            return _context.Set<Cart>()
+            .Include(c => c.CartItems)
+            .ThenInclude(ci => ci.Product)
+            .FirstOrDefault(c => c.UserId == id);
+        }
+        #endregion
+
 
     }
 
