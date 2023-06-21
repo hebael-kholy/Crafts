@@ -36,18 +36,16 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 #region Database
-var connectionString = builder.Configuration.GetConnectionString("CraftsDB");
-builder.Services.AddDbContext<CraftsContext>(options =>
-options.UseSqlServer(connectionString));
+//var connectionString = builder.Configuration.GetConnectionString("CraftsDB");
+//builder.Services.AddDbContext<CraftsContext>(options =>
+//options.UseSqlServer(connectionString));
 #endregion
 
 
 #region DatabaseLite
-//var connectionString = builder.Configuration.GetConnectionString("CraftDBLite");
-//builder.Services.AddDbContext<CraftsContext>(options =>
-//options.UseSqlite(connectionString));
-#endregion
-
+var connectionString = builder.Configuration.GetConnectionString("CraftDBLite");
+builder.Services.AddDbContext<CraftsContext>(options =>
+options.UseSql
 
 #region Identity Manager
 builder.Services.AddIdentity<User, IdentityRole>(options =>
