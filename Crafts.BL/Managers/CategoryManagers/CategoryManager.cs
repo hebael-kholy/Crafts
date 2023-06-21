@@ -3,17 +3,8 @@ using Crafts.BL.Dtos.ProductDtos;
 using Crafts.BL.Managers.Services;
 using Crafts.DAL.Models;
 using Crafts.DAL.Repos.CategoryRepo;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Rewrite;
-using Microsoft.Extensions.Hosting;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Policy;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace Crafts.BL.Managers.CategoryManagers
 {
@@ -23,7 +14,7 @@ namespace Crafts.BL.Managers.CategoryManagers
 
         private readonly IFileService _fileService;
 
-        public CategoryManager(ICategoryRepo categoryRepo, IFileService fileService) 
+        public CategoryManager(ICategoryRepo categoryRepo, IFileService fileService)
         {
             _categoryRepo = categoryRepo;
             _fileService = fileService;
@@ -43,7 +34,7 @@ namespace Crafts.BL.Managers.CategoryManagers
         public CategoryReadDto GetById(int id)
         {
             var category = _categoryRepo.GetById(id);
-            if(category != null)
+            if (category != null)
             {
                 return new CategoryReadDto
                 {
@@ -61,7 +52,7 @@ namespace Crafts.BL.Managers.CategoryManagers
         public CategoryWithProductsDto GetByIdWithProducts(int id)
         {
             var category = _categoryRepo.GetByIdWithProducts(id);
-            if(category != null)
+            if (category != null)
             {
                 return new CategoryWithProductsDto
                 {
@@ -89,9 +80,9 @@ namespace Crafts.BL.Managers.CategoryManagers
             }
         }
 
-        public void AddImage([FromForm]CategoryImgAddDto categoryImgAddDto, int id)
+        public void AddImage([FromForm] CategoryImgAddDto categoryImgAddDto, int id)
         {
-            if(categoryImgAddDto.Image != null)
+            if (categoryImgAddDto.Image != null)
             {
                 var categoryToEdit = _categoryRepo.GetAll().FirstOrDefault(c => c.Id == id);
                 if (categoryToEdit != null)
@@ -110,15 +101,22 @@ namespace Crafts.BL.Managers.CategoryManagers
             }
         }
 
-        public async Task Add(CategoryAddDto categoryAddDto)
+        public async Task Add([FromForm] CategoryAddDto categoryAddDto)
         {
-            Category categoryToAdd = new Category
+            var fileResult = _fileService.SaveImage(categoryAddDto.Image);
+            if (fileResult.Item1 == 1)
             {
-                Title = categoryAddDto.Title,
-                Image = "https://epin-sam.s3.ap-south-1.amazonaws.com/media/images/category/default.png"
-            };
-            await _categoryRepo.Add(categoryToAdd);
-            _categoryRepo.SaveChanges();
+
+
+                Category categoryToAdd = new Category
+                {
+                    Title = categoryAddDto.Title,
+                    Image = fileResult.Item2
+                };
+
+                await _categoryRepo.Add(categoryToAdd);
+                _categoryRepo.SaveChanges();
+            }
         }
 
         public void Edit(CategoryEditDto categoryEditDto, int id)
@@ -140,7 +138,7 @@ namespace Crafts.BL.Managers.CategoryManagers
         {
             var categoryToDelete = _categoryRepo.GetById(id);
 
-            if(categoryToDelete != null)
+            if (categoryToDelete != null)
             {
                 _categoryRepo.Delete(categoryToDelete);
                 _categoryRepo.SaveChanges();
