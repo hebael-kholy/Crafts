@@ -11,6 +11,8 @@ namespace Crafts.DAL.Repos.CartRepo
     public interface ICartRepo :IGenericRepo<Cart>
     {
         Cart? GetByIdWithCartItems(int id);
+        Cart? GetByUserIdWithCartItems(string id);
+
 
 
     }
