@@ -3749,11 +3749,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\dina\\Desktop\\heba\\Crafts\\Crafts.DAL\\Crafts.DAL.csproj",
+      "projectUniqueName": "C:\\Users\\dina\\Desktop\\he\\Crafts\\Crafts.DAL\\Crafts.DAL.csproj",
       "projectName": "Crafts.DAL",
-      "projectPath": "C:\\Users\\dina\\Desktop\\heba\\Crafts\\Crafts.DAL\\Crafts.DAL.csproj",
+      "projectPath": "C:\\Users\\dina\\Desktop\\he\\Crafts\\Crafts.DAL\\Crafts.DAL.csproj",
       "packagesPath": "C:\\Users\\dina\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\dina\\Desktop\\heba\\Crafts\\Crafts.DAL\\obj\\",
+      "outputPath": "C:\\Users\\dina\\Desktop\\he\\Crafts\\Crafts.DAL\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\dina\\AppData\\Roaming\\NuGet\\NuGet.Config",

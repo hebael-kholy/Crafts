@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\dina\\Desktop\\heba\\Crafts\\Crafts.BL\\Crafts.BL.csproj": {}
+    "C:\\Users\\dina\\Desktop\\he\\Crafts\\Crafts.BL\\Crafts.BL.csproj": {}
   },
   "projects": {
-    "C:\\Users\\dina\\Desktop\\heba\\Crafts\\Crafts.BL\\Crafts.BL.csproj": {
+    "C:\\Users\\dina\\Desktop\\he\\Crafts\\Crafts.BL\\Crafts.BL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dina\\Desktop\\heba\\Crafts\\Crafts.BL\\Crafts.BL.csproj",
+        "projectUniqueName": "C:\\Users\\dina\\Desktop\\he\\Crafts\\Crafts.BL\\Crafts.BL.csproj",
         "projectName": "Crafts.BL",
-        "projectPath": "C:\\Users\\dina\\Desktop\\heba\\Crafts\\Crafts.BL\\Crafts.BL.csproj",
+        "projectPath": "C:\\Users\\dina\\Desktop\\he\\Crafts\\Crafts.BL\\Crafts.BL.csproj",
         "packagesPath": "C:\\Users\\dina\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dina\\Desktop\\heba\\Crafts\\Crafts.BL\\obj\\",
+        "outputPath": "C:\\Users\\dina\\Desktop\\he\\Crafts\\Crafts.BL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\dina\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\dina\\Desktop\\heba\\Crafts\\Crafts.DAL\\Crafts.DAL.csproj": {
-                "projectPath": "C:\\Users\\dina\\Desktop\\heba\\Crafts\\Crafts.DAL\\Crafts.DAL.csproj"
+              "C:\\Users\\dina\\Desktop\\he\\Crafts\\Crafts.DAL\\Crafts.DAL.csproj": {
+                "projectPath": "C:\\Users\\dina\\Desktop\\he\\Crafts\\Crafts.DAL\\Crafts.DAL.csproj"
               }
             }
           }
@@ -79,14 +79,14 @@
         }
       }
     },
-    "C:\\Users\\dina\\Desktop\\heba\\Crafts\\Crafts.DAL\\Crafts.DAL.csproj": {
+    "C:\\Users\\dina\\Desktop\\he\\Crafts\\Crafts.DAL\\Crafts.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dina\\Desktop\\heba\\Crafts\\Crafts.DAL\\Crafts.DAL.csproj",
+        "projectUniqueName": "C:\\Users\\dina\\Desktop\\he\\Crafts\\Crafts.DAL\\Crafts.DAL.csproj",
         "projectName": "Crafts.DAL",
-        "projectPath": "C:\\Users\\dina\\Desktop\\heba\\Crafts\\Crafts.DAL\\Crafts.DAL.csproj",
+        "projectPath": "C:\\Users\\dina\\Desktop\\he\\Crafts\\Crafts.DAL\\Crafts.DAL.csproj",
         "packagesPath": "C:\\Users\\dina\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dina\\Desktop\\heba\\Crafts\\Crafts.DAL\\obj\\",
+        "outputPath": "C:\\Users\\dina\\Desktop\\he\\Crafts\\Crafts.DAL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\dina\\AppData\\Roaming\\NuGet\\NuGet.Config",

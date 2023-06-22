@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.EntityFrameworkCore;
 
 namespace Crafts.DAL.Models;
 
+[Index(nameof(Category.Title), IsUnique = true)]
 public class Category
 {
     public int Id { get; set; }
