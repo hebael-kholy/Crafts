@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Crafts.BL.Managers.OrderManagers;
 using Crafts.BL.Dtos.OrderDtos;
+using Microsoft.EntityFrameworkCore.Storage.ValueConversion.Internal;
 
 namespace Crafts.Api.Controllers
 {
@@ -24,6 +25,17 @@ namespace Crafts.Api.Controllers
                 return BadRequest(ModelState);
             }
             return _orderManager.GetAll();
+        }
+        
+        [HttpGet]
+        [Route("{id}/{status}")]
+        public ActionResult<List<OrderReadDto>> GetByStatus(string id, int status)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            return _orderManager.GetByStatus(id, status);
         }
 
         [HttpGet]
@@ -124,5 +136,7 @@ namespace Crafts.Api.Controllers
             var res = new { msg, id };
             return Ok(res);
         }
+
+        
     }
 }

@@ -7,4 +7,6 @@ public interface IOrderRepo : IGenericRepo<Order>
 {
     Order GetOrderWithCartAndUser(int id);
     List<Order> GetUserOrders(string id);
+    List<Order> GetUserOrdersByStatus(string id, int status);
+
 }

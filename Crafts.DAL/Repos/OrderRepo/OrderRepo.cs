@@ -1,5 +1,6 @@
 ﻿using Crafts.DAL.Context;
 using Crafts.DAL.Models;
+using Crafts.DAL.Models.Enum;
 using Crafts.DAL.Repos.GenericRepo;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -35,5 +36,15 @@ public class OrderRepo : GenericRepo<Order>, IOrderRepo
                 .Include(o => o.Cart)
                 .ToList();
                
+    }
+
+    public List<Order> GetUserOrdersByStatus(string id, int status)
+    {
+        return _context.Set<Order>()
+                .Where(u => u.UserId == id)
+                .Where(u => u.Status == (Status)status)
+                //.Include(o => o.User)
+                //.Include(o => o.Cart)
+                .ToList();
     }
 }
