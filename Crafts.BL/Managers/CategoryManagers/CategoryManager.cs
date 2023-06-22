@@ -5,6 +5,7 @@ using Crafts.BL.Managers.Services;
 using Crafts.DAL.Models;
 using Crafts.DAL.Repos.CategoryRepo;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Crafts.BL.Managers.CategoryManagers
@@ -88,16 +89,27 @@ namespace Crafts.BL.Managers.CategoryManagers
                 var categoryToEdit = _categoryRepo.GetAll().FirstOrDefault(c => c.Id == id);
                 if (categoryToEdit != null)
                 {
-                    var fileResult = _fileService.SaveImage(categoryImgAddDto.Image);
-
-                    //When Item1 in Tuple = 1 --> this means image saved successfully
-                    //When Item1 in Tuple = 0 --> this means image not saved successfully
-                    if (fileResult.Item1 == 1)
+                    if (categoryImgAddDto.Image != null && !IsSupportedImageFormat(categoryImgAddDto.Image))
                     {
-                        categoryToEdit.Image = fileResult.Item2;
-                        _categoryRepo.Update(categoryToEdit);
-                        _categoryRepo.SaveChanges();
+                        throw new ArgumentException("Image file must be in JPEG or PNG or JPG or WEBP format.");
                     }
+
+                    var imgURL = upload.UploadImageOnCloudinary(categoryImgAddDto.Image);
+
+                    categoryToEdit.Image = imgURL;
+                    _categoryRepo.Update(categoryToEdit);
+                    _categoryRepo.SaveChanges();
+
+                    //var fileResult = _fileService.SaveImage(categoryImgAddDto.Image);
+
+                    ////When Item1 in Tuple = 1 --> this means image saved successfully
+                    ////When Item1 in Tuple = 0 --> this means image not saved successfully
+                    //if (fileResult.Item1 == 1)
+                    //{
+                    //    categoryToEdit.Image = fileResult.Item2;
+                    //    _categoryRepo.Update(categoryToEdit);
+                    //    _categoryRepo.SaveChanges();
+                    //}
                 }
             }
         }
@@ -108,35 +120,65 @@ namespace Crafts.BL.Managers.CategoryManagers
 
         public async Task Add([FromForm] CategoryAddDto categoryAddDto)
         {
+
+            //if (fileResult.Item1 == 1)
+            //{
+            // All code was here
+            //}
+            // fileResult = _fileService.SaveImage(categoryAddDto.Image);
+
             if (categoryAddDto.Image != null && !IsSupportedImageFormat(categoryAddDto.Image))
             {
                 throw new ArgumentException("Image file must be in JPEG or PNG or JPG or WEBP format.");
             }
 
             var x = upload.UploadImageOnCloudinary(categoryAddDto.Image);
-            // fileResult = _fileService.SaveImage(categoryAddDto.Image);
-
-
 
             Category categoryToAdd = new Category
             {
                 Title = categoryAddDto.Title,
                 Image = x
+                //Image = fileResult.Item2
             };
 
             await _categoryRepo.Add(categoryToAdd);
             _categoryRepo.SaveChanges();
 
+            //var categoryTitle = _categoryRepo.GetByName(categoryAddDto.Title);
+            //if (categoryTitle != null)
+            //{
+            //    if (categoryTitle.Title.Equals(categoryAddDto.Title) && categoryTitle != null)
+            //    {
+            //        throw new ArgumentException($"Category Name '{categoryAddDto.Title}' Exists");
+            //    }
+            //}
+            //else{
+                
+            //}
         }
 
         public void Edit(CategoryEditDto categoryEditDto, int id)
         {
             var categoryToEdit = _categoryRepo.GetById(id);
+            //var categoryTitle = _categoryRepo.GetByName(categoryEditDto.Title);
+
             if (categoryToEdit != null)
             {
-                categoryToEdit.Title = categoryEditDto.Title;
+                categoryToEdit!.Title = categoryEditDto.Title;
                 _categoryRepo.Update(categoryToEdit);
                 _categoryRepo.SaveChanges();
+
+                //if (categoryEditDto.Title.Equals(categoryToEdit.Title))
+                //{
+                //    //throw new ArgumentException($"Category Name '{categoryEditDto.Title}' Exists");
+
+                //    categoryToEdit!.Title = categoryToEdit.Title;
+                //    _categoryRepo.Update(categoryToEdit);
+                //    _categoryRepo.SaveChanges();
+                //}
+                //else
+                //{
+                //}
             }
             else
             {

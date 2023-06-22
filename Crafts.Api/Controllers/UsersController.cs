@@ -212,7 +212,7 @@ public class UsersController : ControllerBase
 
     #region UpdateUser
 
-    [HttpPut("{userId}")]
+    [HttpPut("update/{userId}")]
     public async Task<ActionResult<UpdateUserDto>> UpdateUser(string userId, [FromBody] UpdateUserDto updateDto)
     {
 

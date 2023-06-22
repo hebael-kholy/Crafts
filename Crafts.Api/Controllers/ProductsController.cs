@@ -13,12 +13,12 @@ namespace Crafts.Api.Controllers
     public class ProductsController : ControllerBase
     {
         private readonly IProductsManager _productsManager;
-        
+
 
         public ProductsController(IProductsManager productManager)
         {
             _productsManager = productManager;
-            
+
         }
 
         [HttpGet]
@@ -36,16 +36,27 @@ namespace Crafts.Api.Controllers
 
         [HttpGet]
         [Route("{id:int}")]
-        public ActionResult<ProductReadDto> GetById(int id) 
+        public ActionResult<ProductReadDto> GetById(int id)
         {
-            var product = _productsManager.GetById(id); 
+            var product = _productsManager.GetById(id);
             return product;
         }
 
         [HttpPost]
-        public async Task<ActionResult> Add(ProductAddDto productDto) {
-            await _productsManager.Add(productDto);
-            return Ok(productDto);
+        public async Task<ActionResult> Add(ProductAddDto productDto)
+        {
+            try
+            {
+                await _productsManager.Add(productDto);
+                var msg = new GeneralResponse("Product Added Successfully");
+                var res = new { msg, productDto };
+                return Ok(res);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+
         }
 
         [HttpPut]
@@ -53,7 +64,7 @@ namespace Crafts.Api.Controllers
         public ActionResult AddImage([FromForm] ProductImgAddDto productImgAddDto, int id)
         {
             try
-            {  
+            {
                 _productsManager.AddImage(productImgAddDto, id);
                 var msg = new GeneralResponse($"Image Updated Successfully with Id: {id}");
                 var res = new { msg, id, productImgAddDto };
@@ -69,21 +80,28 @@ namespace Crafts.Api.Controllers
         [Route("{id}")]
         public ActionResult Edit(int id, ProductUpdateDto productUpdateDto)
         {
-            var product = _productsManager.GetById(id);
+            try
+            {
+                var product = _productsManager.GetById(id);
 
-            if (product == null) return NotFound(new { Message = "No Products Found!!" });
+                if (product == null) return NotFound(new { Message = $"Product with id {id} is not found" });
 
-            _productsManager.Update(productUpdateDto,id);
-            return CreatedAtAction(
-                actionName: nameof(GetAll),
-                value: $"Product with Id:{id} is Updated Successfully");
+                _productsManager.Update(productUpdateDto, id);
+                return CreatedAtAction(
+                    actionName: nameof(GetAll),
+                    value: $"Product with Id {id} is Updated Successfully");
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
 
         [HttpDelete]
         [Route("{id}")]
         public ActionResult Delete(int id)
         {
-            var product = _productsManager.GetById(id); 
+            var product = _productsManager.GetById(id);
             if (product?.Id != id) return NotFound(new { Message = "No Products Found!!" });
 
             _productsManager.Delete(id);
