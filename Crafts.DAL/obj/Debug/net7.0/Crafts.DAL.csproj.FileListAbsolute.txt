@@ -194,3 +194,17 @@ C:\Users\dina\Desktop\he\Crafts\Crafts.DAL\obj\Debug\net7.0\refint\Crafts.DAL.dl
 C:\Users\dina\Desktop\he\Crafts\Crafts.DAL\obj\Debug\net7.0\Crafts.DAL.pdb
 C:\Users\dina\Desktop\he\Crafts\Crafts.DAL\obj\Debug\net7.0\Crafts.DAL.genruntimeconfig.cache
 C:\Users\dina\Desktop\he\Crafts\Crafts.DAL\obj\Debug\net7.0\ref\Crafts.DAL.dll
+E:\9-months scholarship iti\Final Project Last\Back\last\Crafts\Crafts.DAL\bin\Debug\net7.0\Crafts.DAL.deps.json
+E:\9-months scholarship iti\Final Project Last\Back\last\Crafts\Crafts.DAL\bin\Debug\net7.0\Crafts.DAL.runtimeconfig.json
+E:\9-months scholarship iti\Final Project Last\Back\last\Crafts\Crafts.DAL\bin\Debug\net7.0\Crafts.DAL.dll
+E:\9-months scholarship iti\Final Project Last\Back\last\Crafts\Crafts.DAL\bin\Debug\net7.0\Crafts.DAL.pdb
+E:\9-months scholarship iti\Final Project Last\Back\last\Crafts\Crafts.DAL\obj\Debug\net7.0\Crafts.DAL.csproj.AssemblyReference.cache
+E:\9-months scholarship iti\Final Project Last\Back\last\Crafts\Crafts.DAL\obj\Debug\net7.0\Crafts.DAL.GeneratedMSBuildEditorConfig.editorconfig
+E:\9-months scholarship iti\Final Project Last\Back\last\Crafts\Crafts.DAL\obj\Debug\net7.0\Crafts.DAL.AssemblyInfoInputs.cache
+E:\9-months scholarship iti\Final Project Last\Back\last\Crafts\Crafts.DAL\obj\Debug\net7.0\Crafts.DAL.AssemblyInfo.cs
+E:\9-months scholarship iti\Final Project Last\Back\last\Crafts\Crafts.DAL\obj\Debug\net7.0\Crafts.DAL.csproj.CoreCompileInputs.cache
+E:\9-months scholarship iti\Final Project Last\Back\last\Crafts\Crafts.DAL\obj\Debug\net7.0\Crafts.DAL.dll
+E:\9-months scholarship iti\Final Project Last\Back\last\Crafts\Crafts.DAL\obj\Debug\net7.0\refint\Crafts.DAL.dll
+E:\9-months scholarship iti\Final Project Last\Back\last\Crafts\Crafts.DAL\obj\Debug\net7.0\Crafts.DAL.pdb
+E:\9-months scholarship iti\Final Project Last\Back\last\Crafts\Crafts.DAL\obj\Debug\net7.0\Crafts.DAL.genruntimeconfig.cache
+E:\9-months scholarship iti\Final Project Last\Back\last\Crafts\Crafts.DAL\obj\Debug\net7.0\ref\Crafts.DAL.dll

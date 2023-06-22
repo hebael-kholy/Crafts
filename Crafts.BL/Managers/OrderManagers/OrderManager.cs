@@ -50,6 +50,25 @@ namespace Crafts.BL.Managers.OrderManagers;
         }).ToList();
     }
 
+    public List<OrderReadDto> GetByStatus(string id, int status)
+    {
+        List<Order> ordersFromDb = _orderRepo.GetUserOrdersByStatus(id, status);
+        return ordersFromDb.Select(o => new OrderReadDto
+        {
+            Id = o.Id,
+            Status = o.Status,
+            PaymentMethod = o.PaymentMethod,
+            TotalPrice = o.TotalPrice,
+            TaxPrice = o.TaxPrice,
+            ShippingPrice = o.ShippingPrice,
+            PaidAt = o.PaidAt,
+            CreatedAt = o.CreatedAt,
+            IsPaid = o.IsPaid,
+            CartId = o.CartId,
+            UserId = o.UserId
+        }).ToList();
+    }
+
     public OrderReadDto GetById(int id)
     {
         var order = _orderRepo.GetOrderWithCartAndUser(id);
@@ -245,4 +264,6 @@ namespace Crafts.BL.Managers.OrderManagers;
             throw new ArgumentException($"Order with id {id} is not found");
         }
     }
+
+    
 }

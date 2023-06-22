@@ -11,6 +11,7 @@ namespace Crafts.BL.Managers.OrderManagers
     public interface IOrderManager
     {
         List<OrderReadDto> GetAll();
+        List<OrderReadDto> GetByStatus(string id, int status);
         List<OrderReadDto> GetUserOrders(string id);
         Task Add(OrderAddDto order);
         OrderReadDto GetById(int id);
