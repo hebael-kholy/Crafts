@@ -11,5 +11,6 @@ namespace Crafts.DAL.Repos.CategoryRepo
     public interface ICategoryRepo : IGenericRepo<Category>
     {
         Category? GetByIdWithProducts(int id);
+        Category GetByName(string title);
     }
 }

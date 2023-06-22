@@ -44,8 +44,18 @@ namespace Crafts.Api.Controllers
 
         [HttpPost]
         public async Task<ActionResult> Add(ProductAddDto productDto) {
-            await _productsManager.Add(productDto);
-            return Ok(productDto);
+            try
+            {
+                await _productsManager.Add(productDto);
+                var msg = new GeneralResponse("Product Added Successfully");
+                var res = new { msg, productDto };
+                return Ok(res);
+            }
+            catch(Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+            
         }
 
         [HttpPut]
@@ -69,14 +79,21 @@ namespace Crafts.Api.Controllers
         [Route("{id}")]
         public ActionResult Edit(int id, ProductUpdateDto productUpdateDto)
         {
-            var product = _productsManager.GetById(id);
+            try
+            {
+                var product = _productsManager.GetById(id);
 
-            if (product == null) return NotFound(new { Message = "No Products Found!!" });
+                if (product == null) return NotFound(new { Message = $"Product with id {id} is not found" });
 
-            _productsManager.Update(productUpdateDto,id);
-            return CreatedAtAction(
-                actionName: nameof(GetAll),
-                value: $"Product with Id:{id} is Updated Successfully");
+                _productsManager.Update(productUpdateDto, id);
+                return CreatedAtAction(
+                    actionName: nameof(GetAll),
+                    value: $"Product with Id {id} is Updated Successfully");
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
 
         [HttpDelete]

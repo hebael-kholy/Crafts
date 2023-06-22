@@ -1218,3 +1218,4 @@ C:\Users\dina\Desktop\heba\Crafts\Crafts.Api\obj\Debug\net7.0\refint\Crafts.Api.
 C:\Users\dina\Desktop\heba\Crafts\Crafts.Api\obj\Debug\net7.0\Crafts.Api.pdb
 C:\Users\dina\Desktop\heba\Crafts\Crafts.Api\obj\Debug\net7.0\Crafts.Api.genruntimeconfig.cache
 C:\Users\dina\Desktop\heba\Crafts\Crafts.Api\obj\Debug\net7.0\ref\Crafts.Api.dll
+E:\ITI\Final Project .Net API\Crafts\Crafts.Api\bin\Debug\net7.0\CloudinaryDotNet.dll

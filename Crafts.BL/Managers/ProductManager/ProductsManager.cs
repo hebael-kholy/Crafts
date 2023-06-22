@@ -5,6 +5,7 @@ using Crafts.BL.Dtos.IdentityDtos;
 using Crafts.BL.Dtos.ProductDtos;
 using Crafts.BL.Managers.Services;
 using Crafts.DAL.Models;
+using Crafts.DAL.Repos.CategoryRepo;
 using Crafts.DAL.Repos.ProductsRepo;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -20,14 +21,23 @@ namespace Crafts.BL.Managers.ProductManager
     {
         private readonly IProductRepo _productRepo;
         private readonly IFileService _fileService;
+        private readonly ICategoryRepo _categoryRepo;
 
         public ProductsManager(IProductRepo productRepo,
-            IFileService fileService) {
+            IFileService fileService, ICategoryRepo categoryRepo) {
             _productRepo = productRepo;
             _fileService = fileService;
+            _categoryRepo = categoryRepo;
         }
         public async Task Add(ProductAddDto productDto)
         {
+            // Check if the category with the given ID exist
+            var category = _categoryRepo.GetById(productDto.CategoryId);
+            if (category == null)
+            {
+                throw new ArgumentException($"Category with id {productDto.CategoryId} is not found");
+            }
+
             var product = new Product
             {
                 Title = productDto.Title,
@@ -44,6 +54,12 @@ namespace Crafts.BL.Managers.ProductManager
         }
         public void Update(ProductUpdateDto productUpdateDto, int id)
         {
+            var category = _categoryRepo.GetById(productUpdateDto.CategoryId);
+            if (category == null)
+            {
+                throw new ArgumentException($"Category with id {productUpdateDto.CategoryId} is not found");
+            }
+
             Product? ProductToEdit =  _productRepo.GetById(id);  //await
     
             if (ProductToEdit == null) { return; }

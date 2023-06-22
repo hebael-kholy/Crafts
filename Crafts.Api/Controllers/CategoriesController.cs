@@ -66,7 +66,7 @@ namespace Crafts.Api.Controllers
             }
             catch(Exception ex)
             {
-                return BadRequest(ex.Message);
+                return BadRequest(ex.InnerException!.Message);
             }
         }
 
@@ -100,7 +100,7 @@ namespace Crafts.Api.Controllers
             }
             catch (Exception ex)
             {
-                return BadRequest(ex.Message);
+                return BadRequest(ex.InnerException!.Message);
             }
         }
 

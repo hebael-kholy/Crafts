@@ -7,9 +7,10 @@ using System.Threading.Tasks;
 
 namespace Crafts.BL.Dtos.CategoryDtos
 {
-    public record CategoryAddDto(string Title, IFormFile Image);
-    //{
-    //    public string Title { get; set; } = string.Empty;
-    //    public IFormFile Image { get; set; } = null!;
-    //}
+    //public record CategoryAddDto(string Title, IFormFile Image);
+    public class CategoryAddDto
+    {
+        public string Title { get; set; } = string.Empty;
+        public IFormFile Image { get; set; } = null!;
+    }
 }

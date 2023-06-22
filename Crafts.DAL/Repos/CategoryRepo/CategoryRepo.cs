@@ -20,5 +20,9 @@ namespace Crafts.DAL.Repos.CategoryRepo
                 .FirstOrDefault(c => c.Id == id);
             return x;
         }
+        public Category GetByName(string title)
+        {
+            return _context.Categories.FirstOrDefault(c => c.Title == title)!;
+        }
     }
 }

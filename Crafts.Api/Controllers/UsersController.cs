@@ -201,7 +201,7 @@ public class UsersController : ControllerBase
 
     #region UpdateUser
 
-    [HttpPut("{userId}")]
+    [HttpPut("update/{userId}")]
     public async Task<ActionResult<UpdateUserDto>> UpdateUser(string userId, [FromBody] UpdateUserDto updateDto)
     {
 
@@ -231,7 +231,7 @@ public class UsersController : ControllerBase
         {
             return BadRequest(res.Errors);
         }
-        var result = new { res.Succeeded, user };
+        var result = new { res, user };
         return Ok(result);
     }
 
@@ -330,7 +330,8 @@ public class UsersController : ControllerBase
         {
             return BadRequest(res.Errors);
         }
-        return Ok(res.Succeeded);
+        var result = new { res.Succeeded, user.Image };
+        return Ok(result);
     }
     #endregion
 }
