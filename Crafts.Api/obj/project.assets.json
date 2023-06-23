@@ -8383,24 +8383,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Hi-Tech\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Copy Center\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\9-months scholarship iti\\Final Project Last\\Back\\last\\Crafts\\Crafts.Api\\Crafts.Api.csproj",
+      "projectUniqueName": "C:\\Users\\Copy Center\\Desktop\\Crafts\\Crafts.Api\\Crafts.Api.csproj",
       "projectName": "Crafts.Api",
-      "projectPath": "E:\\9-months scholarship iti\\Final Project Last\\Back\\last\\Crafts\\Crafts.Api\\Crafts.Api.csproj",
-      "packagesPath": "C:\\Users\\Hi-Tech\\.nuget\\packages\\",
-      "outputPath": "E:\\9-months scholarship iti\\Final Project Last\\Back\\last\\Crafts\\Crafts.Api\\obj\\",
+      "projectPath": "C:\\Users\\Copy Center\\Desktop\\Crafts\\Crafts.Api\\Crafts.Api.csproj",
+      "packagesPath": "C:\\Users\\Copy Center\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Copy Center\\Desktop\\Crafts\\Crafts.Api\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Hi-Tech\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\Copy Center\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8414,8 +8409,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "E:\\9-months scholarship iti\\Final Project Last\\Back\\last\\Crafts\\Crafts.BL\\Crafts.BL.csproj": {
-              "projectPath": "E:\\9-months scholarship iti\\Final Project Last\\Back\\last\\Crafts\\Crafts.BL\\Crafts.BL.csproj"
+            "C:\\Users\\Copy Center\\Desktop\\Crafts\\Crafts.BL\\Crafts.BL.csproj": {
+              "projectPath": "C:\\Users\\Copy Center\\Desktop\\Crafts\\Crafts.BL\\Crafts.BL.csproj"
             }
           }
         }

@@ -3744,24 +3744,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Hi-Tech\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Copy Center\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\9-months scholarship iti\\Final Project Last\\Back\\last\\Crafts\\Crafts.DAL\\Crafts.DAL.csproj",
+      "projectUniqueName": "C:\\Users\\Copy Center\\Desktop\\Crafts\\Crafts.DAL\\Crafts.DAL.csproj",
       "projectName": "Crafts.DAL",
-      "projectPath": "E:\\9-months scholarship iti\\Final Project Last\\Back\\last\\Crafts\\Crafts.DAL\\Crafts.DAL.csproj",
-      "packagesPath": "C:\\Users\\Hi-Tech\\.nuget\\packages\\",
-      "outputPath": "E:\\9-months scholarship iti\\Final Project Last\\Back\\last\\Crafts\\Crafts.DAL\\obj\\",
+      "projectPath": "C:\\Users\\Copy Center\\Desktop\\Crafts\\Crafts.DAL\\Crafts.DAL.csproj",
+      "packagesPath": "C:\\Users\\Copy Center\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Copy Center\\Desktop\\Crafts\\Crafts.DAL\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Hi-Tech\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\Copy Center\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

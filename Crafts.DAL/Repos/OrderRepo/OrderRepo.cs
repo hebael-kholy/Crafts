@@ -43,8 +43,8 @@ public class OrderRepo : GenericRepo<Order>, IOrderRepo
         return _context.Set<Order>()
                 .Where(u => u.UserId == id)
                 .Where(u => u.Status == (Status)status)
-                //.Include(o => o.User)
-                //.Include(o => o.Cart)
+                 .Include(o => o.Cart).ThenInclude(c => c.CartItems)
+            .ThenInclude(ci => ci.Product)
                 .ToList();
     }
 }

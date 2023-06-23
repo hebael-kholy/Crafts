@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\9-months scholarship iti\\Final Project Last\\Back\\last\\Crafts\\Crafts.Api\\Crafts.Api.csproj": {}
+    "C:\\Users\\Copy Center\\Desktop\\Crafts\\Crafts.Api\\Crafts.Api.csproj": {}
   },
   "projects": {
-    "E:\\9-months scholarship iti\\Final Project Last\\Back\\last\\Crafts\\Crafts.Api\\Crafts.Api.csproj": {
+    "C:\\Users\\Copy Center\\Desktop\\Crafts\\Crafts.Api\\Crafts.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\9-months scholarship iti\\Final Project Last\\Back\\last\\Crafts\\Crafts.Api\\Crafts.Api.csproj",
+        "projectUniqueName": "C:\\Users\\Copy Center\\Desktop\\Crafts\\Crafts.Api\\Crafts.Api.csproj",
         "projectName": "Crafts.Api",
-        "projectPath": "E:\\9-months scholarship iti\\Final Project Last\\Back\\last\\Crafts\\Crafts.Api\\Crafts.Api.csproj",
-        "packagesPath": "C:\\Users\\Hi-Tech\\.nuget\\packages\\",
-        "outputPath": "E:\\9-months scholarship iti\\Final Project Last\\Back\\last\\Crafts\\Crafts.Api\\obj\\",
+        "projectPath": "C:\\Users\\Copy Center\\Desktop\\Crafts\\Crafts.Api\\Crafts.Api.csproj",
+        "packagesPath": "C:\\Users\\Copy Center\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Copy Center\\Desktop\\Crafts\\Crafts.Api\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Hi-Tech\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Copy Center\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -32,8 +28,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "E:\\9-months scholarship iti\\Final Project Last\\Back\\last\\Crafts\\Crafts.BL\\Crafts.BL.csproj": {
-                "projectPath": "E:\\9-months scholarship iti\\Final Project Last\\Back\\last\\Crafts\\Crafts.BL\\Crafts.BL.csproj"
+              "C:\\Users\\Copy Center\\Desktop\\Crafts\\Crafts.BL\\Crafts.BL.csproj": {
+                "projectPath": "C:\\Users\\Copy Center\\Desktop\\Crafts\\Crafts.BL\\Crafts.BL.csproj"
               }
             }
           }
@@ -102,21 +98,17 @@
         }
       }
     },
-    "E:\\9-months scholarship iti\\Final Project Last\\Back\\last\\Crafts\\Crafts.BL\\Crafts.BL.csproj": {
+    "C:\\Users\\Copy Center\\Desktop\\Crafts\\Crafts.BL\\Crafts.BL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\9-months scholarship iti\\Final Project Last\\Back\\last\\Crafts\\Crafts.BL\\Crafts.BL.csproj",
+        "projectUniqueName": "C:\\Users\\Copy Center\\Desktop\\Crafts\\Crafts.BL\\Crafts.BL.csproj",
         "projectName": "Crafts.BL",
-        "projectPath": "E:\\9-months scholarship iti\\Final Project Last\\Back\\last\\Crafts\\Crafts.BL\\Crafts.BL.csproj",
-        "packagesPath": "C:\\Users\\Hi-Tech\\.nuget\\packages\\",
-        "outputPath": "E:\\9-months scholarship iti\\Final Project Last\\Back\\last\\Crafts\\Crafts.BL\\obj\\",
+        "projectPath": "C:\\Users\\Copy Center\\Desktop\\Crafts\\Crafts.BL\\Crafts.BL.csproj",
+        "packagesPath": "C:\\Users\\Copy Center\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Copy Center\\Desktop\\Crafts\\Crafts.BL\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Hi-Tech\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Copy Center\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -130,8 +122,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "E:\\9-months scholarship iti\\Final Project Last\\Back\\last\\Crafts\\Crafts.DAL\\Crafts.DAL.csproj": {
-                "projectPath": "E:\\9-months scholarship iti\\Final Project Last\\Back\\last\\Crafts\\Crafts.DAL\\Crafts.DAL.csproj"
+              "C:\\Users\\Copy Center\\Desktop\\Crafts\\Crafts.DAL\\Crafts.DAL.csproj": {
+                "projectPath": "C:\\Users\\Copy Center\\Desktop\\Crafts\\Crafts.DAL\\Crafts.DAL.csproj"
               }
             }
           }
@@ -181,21 +173,17 @@
         }
       }
     },
-    "E:\\9-months scholarship iti\\Final Project Last\\Back\\last\\Crafts\\Crafts.DAL\\Crafts.DAL.csproj": {
+    "C:\\Users\\Copy Center\\Desktop\\Crafts\\Crafts.DAL\\Crafts.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\9-months scholarship iti\\Final Project Last\\Back\\last\\Crafts\\Crafts.DAL\\Crafts.DAL.csproj",
+        "projectUniqueName": "C:\\Users\\Copy Center\\Desktop\\Crafts\\Crafts.DAL\\Crafts.DAL.csproj",
         "projectName": "Crafts.DAL",
-        "projectPath": "E:\\9-months scholarship iti\\Final Project Last\\Back\\last\\Crafts\\Crafts.DAL\\Crafts.DAL.csproj",
-        "packagesPath": "C:\\Users\\Hi-Tech\\.nuget\\packages\\",
-        "outputPath": "E:\\9-months scholarship iti\\Final Project Last\\Back\\last\\Crafts\\Crafts.DAL\\obj\\",
+        "projectPath": "C:\\Users\\Copy Center\\Desktop\\Crafts\\Crafts.DAL\\Crafts.DAL.csproj",
+        "packagesPath": "C:\\Users\\Copy Center\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Copy Center\\Desktop\\Crafts\\Crafts.DAL\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Hi-Tech\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Copy Center\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
