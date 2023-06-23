@@ -22,6 +22,7 @@ public class OrderReadDto
     public DateTime CreatedAt { get; set; } = DateTime.Now;
     public bool IsPaid { get; set; }
     public string UserId { get; set; } = string.Empty;
+    public string UserName { get; set; } = string.Empty;
     public int CartId { get; set; }
     public List<CartItemsChildReadDto> cartItems { get; set; } = null!;
 

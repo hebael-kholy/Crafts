@@ -20,6 +20,15 @@ public class OrderRepo : GenericRepo<Order>, IOrderRepo
         _context = context;
     }
 
+    public List<Order> GetOrderWithCartItems()
+    {
+        return _context.Set<Order>()
+            .Include(o => o.User)
+            .Include(o => o.Cart)
+            .ThenInclude(c => c.CartItems)
+            .ThenInclude(ci => ci.Product).ToList();
+    }
+
     public Order GetOrderWithCartAndUser(int id)
     {
         return _context.Set<Order>()
