@@ -12,7 +12,7 @@ Our project is mainly about giving a chance to those people who make handmade pr
 
 **Client:** Angular, Anguler Material,  Bootstrap 
 
-**Server:** 
+**Server:** .Net Aspcore API ,SQLServer 
 
 
 
