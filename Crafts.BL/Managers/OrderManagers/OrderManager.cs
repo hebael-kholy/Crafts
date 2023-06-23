@@ -31,24 +31,46 @@ namespace Crafts.BL.Managers.OrderManagers;
         _userRepo = userRepo;
         _cartItemRepo = cartItemRepo;
     }
-
+ 
     public List<OrderReadDto> GetAll()
     {
-        List<Order> ordersFromDb = _orderRepo.GetAll();
-        return ordersFromDb.Select(o => new OrderReadDto
+        List<Order> ordersFromDb = _orderRepo.GetOrderWithCartItems();
+
+        List<OrderReadDto> orderReadDtos = new List<OrderReadDto>();
+
+        foreach(var o in  ordersFromDb)
         {
-            Id = o.Id,
-            Status = o.Status,
-            PaymentMethod = o.PaymentMethod,
-            TotalPrice = o.TotalPrice,
-            TaxPrice = o.TaxPrice,
-            ShippingPrice = o.ShippingPrice,
-            PaidAt = o.PaidAt,
-            CreatedAt = o.CreatedAt,
-            IsPaid = o.IsPaid,
-            CartId = o.CartId,
-            UserId = o.UserId
-        }).ToList();
+            var user = _userRepo.GetUserById(o.UserId);
+
+            var orderReadDto = new OrderReadDto
+            {
+                Id = o.Id,
+                Status = o.Status,
+                PaymentMethod = o.PaymentMethod,
+                TotalPrice = o.TotalPrice,
+                TaxPrice = o.TaxPrice,
+                ShippingPrice = o.ShippingPrice,
+                PaidAt = o.PaidAt,
+                CreatedAt = o.CreatedAt,
+                IsPaid = o.IsPaid,
+                CartId = o.CartId,
+                UserId = o.UserId,
+                UserName = user!.UserName!,
+                cartItems = o.Cart.CartItems.Select(ci => new CartItemsChildReadDto
+                {
+                    Id = ci.Id,
+                    Title = ci.Product.Title,
+                    Description = ci.Product.Description,
+                    Image = ci.Product.Image,
+                    Quantity = ci.Product.Quantity,
+                    Rating = ci.Product.Rating,
+                    CategoryId = ci.Product.CategoryId
+                }).ToList()
+            };
+
+            orderReadDtos.Add(orderReadDto);
+        }
+        return orderReadDtos;
     }
 
     public List<OrderReadDto> GetByStatus(string id, int status)
@@ -277,6 +299,4 @@ namespace Crafts.BL.Managers.OrderManagers;
             throw new ArgumentException($"Order with id {id} is not found");
         }
     }
-
-    
 }

@@ -102,7 +102,7 @@ namespace Crafts.Api.Controllers
             try
             {
                 _orderManager.CancelOrder(id);
-                var msg = new GeneralResponse($"Order with id {id} Updated Successfully");
+                var msg = new GeneralResponse($"Order with id {id} Cancelled Successfully");
                 var res = new { msg, id };
                 return Ok(res);
             }
@@ -119,7 +119,7 @@ namespace Crafts.Api.Controllers
             try
             {
                 _orderManager.AcceptOrder(id);
-                var msg = new GeneralResponse($"Order with id {id} Updated Successfully");
+                var msg = new GeneralResponse($"Order with id {id} Accepted Successfully");
                 var res = new { msg, id };
                 return Ok(res);
             }
@@ -136,7 +136,5 @@ namespace Crafts.Api.Controllers
             var res = new { msg, id };
             return Ok(res);
         }
-
-        
     }
 }
