@@ -12,13 +12,13 @@ namespace Crafts.Api.Controllers
     public class CategoriesController : ControllerBase
     {
         private readonly ICategoryManager _categoryManager;
-        public CategoriesController(ICategoryManager categoryManager)
+        public CategoriesController(ICategoryManager categoryManager) 
         {
             _categoryManager = categoryManager;
         }
 
         [HttpGet]
-        public ActionResult<List<CategoryReadDto>> GetAll()
+        public ActionResult<List<CategoryReadDto>> GetAll() 
         {
             if (!ModelState.IsValid)
             {
@@ -29,14 +29,17 @@ namespace Crafts.Api.Controllers
 
         [HttpGet]
         [Route("{id:int}")]
-        public ActionResult<CategoryReadDto> GetById(int id)
+        public ActionResult<CategoryReadDto> GetById(int id) 
         {
-            var category = _categoryManager.GetById(id);
-            if (category == null)
+            try
             {
-                return NotFound(new GeneralResponse("Category is not found"));
+                var category = _categoryManager.GetById(id);
+                return category;
             }
-            return category;
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
 
         [HttpGet]
@@ -64,7 +67,7 @@ namespace Crafts.Api.Controllers
                 var res = new { msg, category };
                 return Ok(res);
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 return BadRequest(ex.InnerException!.Message);
             }
