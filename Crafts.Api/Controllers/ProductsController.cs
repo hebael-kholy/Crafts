@@ -38,12 +38,19 @@ namespace Crafts.Api.Controllers
         [Route("{id:int}")]
         public ActionResult<ProductReadDto> GetById(int id) 
         {
-            var product = _productsManager.GetById(id); 
-            return product;
+            try
+            {
+                var product = _productsManager.GetById(id);
+                return product;
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
 
         [HttpPost]
-        public async Task<ActionResult> Add(ProductAddDto productDto) {
+        public async Task<ActionResult> Add([FromForm] ProductAddDto productDto) {
             try
             {
                 await _productsManager.Add(productDto);
@@ -83,12 +90,10 @@ namespace Crafts.Api.Controllers
             {
                 var product = _productsManager.GetById(id);
 
-                if (product == null) return NotFound(new { Message = $"Product with id {id} is not found" });
-
                 _productsManager.Update(productUpdateDto, id);
-                return CreatedAtAction(
-                    actionName: nameof(GetAll),
-                    value: $"Product with Id {id} is Updated Successfully");
+                var msg = new GeneralResponse($"Product with id {id} Updated Successfully");
+                var res = new { msg, product};
+                return Ok(res);
             }
             catch (Exception ex)
             {
@@ -100,13 +105,13 @@ namespace Crafts.Api.Controllers
         [Route("{id}")]
         public ActionResult Delete(int id)
         {
-            var product = _productsManager.GetById(id); 
-            if (product?.Id != id) return NotFound(new { Message = "No Products Found!!" });
+            var product = _productsManager.GetById(id);
 
             _productsManager.Delete(id);
-            return CreatedAtAction(
-                actionName: nameof(GetAll),
-                value: $"Product with id:{id} is Deleted Successfully");
+            var msg = new GeneralResponse($"Product with id {id} Deleted Successfully");
+            var res = new { msg, product };
+
+            return Ok(res);
         }
     }
 }

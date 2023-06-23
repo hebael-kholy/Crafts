@@ -11,11 +11,10 @@ namespace Crafts.BL.Dtos.ProductDtos
     {
         public string Title { get; set; } = string.Empty;
         public  double Price { get; set; }
-        public  float Rating { get; set; }
         public int Quantity { get; set; }
-        public  bool IsSale { get; set; }
         public string Description { get; set; } = string.Empty;
         public int CategoryId { get; set; }
+        public IFormFile? Image { get; set; } = null!;
 
     }
 }

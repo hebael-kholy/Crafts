@@ -29,8 +29,13 @@ namespace Crafts.BL.Managers.ProductManager
             _fileService = fileService;
             _categoryRepo = categoryRepo;
         }
-        public async Task Add(ProductAddDto productDto)
+        public async Task Add([FromForm] ProductAddDto productDto)
         {
+            if (productDto.Image != null && !IsSupportedImageFormat(productDto.Image))
+            {
+                throw new ArgumentException("Image file must be in JPEG or PNG or JPG or WEBP format.");
+            }
+
             // Check if the category with the given ID exist
             var category = _categoryRepo.GetById(productDto.CategoryId);
             if (category == null)
@@ -38,20 +43,24 @@ namespace Crafts.BL.Managers.ProductManager
                 throw new ArgumentException($"Category with id {productDto.CategoryId} is not found");
             }
 
+            var x = upload.UploadImageOnCloudinary(productDto.Image);
+
             var product = new Product
             {
                 Title = productDto.Title,
                 Price = productDto.Price,
-                Rating = productDto.Rating,
-                Image = "https://epin-sam.s3.ap-south-1.amazonaws.com/media/images/category/default.png",
+                Rating = 1,
+                Image = x,
                 Quantity = productDto.Quantity,
-                IsSale = productDto.IsSale,
+                IsSale = false,
                 Description = productDto.Description,
                 CategoryId = productDto.CategoryId
             };
+
             await _productRepo.Add(product);
             _productRepo.SaveChanges();
         }
+
         public void Update(ProductUpdateDto productUpdateDto, int id)
         {
             var category = _categoryRepo.GetById(productUpdateDto.CategoryId);
@@ -62,50 +71,75 @@ namespace Crafts.BL.Managers.ProductManager
 
             Product? ProductToEdit =  _productRepo.GetById(id);  //await
     
-            if (ProductToEdit == null) { return; }
+            if (ProductToEdit != null) 
+            {
 
-            ProductToEdit.Title = productUpdateDto.Title == "" ? ProductToEdit.Title : productUpdateDto.Title; 
-            ProductToEdit.Price = productUpdateDto.Price != 0 ? productUpdateDto.Price : ProductToEdit.Price;
-            ProductToEdit.Quantity = productUpdateDto.Quantity != 0 ? productUpdateDto.Quantity : ProductToEdit.Quantity;
-            if (productUpdateDto.IsSale == true) { ProductToEdit.IsSale = productUpdateDto.IsSale; }
-            else { ProductToEdit.IsSale = ProductToEdit.IsSale; }
-            ProductToEdit.Description = productUpdateDto.Description != "" ? productUpdateDto.Description : ProductToEdit.Description; ;
-            ProductToEdit.CategoryId = productUpdateDto.CategoryId != 0 ? productUpdateDto.CategoryId : ProductToEdit.CategoryId;
+                ProductToEdit.Title = productUpdateDto.Title;
+                ProductToEdit.Price = productUpdateDto.Price;
+                ProductToEdit.Quantity = productUpdateDto.Quantity;
+                ProductToEdit.IsSale = productUpdateDto.IsSale;
+                ProductToEdit.Description = productUpdateDto.Description;
+                ProductToEdit.CategoryId = productUpdateDto.CategoryId;
 
-             _productRepo.Update(ProductToEdit);     //await
-            _productRepo.SaveChanges();
+                _productRepo.Update(ProductToEdit);     //await
+                _productRepo.SaveChanges();
+            }
+            else
+            {
+                throw new ArgumentException($"Product with id {id} is not found");
+            }
         }
 
         public void Delete(int id)
         {
             Product? product = _productRepo.GetById(id);
 
-            if (product is null) { return; }
-
-            _productRepo.Delete(product);
-            _productRepo.SaveChanges();
+            if (product != null) 
+            { 
+                _productRepo.Delete(product);
+                _productRepo.SaveChanges();
+            }
+            else
+            {
+                throw new ArgumentException($"Product with id {id} is not found");
+            }
         }
 
         public List<ProductReadDto> GetAll()
         {
             List<Product> productsFromDB = _productRepo.GetAll();
-            return productsFromDB
-                .Select(p => new ProductReadDto 
+
+            List<ProductReadDto> productReadDtos = new List<ProductReadDto>();
+
+            foreach (var p in productsFromDB)
+            {
+                var category = _categoryRepo.GetById(p.CategoryId);
+
+                var productReadDto = new ProductReadDto
                 {
-                  Id = p.Id,
-                  Title = p.Title,
-                  Price = p.Price,
-                  Rating = p.Rating,
-                  Image = p.Image, 
-                  Quantity = p.Quantity, 
-                  IsSale = p.IsSale,
-                  CategoryId = p.CategoryId,
-                  Description = p.Description }).ToList();
+                    Id = p.Id,
+                    Title = p.Title,
+                    Price = p.Price,
+                    Rating = p.Rating,
+                    Image = p.Image,
+                    Quantity = p.Quantity,
+                    IsSale = p.IsSale,
+                    CategoryId = p.CategoryId,
+                    Description = p.Description,
+                    CategoryName = category!.Title
+                };
+
+                productReadDtos.Add(productReadDto);
+            }
+            return productReadDtos;
         }
+
         public List<ProductReadDto> GetProductwithSale()
         {
             List<Product> productsFromDB = _productRepo.GetProductsWithSale();
-            return productsFromDB
+            if(productsFromDB != null)
+            {
+                return productsFromDB
                .Select(p => new ProductReadDto
                {
                    Id = p.Id,
@@ -118,23 +152,37 @@ namespace Crafts.BL.Managers.ProductManager
                    CategoryId = p.CategoryId,
                    Description = p.Description
                }).ToList();
+            }
+            else
+            {
+                throw new ArgumentException($"Products With Sale are not found");
+            }
         }
-        public ProductReadDto? GetById(int id)
+        public ProductReadDto GetById(int id)
         {
-            List<Product> productFromDB = _productRepo.GetAll();
-            return productFromDB
-                .Select(p => new ProductReadDto
+            var productFromDB = _productRepo.GetById(id);
+
+            if(productFromDB != null)
+            {
+                var category = _categoryRepo.GetById(productFromDB.CategoryId);
+                return new ProductReadDto
                 {
-                    Id = p.Id,
-                    Title = p.Title,
-                    Price = p.Price,
-                    Rating = p.Rating,
-                    Image = p.Image,
-                    Quantity = p.Quantity,
-                    IsSale = p.IsSale,
-                    Description = p.Description,
-                    CategoryId = p.CategoryId,
-                }).FirstOrDefault(p => p.Id == id);
+                    Id = productFromDB.Id,
+                    Title = productFromDB.Title,
+                    Price = productFromDB.Price,
+                    Rating = productFromDB.Rating,
+                    Image = productFromDB.Image,
+                    Quantity = productFromDB.Quantity,
+                    IsSale = productFromDB.IsSale,
+                    Description = productFromDB.Description,
+                    CategoryId = productFromDB.CategoryId,
+                    CategoryName = category!.Title
+                };
+            }
+            else
+            {
+                throw new ArgumentException($"Product with id {id} is not found");
+            }
         }
         private bool IsSupportedImageFormat(IFormFile file)
         {
@@ -158,7 +206,6 @@ namespace Crafts.BL.Managers.ProductManager
                     productToEdit.Image = imgURL;
                     _productRepo.Update(productToEdit);
                     _productRepo.SaveChanges();
-                    
                 }
             }
         }

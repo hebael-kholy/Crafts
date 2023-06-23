@@ -31,12 +31,15 @@ namespace Crafts.Api.Controllers
         [Route("{id:int}")]
         public ActionResult<CategoryReadDto> GetById(int id) 
         {
-            var category = _categoryManager.GetById(id);
-            if (category == null)
+            try
             {
-                return NotFound(new GeneralResponse("Category is not found"));
+                var category = _categoryManager.GetById(id);
+                return category;
             }
-            return category;
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
 
         [HttpGet]
