@@ -128,7 +128,7 @@ namespace Crafts.BL.Managers.CartManager
         }
         #endregion
 
-        #region GetByIdWithCartItems
+        #region GetByUserIdWithCartItems
         public CartWithCartItemsReadDto GetByUserIdWithCartItems(string id)
         {
 
@@ -153,7 +153,12 @@ namespace Crafts.BL.Managers.CartManager
                 {
                     Id = c.Id,
                     Quantity = c.Quantity,
-
+                    Title= c.Product.Title,
+                    CategoryId= c.Product.CategoryId,
+                    Price = c.Product.Price,
+                    Image = c.Product.Image,
+                    Rating = c.Product.Rating,
+                    Description = c.Product.Description
                 }).ToList()
             };
 

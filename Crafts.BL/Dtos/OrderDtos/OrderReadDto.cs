@@ -5,6 +5,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Crafts.BL.Dtos.CartItemsDtos;
+using Crafts.BL.Dtos.CartDtos;
 
 namespace Crafts.BL.Dtos.OrderDtos;
 
@@ -21,4 +23,8 @@ public class OrderReadDto
     public bool IsPaid { get; set; }
     public string UserId { get; set; } = string.Empty;
     public int CartId { get; set; }
+    public List<CartItemsChildReadDto> cartItems { get; set; } = null!;
+
+
+
 }

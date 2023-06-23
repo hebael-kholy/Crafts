@@ -100,7 +100,7 @@ public class UsersController : ControllerBase
 
         var token = GenerateToken(claims, exp);
 
-        var res = new { user,token };
+        var res = new { user ,token };
         return Ok(res);
 
     }

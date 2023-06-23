@@ -1,4 +1,5 @@
-﻿using Crafts.BL.Dtos.OrderDtos;
+﻿using Crafts.BL.Dtos.CartItemsDtos;
+using Crafts.BL.Dtos.OrderDtos;
 using Crafts.BL.Dtos.ReviewDtos;
 using Crafts.DAL.Models;
 using Crafts.DAL.Models.Enum;
@@ -65,7 +66,18 @@ namespace Crafts.BL.Managers.OrderManagers;
             CreatedAt = o.CreatedAt,
             IsPaid = o.IsPaid,
             CartId = o.CartId,
-            UserId = o.UserId
+            UserId = o.UserId,
+            cartItems = o.Cart.CartItems.Select(ci => new CartItemsChildReadDto
+            {
+                Id = ci.Id,
+                Title = ci.Product.Title,
+                Description = ci.Product.Description,
+                Image = ci.Product.Image,
+                Quantity=ci.Product.Quantity,
+                Rating = ci.Product.Rating,
+                CategoryId = ci.Product.CategoryId
+            }).ToList()
+
         }).ToList();
     }
 
@@ -87,6 +99,7 @@ namespace Crafts.BL.Managers.OrderManagers;
                 IsPaid = order.IsPaid,
                 CartId = order.CartId,
                 UserId = order.UserId
+              
             };
         }
         else

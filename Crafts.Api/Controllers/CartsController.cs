@@ -81,8 +81,8 @@ namespace Crafts.Api.Controllers
             }
         }
 
-        [HttpPut]
-        [Route("/Coupon/{CartId}")]
+        [HttpGet]
+        [Route("/Coupon")]
         public ActionResult ApplyCoupon(int CartId, int couponId)
         {
             try
