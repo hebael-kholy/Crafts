@@ -13,6 +13,7 @@ namespace Crafts.BL.Managers.CategoryManagers
         List<CategoryReadDto> GetAll();
         CategoryWithProductsDto GetByIdWithProducts(int id);
         void AddImage(CategoryImgAddDto category, int id);
+        CategoryWithProductsDto GetCategoryByTitle(string title);
         Task Add(CategoryAddDto category);
         CategoryReadDto GetById(int id);
         void Edit(CategoryEditDto categoryEditDto, int id);

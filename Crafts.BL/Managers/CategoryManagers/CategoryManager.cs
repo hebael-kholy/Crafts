@@ -200,5 +200,37 @@ namespace Crafts.BL.Managers.CategoryManagers
                 throw new ArgumentException($"Category with id {id} is not found");
             }
         }
+
+        public CategoryWithProductsDto GetCategoryByTitle(string title)
+        {
+            var cat = _categoryRepo.GetCategoryByTitle(title);
+            if (cat != null)
+            {
+                return new CategoryWithProductsDto
+                {
+                    Id = cat.Id,
+                    Image = cat.Image,
+                    Title = cat.Title,
+                    //We used Select To convert from list of products to list of ProductsReadDto
+                    Products = cat.Products.Select(p => new ProductReadDto
+                    {
+                        Id = p.Id,
+                        Title = p.Title,
+                        Price = p.Price,
+                        Rating = p.Rating,
+                        Image = p.Image,
+                        Quantity = p.Quantity,
+                        IsSale = p.IsSale,
+                        Description = p.Description,
+                        CategoryId = p.CategoryId,
+                    }).ToList()
+                };
+            }
+            else
+            {
+                throw new ArgumentException($"Category with title {title} is not found");
+            }
+        }
+
     }
 }
