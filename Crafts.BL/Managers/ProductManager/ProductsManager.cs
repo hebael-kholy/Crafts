@@ -29,6 +29,7 @@ namespace Crafts.BL.Managers.ProductManager
             _fileService = fileService;
             _categoryRepo = categoryRepo;
         }
+
         public async Task Add([FromForm] ProductAddDto productDto)
         {
             if (productDto.Image != null && !IsSupportedImageFormat(productDto.Image))
