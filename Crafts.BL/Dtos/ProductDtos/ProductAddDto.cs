@@ -16,6 +16,6 @@ namespace Crafts.BL.Dtos.ProductDtos
         public  bool IsSale { get; set; }
         public string Description { get; set; } = string.Empty;
         public int CategoryId { get; set; }
-
+        public IFormFile Image { get; set; } = null!;
     }
 }

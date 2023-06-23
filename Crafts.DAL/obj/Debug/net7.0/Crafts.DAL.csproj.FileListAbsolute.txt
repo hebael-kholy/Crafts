@@ -222,3 +222,17 @@ C:\Users\Copy Center\Desktop\Crafts\Crafts.DAL\obj\Debug\net7.0\refint\Crafts.DA
 C:\Users\Copy Center\Desktop\Crafts\Crafts.DAL\obj\Debug\net7.0\Crafts.DAL.pdb
 C:\Users\Copy Center\Desktop\Crafts\Crafts.DAL\obj\Debug\net7.0\Crafts.DAL.genruntimeconfig.cache
 C:\Users\Copy Center\Desktop\Crafts\Crafts.DAL\obj\Debug\net7.0\ref\Crafts.DAL.dll
+C:\Users\dina\Desktop\Crafts\Crafts.DAL\bin\Debug\net7.0\Crafts.DAL.deps.json
+C:\Users\dina\Desktop\Crafts\Crafts.DAL\bin\Debug\net7.0\Crafts.DAL.runtimeconfig.json
+C:\Users\dina\Desktop\Crafts\Crafts.DAL\bin\Debug\net7.0\Crafts.DAL.dll
+C:\Users\dina\Desktop\Crafts\Crafts.DAL\bin\Debug\net7.0\Crafts.DAL.pdb
+C:\Users\dina\Desktop\Crafts\Crafts.DAL\obj\Debug\net7.0\Crafts.DAL.csproj.AssemblyReference.cache
+C:\Users\dina\Desktop\Crafts\Crafts.DAL\obj\Debug\net7.0\Crafts.DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dina\Desktop\Crafts\Crafts.DAL\obj\Debug\net7.0\Crafts.DAL.AssemblyInfoInputs.cache
+C:\Users\dina\Desktop\Crafts\Crafts.DAL\obj\Debug\net7.0\Crafts.DAL.AssemblyInfo.cs
+C:\Users\dina\Desktop\Crafts\Crafts.DAL\obj\Debug\net7.0\Crafts.DAL.csproj.CoreCompileInputs.cache
+C:\Users\dina\Desktop\Crafts\Crafts.DAL\obj\Debug\net7.0\Crafts.DAL.dll
+C:\Users\dina\Desktop\Crafts\Crafts.DAL\obj\Debug\net7.0\refint\Crafts.DAL.dll
+C:\Users\dina\Desktop\Crafts\Crafts.DAL\obj\Debug\net7.0\Crafts.DAL.pdb
+C:\Users\dina\Desktop\Crafts\Crafts.DAL\obj\Debug\net7.0\Crafts.DAL.genruntimeconfig.cache
+C:\Users\dina\Desktop\Crafts\Crafts.DAL\obj\Debug\net7.0\ref\Crafts.DAL.dll
