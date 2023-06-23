@@ -64,23 +64,19 @@ namespace Crafts.BL.Managers.ProductManager
 
         public void Update(ProductUpdateDto productUpdateDto, int id)
         {
-            var category = _categoryRepo.GetById(productUpdateDto.CategoryId);
-            if (category == null)
-            {
-                throw new ArgumentException($"Category with id {productUpdateDto.CategoryId} is not found");
-            }
-
+           
             Product? ProductToEdit =  _productRepo.GetById(id);  //await
     
             if (ProductToEdit != null) 
             {
 
-                ProductToEdit.Title = productUpdateDto.Title;
-                ProductToEdit.Price = productUpdateDto.Price;
-                ProductToEdit.Quantity = productUpdateDto.Quantity;
-                ProductToEdit.IsSale = productUpdateDto.IsSale;
-                ProductToEdit.Description = productUpdateDto.Description;
-                ProductToEdit.CategoryId = productUpdateDto.CategoryId;
+                ProductToEdit.Title = productUpdateDto.Title == "" ? ProductToEdit.Title : productUpdateDto.Title;
+                ProductToEdit.Price = productUpdateDto.Price == 0 ? ProductToEdit.Price : productUpdateDto.Price;
+                ProductToEdit.Quantity = productUpdateDto.Quantity == 0 ? ProductToEdit.Quantity : productUpdateDto.Quantity;
+                if (productUpdateDto.IsSale == true) { ProductToEdit.IsSale = true; }
+                else { ProductToEdit.IsSale = false; }
+                ProductToEdit.Description = productUpdateDto.Description == "" ? ProductToEdit.Description : productUpdateDto.Description;
+                ProductToEdit.CategoryId = productUpdateDto.CategoryId == 0 ? ProductToEdit.CategoryId : productUpdateDto.CategoryId;
 
                 _productRepo.Update(ProductToEdit);     //await
                 _productRepo.SaveChanges();

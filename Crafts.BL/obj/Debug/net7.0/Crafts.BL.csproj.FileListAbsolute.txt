@@ -278,3 +278,20 @@ C:\Users\dina\Desktop\Crafts\Crafts.BL\bin\Debug\net7.0\Crafts.DAL.pdb
 C:\Users\dina\Desktop\Crafts\Crafts.BL\obj\Debug\net7.0\Crafts.BL.csproj.CopyComplete
 C:\Users\dina\Desktop\Crafts\Crafts.BL\obj\Debug\net7.0\Crafts.BL.genruntimeconfig.cache
 C:\Users\dina\Desktop\Crafts\Crafts.BL\obj\Debug\net7.0\ref\Crafts.BL.dll
+D:\9 Months\Final_Project_Crafts\CloneBack23_6\Crafts\Crafts.BL\bin\Debug\net7.0\Crafts.BL.deps.json
+D:\9 Months\Final_Project_Crafts\CloneBack23_6\Crafts\Crafts.BL\bin\Debug\net7.0\Crafts.BL.runtimeconfig.json
+D:\9 Months\Final_Project_Crafts\CloneBack23_6\Crafts\Crafts.BL\bin\Debug\net7.0\Crafts.BL.dll
+D:\9 Months\Final_Project_Crafts\CloneBack23_6\Crafts\Crafts.BL\bin\Debug\net7.0\Crafts.BL.pdb
+D:\9 Months\Final_Project_Crafts\CloneBack23_6\Crafts\Crafts.BL\bin\Debug\net7.0\Crafts.DAL.dll
+D:\9 Months\Final_Project_Crafts\CloneBack23_6\Crafts\Crafts.BL\bin\Debug\net7.0\Crafts.DAL.pdb
+D:\9 Months\Final_Project_Crafts\CloneBack23_6\Crafts\Crafts.BL\obj\Debug\net7.0\Crafts.BL.csproj.AssemblyReference.cache
+D:\9 Months\Final_Project_Crafts\CloneBack23_6\Crafts\Crafts.BL\obj\Debug\net7.0\Crafts.BL.GeneratedMSBuildEditorConfig.editorconfig
+D:\9 Months\Final_Project_Crafts\CloneBack23_6\Crafts\Crafts.BL\obj\Debug\net7.0\Crafts.BL.AssemblyInfoInputs.cache
+D:\9 Months\Final_Project_Crafts\CloneBack23_6\Crafts\Crafts.BL\obj\Debug\net7.0\Crafts.BL.AssemblyInfo.cs
+D:\9 Months\Final_Project_Crafts\CloneBack23_6\Crafts\Crafts.BL\obj\Debug\net7.0\Crafts.BL.csproj.CoreCompileInputs.cache
+D:\9 Months\Final_Project_Crafts\CloneBack23_6\Crafts\Crafts.BL\obj\Debug\net7.0\Crafts.BL.csproj.CopyComplete
+D:\9 Months\Final_Project_Crafts\CloneBack23_6\Crafts\Crafts.BL\obj\Debug\net7.0\Crafts.BL.dll
+D:\9 Months\Final_Project_Crafts\CloneBack23_6\Crafts\Crafts.BL\obj\Debug\net7.0\refint\Crafts.BL.dll
+D:\9 Months\Final_Project_Crafts\CloneBack23_6\Crafts\Crafts.BL\obj\Debug\net7.0\Crafts.BL.pdb
+D:\9 Months\Final_Project_Crafts\CloneBack23_6\Crafts\Crafts.BL\obj\Debug\net7.0\Crafts.BL.genruntimeconfig.cache
+D:\9 Months\Final_Project_Crafts\CloneBack23_6\Crafts\Crafts.BL\obj\Debug\net7.0\ref\Crafts.BL.dll
