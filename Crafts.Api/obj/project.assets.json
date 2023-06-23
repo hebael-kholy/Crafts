@@ -8383,19 +8383,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\dina\\.nuget\\packages\\": {}
+    "C:\\Users\\TRUST\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\dina\\Desktop\\Crafts\\Crafts.Api\\Crafts.Api.csproj",
+      "projectUniqueName": "D:\\9 Months\\Final_Project_Crafts\\CloneBack23_6\\Crafts\\Crafts.Api\\Crafts.Api.csproj",
       "projectName": "Crafts.Api",
-      "projectPath": "C:\\Users\\dina\\Desktop\\Crafts\\Crafts.Api\\Crafts.Api.csproj",
-      "packagesPath": "C:\\Users\\dina\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\dina\\Desktop\\Crafts\\Crafts.Api\\obj\\",
+      "projectPath": "D:\\9 Months\\Final_Project_Crafts\\CloneBack23_6\\Crafts\\Crafts.Api\\Crafts.Api.csproj",
+      "packagesPath": "C:\\Users\\TRUST\\.nuget\\packages\\",
+      "outputPath": "D:\\9 Months\\Final_Project_Crafts\\CloneBack23_6\\Crafts\\Crafts.Api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\dina\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\TRUST\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8403,15 +8403,14 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\sdk\\7.0.302\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\dina\\Desktop\\Crafts\\Crafts.BL\\Crafts.BL.csproj": {
-              "projectPath": "C:\\Users\\dina\\Desktop\\Crafts\\Crafts.BL\\Crafts.BL.csproj"
+            "D:\\9 Months\\Final_Project_Crafts\\CloneBack23_6\\Crafts\\Crafts.BL\\Crafts.BL.csproj": {
+              "projectPath": "D:\\9 Months\\Final_Project_Crafts\\CloneBack23_6\\Crafts\\Crafts.BL\\Crafts.BL.csproj"
             }
           }
         }
@@ -8476,7 +8475,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   }

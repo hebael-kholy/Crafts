@@ -28,6 +28,21 @@ namespace Crafts.Api.Controllers
         }
 
         [HttpGet]
+        [Route("/CategoryByTitle")]
+        public ActionResult<CategoryWithProductsDto> GetByTitle(string title)
+        {
+            try
+            {
+                var category = _categoryManager.GetCategoryByTitle(title);
+                return category;
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpGet]
         [Route("{id:int}")]
         public ActionResult<CategoryReadDto> GetById(int id) 
         {

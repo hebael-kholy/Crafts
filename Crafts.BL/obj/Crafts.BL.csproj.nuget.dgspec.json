@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\dina\\Desktop\\Crafts\\Crafts.BL\\Crafts.BL.csproj": {}
+    "D:\\9 Months\\Final_Project_Crafts\\CloneBack23_6\\Crafts\\Crafts.BL\\Crafts.BL.csproj": {}
   },
   "projects": {
-    "C:\\Users\\dina\\Desktop\\Crafts\\Crafts.BL\\Crafts.BL.csproj": {
+    "D:\\9 Months\\Final_Project_Crafts\\CloneBack23_6\\Crafts\\Crafts.BL\\Crafts.BL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dina\\Desktop\\Crafts\\Crafts.BL\\Crafts.BL.csproj",
+        "projectUniqueName": "D:\\9 Months\\Final_Project_Crafts\\CloneBack23_6\\Crafts\\Crafts.BL\\Crafts.BL.csproj",
         "projectName": "Crafts.BL",
-        "projectPath": "C:\\Users\\dina\\Desktop\\Crafts\\Crafts.BL\\Crafts.BL.csproj",
-        "packagesPath": "C:\\Users\\dina\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dina\\Desktop\\Crafts\\Crafts.BL\\obj\\",
+        "projectPath": "D:\\9 Months\\Final_Project_Crafts\\CloneBack23_6\\Crafts\\Crafts.BL\\Crafts.BL.csproj",
+        "packagesPath": "C:\\Users\\TRUST\\.nuget\\packages\\",
+        "outputPath": "D:\\9 Months\\Final_Project_Crafts\\CloneBack23_6\\Crafts\\Crafts.BL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\dina\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\TRUST\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +28,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\dina\\Desktop\\Crafts\\Crafts.DAL\\Crafts.DAL.csproj": {
-                "projectPath": "C:\\Users\\dina\\Desktop\\Crafts\\Crafts.DAL\\Crafts.DAL.csproj"
+              "D:\\9 Months\\Final_Project_Crafts\\CloneBack23_6\\Crafts\\Crafts.DAL\\Crafts.DAL.csproj": {
+                "projectPath": "D:\\9 Months\\Final_Project_Crafts\\CloneBack23_6\\Crafts\\Crafts.DAL\\Crafts.DAL.csproj"
               }
             }
           }
@@ -75,21 +75,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\dina\\Desktop\\Crafts\\Crafts.DAL\\Crafts.DAL.csproj": {
+    "D:\\9 Months\\Final_Project_Crafts\\CloneBack23_6\\Crafts\\Crafts.DAL\\Crafts.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dina\\Desktop\\Crafts\\Crafts.DAL\\Crafts.DAL.csproj",
+        "projectUniqueName": "D:\\9 Months\\Final_Project_Crafts\\CloneBack23_6\\Crafts\\Crafts.DAL\\Crafts.DAL.csproj",
         "projectName": "Crafts.DAL",
-        "projectPath": "C:\\Users\\dina\\Desktop\\Crafts\\Crafts.DAL\\Crafts.DAL.csproj",
-        "packagesPath": "C:\\Users\\dina\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dina\\Desktop\\Crafts\\Crafts.DAL\\obj\\",
+        "projectPath": "D:\\9 Months\\Final_Project_Crafts\\CloneBack23_6\\Crafts\\Crafts.DAL\\Crafts.DAL.csproj",
+        "packagesPath": "C:\\Users\\TRUST\\.nuget\\packages\\",
+        "outputPath": "D:\\9 Months\\Final_Project_Crafts\\CloneBack23_6\\Crafts\\Crafts.DAL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\dina\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\TRUST\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -172,7 +172,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }

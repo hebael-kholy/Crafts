@@ -20,5 +20,11 @@ namespace Crafts.DAL.Repos.CategoryRepo
                 .FirstOrDefault(c => c.Id == id);
             return x;
         }
+
+        public Category? GetCategoryByTitle(string title)
+        {
+            var cat = _context.Categories.Include(c=>c.Products).FirstOrDefault(c=>c.Title==title);
+            return cat;
+        }
     }
 }
