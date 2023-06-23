@@ -1,4 +1,5 @@
-﻿using Crafts.BL.Dtos.WishListDto;
+﻿using Crafts.BL.Dtos.ProductDtos;
+using Crafts.BL.Dtos.WishListDto;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +13,7 @@ namespace Crafts.BL.Managers.WishListManager
         WishListReadDto GetUserWishList(string userId);
         List<WishListReadDto> GetAll();
         Task Add(WishListAddDto wishList);
-        void AddProductToWishlistAsync(int productId, int wishlist);
+        void AddProductToWishlistAsync(int wishListId, ProductToAddToWishList prod);
         void DeleteProductFromWishListAsync(int productId , int wishlistId);
         WishlistWithProductsDto GetByIdWithProducts(int id);
         WishListReadDto GetById(int id);

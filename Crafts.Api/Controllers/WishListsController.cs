@@ -70,12 +70,13 @@ namespace Crafts.Api.Controllers
         }
 
         //Add Product To WishList
-        [HttpPost("{productId}")]
-        public ActionResult AddProductToWishlist(int productId, int wishlistId)
+        [HttpPost]
+        [Route("/WishListProduct/{wishlistId}")]
+        public ActionResult AddProductToWishlist( int wishlistId, ProductToAddToWishList product)
         {
             try
             {
-                _wishListManager.AddProductToWishlistAsync(productId, wishlistId);
+                _wishListManager.AddProductToWishlistAsync(wishlistId, product);
                 var msg = new GeneralResponse($"WishList with id {wishlistId} Updated Successfully");
                 var res = new { msg, wishlistId };
                 return Ok(res);

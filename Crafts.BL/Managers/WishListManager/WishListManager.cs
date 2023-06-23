@@ -5,6 +5,7 @@ using Crafts.DAL.Models;
 using Crafts.DAL.Repos.IdentityRepo;
 using Crafts.DAL.Repos.ProductsRepo;
 using Crafts.DAL.Repos.WishListRepo;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,24 +32,30 @@ public class WishListManager : IWishListManager
     }
 
     //add product to wishlist
-    public void AddProductToWishlistAsync(int productId, int wishlistId)
+    public void AddProductToWishlistAsync(int wishListId, ProductToAddToWishList prod)
     {
-
-        var wishlist = _wishListRepo.GetById(wishlistId);
-        var product = _productRepo.GetById(productId);
+        var wishlist = _wishListRepo.GetById(wishListId);
+        var product = _productRepo.GetById(prod.ProductId);
 
         if (wishlist is not null)
         {
-            if (wishlist.Products.Any(p => p.Id == productId))
+            if (wishlist.Products.Any(p => p.Id == prod.ProductId))
             {
                 throw new ArgumentException("Product already exists in wishlist");
             }
+        }
+        if(wishlist == null)
+        {
+            throw new ArgumentException("WishList not found");
+        }
+        if (product == null)
+        {
+            throw new ArgumentException("Product not found");
         }
 
         wishlist.Products.Add(product);
         _wishListRepo.Update(wishlist);
         _wishListRepo.SaveChanges();
-
     }
     //Remove Product From WishList      
     public void DeleteProductFromWishListAsync(int productId, int wishlistId)
@@ -202,7 +209,6 @@ public class WishListManager : IWishListManager
             throw new ArgumentException($"user with id {userId} dosen't have a wishlist");
         }
     }
-
 
 
 }
