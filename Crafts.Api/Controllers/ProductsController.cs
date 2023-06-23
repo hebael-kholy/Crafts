@@ -13,12 +13,12 @@ namespace Crafts.Api.Controllers
     public class ProductsController : ControllerBase
     {
         private readonly IProductsManager _productsManager;
-
+        
 
         public ProductsController(IProductsManager productManager)
         {
             _productsManager = productManager;
-
+            
         }
 
         [HttpGet]
@@ -36,15 +36,21 @@ namespace Crafts.Api.Controllers
 
         [HttpGet]
         [Route("{id:int}")]
-        public ActionResult<ProductReadDto> GetById(int id)
+        public ActionResult<ProductReadDto> GetById(int id) 
         {
-            var product = _productsManager.GetById(id);
-            return product;
+            try
+            {
+                var product = _productsManager.GetById(id);
+                return product;
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
 
         [HttpPost]
-        public async Task<ActionResult> Add(ProductAddDto productDto)
-        {
+        public async Task<ActionResult> Add([FromForm] ProductAddDto productDto) {
             try
             {
                 await _productsManager.Add(productDto);
@@ -52,11 +58,11 @@ namespace Crafts.Api.Controllers
                 var res = new { msg, productDto };
                 return Ok(res);
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 return BadRequest(ex.Message);
             }
-
+            
         }
 
         [HttpPut]
@@ -64,7 +70,7 @@ namespace Crafts.Api.Controllers
         public ActionResult AddImage([FromForm] ProductImgAddDto productImgAddDto, int id)
         {
             try
-            {
+            {  
                 _productsManager.AddImage(productImgAddDto, id);
                 var msg = new GeneralResponse($"Image Updated Successfully with Id: {id}");
                 var res = new { msg, id, productImgAddDto };
@@ -84,12 +90,10 @@ namespace Crafts.Api.Controllers
             {
                 var product = _productsManager.GetById(id);
 
-                if (product == null) return NotFound(new { Message = $"Product with id {id} is not found" });
-
                 _productsManager.Update(productUpdateDto, id);
-                return CreatedAtAction(
-                    actionName: nameof(GetAll),
-                    value: $"Product with Id {id} is Updated Successfully");
+                var msg = new GeneralResponse($"Product with id {id} Updated Successfully");
+                var res = new { msg, product};
+                return Ok(res);
             }
             catch (Exception ex)
             {
@@ -102,12 +106,12 @@ namespace Crafts.Api.Controllers
         public ActionResult Delete(int id)
         {
             var product = _productsManager.GetById(id);
-            if (product?.Id != id) return NotFound(new { Message = "No Products Found!!" });
 
             _productsManager.Delete(id);
-            return CreatedAtAction(
-                actionName: nameof(GetAll),
-                value: $"Product with id:{id} is Deleted Successfully");
+            var msg = new GeneralResponse($"Product with id {id} Deleted Successfully");
+            var res = new { msg, product };
+
+            return Ok(res);
         }
     }
 }
