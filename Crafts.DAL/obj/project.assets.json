@@ -3749,11 +3749,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\9 Months\\Final_Project_Crafts\\CloneBack23_6\\Crafts\\Crafts.DAL\\Crafts.DAL.csproj",
+      "projectUniqueName": "D:\\9 Months\\Final_Project_Crafts\\CloneBack24_6\\Crafts\\Crafts.DAL\\Crafts.DAL.csproj",
       "projectName": "Crafts.DAL",
-      "projectPath": "D:\\9 Months\\Final_Project_Crafts\\CloneBack23_6\\Crafts\\Crafts.DAL\\Crafts.DAL.csproj",
+      "projectPath": "D:\\9 Months\\Final_Project_Crafts\\CloneBack24_6\\Crafts\\Crafts.DAL\\Crafts.DAL.csproj",
       "packagesPath": "C:\\Users\\TRUST\\.nuget\\packages\\",
-      "outputPath": "D:\\9 Months\\Final_Project_Crafts\\CloneBack23_6\\Crafts\\Crafts.DAL\\obj\\",
+      "outputPath": "D:\\9 Months\\Final_Project_Crafts\\CloneBack24_6\\Crafts\\Crafts.DAL\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\TRUST\\AppData\\Roaming\\NuGet\\NuGet.Config",

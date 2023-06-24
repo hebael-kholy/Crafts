@@ -3960,11 +3960,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\9 Months\\Final_Project_Crafts\\CloneBack23_6\\Crafts\\Crafts.BL\\Crafts.BL.csproj",
+      "projectUniqueName": "D:\\9 Months\\Final_Project_Crafts\\CloneBack24_6\\Crafts\\Crafts.BL\\Crafts.BL.csproj",
       "projectName": "Crafts.BL",
-      "projectPath": "D:\\9 Months\\Final_Project_Crafts\\CloneBack23_6\\Crafts\\Crafts.BL\\Crafts.BL.csproj",
+      "projectPath": "D:\\9 Months\\Final_Project_Crafts\\CloneBack24_6\\Crafts\\Crafts.BL\\Crafts.BL.csproj",
       "packagesPath": "C:\\Users\\TRUST\\.nuget\\packages\\",
-      "outputPath": "D:\\9 Months\\Final_Project_Crafts\\CloneBack23_6\\Crafts\\Crafts.BL\\obj\\",
+      "outputPath": "D:\\9 Months\\Final_Project_Crafts\\CloneBack24_6\\Crafts\\Crafts.BL\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\TRUST\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -3981,8 +3981,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "D:\\9 Months\\Final_Project_Crafts\\CloneBack23_6\\Crafts\\Crafts.DAL\\Crafts.DAL.csproj": {
-              "projectPath": "D:\\9 Months\\Final_Project_Crafts\\CloneBack23_6\\Crafts\\Crafts.DAL\\Crafts.DAL.csproj"
+            "D:\\9 Months\\Final_Project_Crafts\\CloneBack24_6\\Crafts\\Crafts.DAL\\Crafts.DAL.csproj": {
+              "projectPath": "D:\\9 Months\\Final_Project_Crafts\\CloneBack24_6\\Crafts\\Crafts.DAL\\Crafts.DAL.csproj"
             }
           }
         }

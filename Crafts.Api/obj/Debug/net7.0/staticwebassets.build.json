@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "NFDY5xuLphigQrIEZiQM5b4TW8wudreLNVBgT9+2T8s=",
+  "Hash": "i+Y+kAfOOKa8nSwL7XOWKO3tRysJMAMUueh1HRQ3FLY=",
   "Source": "Crafts.Api",
   "BasePath": "_content/Crafts.Api",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "Crafts.Api\\wwwroot",
       "Source": "Crafts.Api",
-      "ContentRoot": "D:\\9 Months\\Final_Project_Crafts\\CloneBack23_6\\Crafts\\Crafts.Api\\wwwroot\\",
+      "ContentRoot": "D:\\9 Months\\Final_Project_Crafts\\CloneBack24_6\\Crafts\\Crafts.Api\\wwwroot\\",
       "BasePath": "_content/Crafts.Api",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "D:\\9 Months\\Final_Project_Crafts\\CloneBack23_6\\Crafts\\Crafts.Api\\wwwroot\\Images\\002bd653-eb6b-458f-b3b3-7d21b61242b7.jpg",
+      "Identity": "D:\\9 Months\\Final_Project_Crafts\\CloneBack24_6\\Crafts\\Crafts.Api\\wwwroot\\Images\\002bd653-eb6b-458f-b3b3-7d21b61242b7.jpg",
       "SourceId": "Crafts.Api",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\9 Months\\Final_Project_Crafts\\CloneBack23_6\\Crafts\\Crafts.Api\\wwwroot\\",
+      "ContentRoot": "D:\\9 Months\\Final_Project_Crafts\\CloneBack24_6\\Crafts\\Crafts.Api\\wwwroot\\",
       "BasePath": "_content/Crafts.Api",
       "RelativePath": "Images/002bd653-eb6b-458f-b3b3-7d21b61242b7.jpg",
       "AssetKind": "All",
@@ -34,10 +34,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\002bd653-eb6b-458f-b3b3-7d21b61242b7.jpg"
     },
     {
-      "Identity": "D:\\9 Months\\Final_Project_Crafts\\CloneBack23_6\\Crafts\\Crafts.Api\\wwwroot\\Images\\0166e781-5aa2-496f-894a-481bd53395c6.jpg",
+      "Identity": "D:\\9 Months\\Final_Project_Crafts\\CloneBack24_6\\Crafts\\Crafts.Api\\wwwroot\\Images\\0166e781-5aa2-496f-894a-481bd53395c6.jpg",
       "SourceId": "Crafts.Api",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\9 Months\\Final_Project_Crafts\\CloneBack23_6\\Crafts\\Crafts.Api\\wwwroot\\",
+      "ContentRoot": "D:\\9 Months\\Final_Project_Crafts\\CloneBack24_6\\Crafts\\Crafts.Api\\wwwroot\\",
       "BasePath": "_content/Crafts.Api",
       "RelativePath": "Images/0166e781-5aa2-496f-894a-481bd53395c6.jpg",
       "AssetKind": "All",
@@ -51,10 +51,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\0166e781-5aa2-496f-894a-481bd53395c6.jpg"
     },
     {
-      "Identity": "D:\\9 Months\\Final_Project_Crafts\\CloneBack23_6\\Crafts\\Crafts.Api\\wwwroot\\Images\\1aadbbb7-8536-406d-9c57-fbb4b1ec9d17.png",
+      "Identity": "D:\\9 Months\\Final_Project_Crafts\\CloneBack24_6\\Crafts\\Crafts.Api\\wwwroot\\Images\\1aadbbb7-8536-406d-9c57-fbb4b1ec9d17.png",
       "SourceId": "Crafts.Api",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\9 Months\\Final_Project_Crafts\\CloneBack23_6\\Crafts\\Crafts.Api\\wwwroot\\",
+      "ContentRoot": "D:\\9 Months\\Final_Project_Crafts\\CloneBack24_6\\Crafts\\Crafts.Api\\wwwroot\\",
       "BasePath": "_content/Crafts.Api",
       "RelativePath": "Images/1aadbbb7-8536-406d-9c57-fbb4b1ec9d17.png",
       "AssetKind": "All",
@@ -68,10 +68,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\1aadbbb7-8536-406d-9c57-fbb4b1ec9d17.png"
     },
     {
-      "Identity": "D:\\9 Months\\Final_Project_Crafts\\CloneBack23_6\\Crafts\\Crafts.Api\\wwwroot\\Images\\2e2e9f65-6250-4a52-a3b5-318e687b2d4a.jpg",
+      "Identity": "D:\\9 Months\\Final_Project_Crafts\\CloneBack24_6\\Crafts\\Crafts.Api\\wwwroot\\Images\\2e2e9f65-6250-4a52-a3b5-318e687b2d4a.jpg",
       "SourceId": "Crafts.Api",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\9 Months\\Final_Project_Crafts\\CloneBack23_6\\Crafts\\Crafts.Api\\wwwroot\\",
+      "ContentRoot": "D:\\9 Months\\Final_Project_Crafts\\CloneBack24_6\\Crafts\\Crafts.Api\\wwwroot\\",
       "BasePath": "_content/Crafts.Api",
       "RelativePath": "Images/2e2e9f65-6250-4a52-a3b5-318e687b2d4a.jpg",
       "AssetKind": "All",
@@ -85,10 +85,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\2e2e9f65-6250-4a52-a3b5-318e687b2d4a.jpg"
     },
     {
-      "Identity": "D:\\9 Months\\Final_Project_Crafts\\CloneBack23_6\\Crafts\\Crafts.Api\\wwwroot\\Images\\310551841_490575076425596_19719425793244959_n.jpg",
+      "Identity": "D:\\9 Months\\Final_Project_Crafts\\CloneBack24_6\\Crafts\\Crafts.Api\\wwwroot\\Images\\310551841_490575076425596_19719425793244959_n.jpg",
       "SourceId": "Crafts.Api",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\9 Months\\Final_Project_Crafts\\CloneBack23_6\\Crafts\\Crafts.Api\\wwwroot\\",
+      "ContentRoot": "D:\\9 Months\\Final_Project_Crafts\\CloneBack24_6\\Crafts\\Crafts.Api\\wwwroot\\",
       "BasePath": "_content/Crafts.Api",
       "RelativePath": "Images/310551841_490575076425596_19719425793244959_n.jpg",
       "AssetKind": "All",
@@ -102,10 +102,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\310551841_490575076425596_19719425793244959_n.jpg"
     },
     {
-      "Identity": "D:\\9 Months\\Final_Project_Crafts\\CloneBack23_6\\Crafts\\Crafts.Api\\wwwroot\\Images\\310623007_490574979758939_2089894049691935084_n.jpg",
+      "Identity": "D:\\9 Months\\Final_Project_Crafts\\CloneBack24_6\\Crafts\\Crafts.Api\\wwwroot\\Images\\310623007_490574979758939_2089894049691935084_n.jpg",
       "SourceId": "Crafts.Api",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\9 Months\\Final_Project_Crafts\\CloneBack23_6\\Crafts\\Crafts.Api\\wwwroot\\",
+      "ContentRoot": "D:\\9 Months\\Final_Project_Crafts\\CloneBack24_6\\Crafts\\Crafts.Api\\wwwroot\\",
       "BasePath": "_content/Crafts.Api",
       "RelativePath": "Images/310623007_490574979758939_2089894049691935084_n.jpg",
       "AssetKind": "All",
@@ -119,10 +119,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\310623007_490574979758939_2089894049691935084_n.jpg"
     },
     {
-      "Identity": "D:\\9 Months\\Final_Project_Crafts\\CloneBack23_6\\Crafts\\Crafts.Api\\wwwroot\\Images\\311170102_490575213092249_3595074147461224268_n.jpg",
+      "Identity": "D:\\9 Months\\Final_Project_Crafts\\CloneBack24_6\\Crafts\\Crafts.Api\\wwwroot\\Images\\311170102_490575213092249_3595074147461224268_n.jpg",
       "SourceId": "Crafts.Api",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\9 Months\\Final_Project_Crafts\\CloneBack23_6\\Crafts\\Crafts.Api\\wwwroot\\",
+      "ContentRoot": "D:\\9 Months\\Final_Project_Crafts\\CloneBack24_6\\Crafts\\Crafts.Api\\wwwroot\\",
       "BasePath": "_content/Crafts.Api",
       "RelativePath": "Images/311170102_490575213092249_3595074147461224268_n.jpg",
       "AssetKind": "All",
@@ -136,10 +136,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\311170102_490575213092249_3595074147461224268_n.jpg"
     },
     {
-      "Identity": "D:\\9 Months\\Final_Project_Crafts\\CloneBack23_6\\Crafts\\Crafts.Api\\wwwroot\\Images\\Annotation 2023-03-18 171612.png",
+      "Identity": "D:\\9 Months\\Final_Project_Crafts\\CloneBack24_6\\Crafts\\Crafts.Api\\wwwroot\\Images\\Annotation 2023-03-18 171612.png",
       "SourceId": "Crafts.Api",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\9 Months\\Final_Project_Crafts\\CloneBack23_6\\Crafts\\Crafts.Api\\wwwroot\\",
+      "ContentRoot": "D:\\9 Months\\Final_Project_Crafts\\CloneBack24_6\\Crafts\\Crafts.Api\\wwwroot\\",
       "BasePath": "_content/Crafts.Api",
       "RelativePath": "Images/Annotation 2023-03-18 171612.png",
       "AssetKind": "All",
@@ -153,10 +153,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\Annotation 2023-03-18 171612.png"
     },
     {
-      "Identity": "D:\\9 Months\\Final_Project_Crafts\\CloneBack23_6\\Crafts\\Crafts.Api\\wwwroot\\Images\\Annotation 2023-03-23 135126.png",
+      "Identity": "D:\\9 Months\\Final_Project_Crafts\\CloneBack24_6\\Crafts\\Crafts.Api\\wwwroot\\Images\\Annotation 2023-03-23 135126.png",
       "SourceId": "Crafts.Api",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\9 Months\\Final_Project_Crafts\\CloneBack23_6\\Crafts\\Crafts.Api\\wwwroot\\",
+      "ContentRoot": "D:\\9 Months\\Final_Project_Crafts\\CloneBack24_6\\Crafts\\Crafts.Api\\wwwroot\\",
       "BasePath": "_content/Crafts.Api",
       "RelativePath": "Images/Annotation 2023-03-23 135126.png",
       "AssetKind": "All",
@@ -170,10 +170,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\Annotation 2023-03-23 135126.png"
     },
     {
-      "Identity": "D:\\9 Months\\Final_Project_Crafts\\CloneBack23_6\\Crafts\\Crafts.Api\\wwwroot\\Images\\Annotation 2023-04-03 104747.png",
+      "Identity": "D:\\9 Months\\Final_Project_Crafts\\CloneBack24_6\\Crafts\\Crafts.Api\\wwwroot\\Images\\Annotation 2023-04-03 104747.png",
       "SourceId": "Crafts.Api",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\9 Months\\Final_Project_Crafts\\CloneBack23_6\\Crafts\\Crafts.Api\\wwwroot\\",
+      "ContentRoot": "D:\\9 Months\\Final_Project_Crafts\\CloneBack24_6\\Crafts\\Crafts.Api\\wwwroot\\",
       "BasePath": "_content/Crafts.Api",
       "RelativePath": "Images/Annotation 2023-04-03 104747.png",
       "AssetKind": "All",
@@ -187,10 +187,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\Annotation 2023-04-03 104747.png"
     },
     {
-      "Identity": "D:\\9 Months\\Final_Project_Crafts\\CloneBack23_6\\Crafts\\Crafts.Api\\wwwroot\\Images\\Annotation 2023-04-03 105214.png",
+      "Identity": "D:\\9 Months\\Final_Project_Crafts\\CloneBack24_6\\Crafts\\Crafts.Api\\wwwroot\\Images\\Annotation 2023-04-03 105214.png",
       "SourceId": "Crafts.Api",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\9 Months\\Final_Project_Crafts\\CloneBack23_6\\Crafts\\Crafts.Api\\wwwroot\\",
+      "ContentRoot": "D:\\9 Months\\Final_Project_Crafts\\CloneBack24_6\\Crafts\\Crafts.Api\\wwwroot\\",
       "BasePath": "_content/Crafts.Api",
       "RelativePath": "Images/Annotation 2023-04-03 105214.png",
       "AssetKind": "All",
@@ -204,10 +204,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\Annotation 2023-04-03 105214.png"
     },
     {
-      "Identity": "D:\\9 Months\\Final_Project_Crafts\\CloneBack23_6\\Crafts\\Crafts.Api\\wwwroot\\Images\\Annotation 2023-04-03 105637.png",
+      "Identity": "D:\\9 Months\\Final_Project_Crafts\\CloneBack24_6\\Crafts\\Crafts.Api\\wwwroot\\Images\\Annotation 2023-04-03 105637.png",
       "SourceId": "Crafts.Api",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\9 Months\\Final_Project_Crafts\\CloneBack23_6\\Crafts\\Crafts.Api\\wwwroot\\",
+      "ContentRoot": "D:\\9 Months\\Final_Project_Crafts\\CloneBack24_6\\Crafts\\Crafts.Api\\wwwroot\\",
       "BasePath": "_content/Crafts.Api",
       "RelativePath": "Images/Annotation 2023-04-03 105637.png",
       "AssetKind": "All",
@@ -221,10 +221,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\Annotation 2023-04-03 105637.png"
     },
     {
-      "Identity": "D:\\9 Months\\Final_Project_Crafts\\CloneBack23_6\\Crafts\\Crafts.Api\\wwwroot\\Images\\c565a3ea-bacc-42e3-8f66-d0f7d54bbb98.jpg",
+      "Identity": "D:\\9 Months\\Final_Project_Crafts\\CloneBack24_6\\Crafts\\Crafts.Api\\wwwroot\\Images\\c565a3ea-bacc-42e3-8f66-d0f7d54bbb98.jpg",
       "SourceId": "Crafts.Api",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\9 Months\\Final_Project_Crafts\\CloneBack23_6\\Crafts\\Crafts.Api\\wwwroot\\",
+      "ContentRoot": "D:\\9 Months\\Final_Project_Crafts\\CloneBack24_6\\Crafts\\Crafts.Api\\wwwroot\\",
       "BasePath": "_content/Crafts.Api",
       "RelativePath": "Images/c565a3ea-bacc-42e3-8f66-d0f7d54bbb98.jpg",
       "AssetKind": "All",
@@ -238,10 +238,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\c565a3ea-bacc-42e3-8f66-d0f7d54bbb98.jpg"
     },
     {
-      "Identity": "D:\\9 Months\\Final_Project_Crafts\\CloneBack23_6\\Crafts\\Crafts.Api\\wwwroot\\Images\\download.png",
+      "Identity": "D:\\9 Months\\Final_Project_Crafts\\CloneBack24_6\\Crafts\\Crafts.Api\\wwwroot\\Images\\download.png",
       "SourceId": "Crafts.Api",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\9 Months\\Final_Project_Crafts\\CloneBack23_6\\Crafts\\Crafts.Api\\wwwroot\\",
+      "ContentRoot": "D:\\9 Months\\Final_Project_Crafts\\CloneBack24_6\\Crafts\\Crafts.Api\\wwwroot\\",
       "BasePath": "_content/Crafts.Api",
       "RelativePath": "Images/download.png",
       "AssetKind": "All",
@@ -255,10 +255,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\download.png"
     },
     {
-      "Identity": "D:\\9 Months\\Final_Project_Crafts\\CloneBack23_6\\Crafts\\Crafts.Api\\wwwroot\\Images\\e465a267-57cd-4992-9a7b-6062461c0a92.png",
+      "Identity": "D:\\9 Months\\Final_Project_Crafts\\CloneBack24_6\\Crafts\\Crafts.Api\\wwwroot\\Images\\e465a267-57cd-4992-9a7b-6062461c0a92.png",
       "SourceId": "Crafts.Api",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\9 Months\\Final_Project_Crafts\\CloneBack23_6\\Crafts\\Crafts.Api\\wwwroot\\",
+      "ContentRoot": "D:\\9 Months\\Final_Project_Crafts\\CloneBack24_6\\Crafts\\Crafts.Api\\wwwroot\\",
       "BasePath": "_content/Crafts.Api",
       "RelativePath": "Images/e465a267-57cd-4992-9a7b-6062461c0a92.png",
       "AssetKind": "All",
@@ -272,10 +272,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\e465a267-57cd-4992-9a7b-6062461c0a92.png"
     },
     {
-      "Identity": "D:\\9 Months\\Final_Project_Crafts\\CloneBack23_6\\Crafts\\Crafts.Api\\wwwroot\\Images\\f949caf6-a4da-4cc3-ad06-560ee45e5de6.jpg",
+      "Identity": "D:\\9 Months\\Final_Project_Crafts\\CloneBack24_6\\Crafts\\Crafts.Api\\wwwroot\\Images\\f949caf6-a4da-4cc3-ad06-560ee45e5de6.jpg",
       "SourceId": "Crafts.Api",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\9 Months\\Final_Project_Crafts\\CloneBack23_6\\Crafts\\Crafts.Api\\wwwroot\\",
+      "ContentRoot": "D:\\9 Months\\Final_Project_Crafts\\CloneBack24_6\\Crafts\\Crafts.Api\\wwwroot\\",
       "BasePath": "_content/Crafts.Api",
       "RelativePath": "Images/f949caf6-a4da-4cc3-ad06-560ee45e5de6.jpg",
       "AssetKind": "All",
@@ -289,10 +289,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\f949caf6-a4da-4cc3-ad06-560ee45e5de6.jpg"
     },
     {
-      "Identity": "D:\\9 Months\\Final_Project_Crafts\\CloneBack23_6\\Crafts\\Crafts.Api\\wwwroot\\Images\\images.jfif",
+      "Identity": "D:\\9 Months\\Final_Project_Crafts\\CloneBack24_6\\Crafts\\Crafts.Api\\wwwroot\\Images\\images.jfif",
       "SourceId": "Crafts.Api",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\9 Months\\Final_Project_Crafts\\CloneBack23_6\\Crafts\\Crafts.Api\\wwwroot\\",
+      "ContentRoot": "D:\\9 Months\\Final_Project_Crafts\\CloneBack24_6\\Crafts\\Crafts.Api\\wwwroot\\",
       "BasePath": "_content/Crafts.Api",
       "RelativePath": "Images/images.jfif",
       "AssetKind": "All",
@@ -306,10 +306,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\images.jfif"
     },
     {
-      "Identity": "D:\\9 Months\\Final_Project_Crafts\\CloneBack23_6\\Crafts\\Crafts.Api\\wwwroot\\Images\\pexels-pixabay-268533.jpg",
+      "Identity": "D:\\9 Months\\Final_Project_Crafts\\CloneBack24_6\\Crafts\\Crafts.Api\\wwwroot\\Images\\pexels-pixabay-268533.jpg",
       "SourceId": "Crafts.Api",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\9 Months\\Final_Project_Crafts\\CloneBack23_6\\Crafts\\Crafts.Api\\wwwroot\\",
+      "ContentRoot": "D:\\9 Months\\Final_Project_Crafts\\CloneBack24_6\\Crafts\\Crafts.Api\\wwwroot\\",
       "BasePath": "_content/Crafts.Api",
       "RelativePath": "Images/pexels-pixabay-268533.jpg",
       "AssetKind": "All",
@@ -323,10 +323,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\pexels-pixabay-268533.jpg"
     },
     {
-      "Identity": "D:\\9 Months\\Final_Project_Crafts\\CloneBack23_6\\Crafts\\Crafts.Api\\wwwroot\\Images\\photo_2023-02-20_13-49-40.jpg",
+      "Identity": "D:\\9 Months\\Final_Project_Crafts\\CloneBack24_6\\Crafts\\Crafts.Api\\wwwroot\\Images\\photo_2023-02-20_13-49-40.jpg",
       "SourceId": "Crafts.Api",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\9 Months\\Final_Project_Crafts\\CloneBack23_6\\Crafts\\Crafts.Api\\wwwroot\\",
+      "ContentRoot": "D:\\9 Months\\Final_Project_Crafts\\CloneBack24_6\\Crafts\\Crafts.Api\\wwwroot\\",
       "BasePath": "_content/Crafts.Api",
       "RelativePath": "Images/photo_2023-02-20_13-49-40.jpg",
       "AssetKind": "All",
@@ -340,10 +340,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\photo_2023-02-20_13-49-40.jpg"
     },
     {
-      "Identity": "D:\\9 Months\\Final_Project_Crafts\\CloneBack23_6\\Crafts\\Crafts.Api\\wwwroot\\Images\\photo_2023-03-11_07-19-44.jpg",
+      "Identity": "D:\\9 Months\\Final_Project_Crafts\\CloneBack24_6\\Crafts\\Crafts.Api\\wwwroot\\Images\\photo_2023-03-11_07-19-44.jpg",
       "SourceId": "Crafts.Api",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\9 Months\\Final_Project_Crafts\\CloneBack23_6\\Crafts\\Crafts.Api\\wwwroot\\",
+      "ContentRoot": "D:\\9 Months\\Final_Project_Crafts\\CloneBack24_6\\Crafts\\Crafts.Api\\wwwroot\\",
       "BasePath": "_content/Crafts.Api",
       "RelativePath": "Images/photo_2023-03-11_07-19-44.jpg",
       "AssetKind": "All",

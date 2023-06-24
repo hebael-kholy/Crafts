@@ -62,12 +62,13 @@ namespace Crafts.BL.Managers.OrderManagers;
                     Title = ci.Product.Title,
                     Description = ci.Product.Description,
                     Image = ci.Product.Image,
-                    Quantity = ci.Product.Quantity,
+                    Quantity = ci.Quantity,
+                 
                     Rating = ci.Product.Rating,
                     CategoryId = ci.Product.CategoryId
                 }).ToList()
             };
-
+            
             orderReadDtos.Add(orderReadDto);
         }
         return orderReadDtos;
@@ -89,6 +90,7 @@ namespace Crafts.BL.Managers.OrderManagers;
             IsPaid = o.IsPaid,
             CartId = o.CartId,
             UserId = o.UserId,
+            
             cartItems = o.Cart.CartItems.Select(ci => new CartItemsChildReadDto
             {
                 Id = ci.Id,
@@ -97,7 +99,9 @@ namespace Crafts.BL.Managers.OrderManagers;
                 Image = ci.Product.Image,
                 Quantity=ci.Product.Quantity,
                 Rating = ci.Product.Rating,
-                CategoryId = ci.Product.CategoryId
+                CategoryId = ci.Product.CategoryId,
+                Price = ci.Product.Price
+             
             }).ToList()
 
         }).ToList();
@@ -183,8 +187,9 @@ namespace Crafts.BL.Managers.OrderManagers;
         await _orderRepo.Add(orderToAdd);
 
         _orderRepo.SaveChanges();
-        _cartItemRepo.DeleteAllCartItemsByCartId(cart.Id);
-        _cartItemRepo.SaveChanges();
+        //_cartItemRepo.DeleteAllCartItemsByCartId(cart.Id);
+        //_cartItemRepo.SaveChanges();
+
     }
 
     public void Edit(OrderEditDto orderEditDto, int id)

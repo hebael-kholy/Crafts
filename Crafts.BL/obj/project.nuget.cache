@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "rzYQ3BXUtR0qD9a+c2gbr5Nq0HjNvRF6AIr5ymPlgVGHoBnif1nKNpfwlFMAHmsQIQIhJwdxErIonK5uGGee4A==",
+  "dgSpecHash": "C/lQtr2TIhctzA7aq/pW+gnxTOAHa4kpmV1ZJES/17LfKn2kU6UjJcuv6Hv+1eEbxhRZBzoYTIMTfEo4nv0jUg==",
   "success": true,
-  "projectFilePath": "D:\\9 Months\\Final_Project_Crafts\\CloneBack23_6\\Crafts\\Crafts.BL\\Crafts.BL.csproj",
+  "projectFilePath": "D:\\9 Months\\Final_Project_Crafts\\CloneBack24_6\\Crafts\\Crafts.BL\\Crafts.BL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\TRUST\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\TRUST\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
