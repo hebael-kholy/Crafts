@@ -11,6 +11,8 @@ namespace Crafts.BL.Managers.ReviewManagers
     public interface IReviewManager
     {
         List<ReviewReadDto> GetAll();
+
+        List<ReviewReadDto> GetReviewsByProductId(int id);
         Task Add(ReviewAddDto review);
         ReviewReadDto GetById(int id);
         void Edit(ReviewEditDto reviewEditDto, int id);

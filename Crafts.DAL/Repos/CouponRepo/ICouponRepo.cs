@@ -10,5 +10,6 @@ namespace Crafts.DAL.Repos.CouponRepo
 {
     public interface ICouponRepo : IGenericRepo<Coupon>
     {
+        Coupon GetCouponByName(string Name);
     }
 }

@@ -56,6 +56,18 @@ namespace Crafts.Api.Controllers
             return coupon;
         }
 
+        [HttpGet]
+        [Route("{Name}")]
+        public ActionResult<CouponReadDto> GetByName(string Name)
+        {
+            var coupon = _couponsManagers.GetCouponByName(Name);
+            if (coupon == null)
+            {
+                return NotFound(new GeneralResponse("Resource is missing"));
+            }
+            return coupon;
+        }
+
         [HttpDelete]
         [Route("{id:int}")]
         public ActionResult Delete(int id)

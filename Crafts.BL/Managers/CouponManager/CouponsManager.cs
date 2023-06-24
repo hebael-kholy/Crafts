@@ -18,6 +18,24 @@ namespace Crafts.BL.Managers.CouponManager
         {
             _couponRepo = couponRepo;
         }
+
+        public CouponReadDto GetCouponByName(string Name)
+        {
+            Coupon? coupon = _couponRepo.GetCouponByName(Name);
+            if (coupon == null)
+            {
+                throw new ArgumentException($"Coupon with Name {Name} is not found");
+            }
+            return new CouponReadDto
+            {
+                Id = coupon.Id,
+                Name = coupon.Name,
+                ExpireDate = coupon.ExpireDate,
+                Discount = coupon.Discount
+            };
+        }
+
+    
         public  async Task Add(CouponAddDto couponDto)
         {
             var coupon = new Coupon

@@ -39,6 +39,19 @@ namespace Crafts.BL.Managers.ReviewManagers
                 UserId = r.UserId,
             }).ToList();
         }
+        public List<ReviewReadDto> GetReviewsByProductId(int id)
+        {
+            List<Review> reviewsFromDb = _reviewRepo.GetReviewsByProductId(id);
+            return reviewsFromDb.Select(r => new ReviewReadDto
+            {
+                Id = r.Id,
+                Content = r.Content,
+                ProductId = r.ProductId,
+                UserId = r.UserId,
+                Image = r.User.Image,
+                UserName = r.User.UserName
+            }).ToList();
+        }
 
         public ReviewReadDto GetById(int id)
         {
