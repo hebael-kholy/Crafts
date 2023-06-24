@@ -28,18 +28,28 @@ namespace Crafts.Api.Controllers
             return _reviewManager.GetAll();
         }
 
+        //[HttpGet]
+        //[Route("{id:int}")]
+        //public ActionResult<ReviewReadDto> GetById(int id)
+        //{
+        //    var review = _reviewManager.GetById(id);
+        //    if (review == null)
+        //    {
+        //        return NotFound(new GeneralResponse("Review is not found"));
+        //    }
+        //    return review;
+        //}
+
         [HttpGet]
         [Route("{id:int}")]
-        public ActionResult<ReviewReadDto> GetById(int id)
+        public ActionResult<List<ReviewReadDto>> GetById(int id)
         {
-            var review = _reviewManager.GetById(id);
-            if (review == null)
+            if (!ModelState.IsValid)
             {
-                return NotFound(new GeneralResponse("Review is not found"));
+                return BadRequest(ModelState);
             }
-            return review;
+            return _reviewManager.GetReviewsByProductId(id);
         }
-
         [HttpPost]
         public async Task<ActionResult> Add(ReviewAddDto review)
         {

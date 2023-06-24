@@ -13,6 +13,7 @@ namespace Crafts.BL.Managers.CouponManager
         Task Add(CouponAddDto couponDto);
         List<CouponReadDto> GetAll();
         CouponReadDto? GetById(int id);
+        CouponReadDto GetCouponByName(string Name);
         void Delete(int id);
         void Edit(CouponEditDto couponEditDto, int id);
 

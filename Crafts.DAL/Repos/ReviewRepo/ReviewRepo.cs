@@ -20,5 +20,13 @@ namespace Crafts.DAL.Repos.ReviewRepo
                 .Include(r => r.UserId)
                 .FirstOrDefault(r => r.Id == id)!;
         }
+
+        public List<Review> GetReviewsByProductId(int id)
+        {
+            return _context.Set<Review>().Where(r=>r.ProductId == id).Include(r=>r.User).ToList();
+
+        }
     }
+        
+    
 }

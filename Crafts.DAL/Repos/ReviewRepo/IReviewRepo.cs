@@ -11,5 +11,6 @@ namespace Crafts.DAL.Repos.ReviewRepo
     public interface IReviewRepo : IGenericRepo<Review>
     {
         Review GetReviewWithProductAndUser(int id);
+        List<Review> GetReviewsByProductId(int id);
     }
 }
