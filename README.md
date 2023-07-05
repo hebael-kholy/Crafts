@@ -44,9 +44,9 @@ Admins can do the following:
 
 ## Demo
 
-- live demo for user:   []()
-- live demo for admin dashboard: []()
-- to see video: []()
+- live demo for user:   [Click here](https://crafts-client.vercel.app/)
+- live demo for admin dashboard: [Click here](https://crafts-admin.vercel.app/)
+- to see video: [Click here](https://youtu.be/z2vT-_NoK2k)
 
 ## Authors
 
